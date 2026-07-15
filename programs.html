@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Programs, Math Olympiad Trainer Academy</title>
+    <meta name="description" content="The Math Olympiad Trainer Academy launched in September 2024. Year 1 closed with a weeklong onsite intensive at NYU Abu Dhabi in June 2025. Year 2 includes four cycles in algebra, geometry, number theory, and combinatorics. Each cycle closes with teacher presentations." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .cycle-card {
+        border: 1px solid var(--color-divider);
+        background: var(--color-surface-2);
+        padding: var(--space-8);
+        border-radius: var(--radius-md);
+        display: grid;
+        grid-template-columns: 110px 1fr auto;
+        gap: var(--space-6);
+        align-items: center;
+        transition: all var(--transition-interactive);
+      }
+      .cycle-card:hover {
+        border-color: var(--color-accent);
+        box-shadow: var(--shadow-md);
+        transform: translateY(-2px);
+      }
+      .cycle-card + .cycle-card { margin-top: var(--space-4); }
+      .cycle-year-head {
+        font-family: var(--font-display);
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+        margin: var(--space-10) 0 var(--space-5);
+        padding-bottom: var(--space-3);
+        border-bottom: 1px solid var(--color-divider);
+      }
+      .cycle-year-head:first-of-type { margin-top: var(--space-4); }
+      .cycle-card__num {
+        font-family: var(--font-display);
+        font-size: 3rem;
+        font-weight: 500;
+        color: var(--color-accent);
+        line-height: 1;
+        font-style: italic;
+      }
+      .cycle-card__date {
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+        margin-bottom: var(--space-2);
+      }
+      .cycle-card__title {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: var(--space-2);
+        color: var(--color-primary);
+      }
+      .cycle-card__meta {
+        font-size: 0.875rem;
+        color: var(--color-text-muted);
+        margin: 0;
+      }
+      .cycle-card__badge {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        padding: var(--space-2) var(--space-3);
+        border-radius: var(--radius-sm);
+        background: var(--color-accent-highlight);
+        color: var(--color-accent-active);
+      }
+      .cycle-card__badge--past { background: var(--color-surface-offset); color: var(--color-text-muted); }
+      .cycle-card__badge--current { background: var(--color-primary); color: var(--color-text-inverse); }
+      .cycle-card__badge--upcoming { background: var(--color-accent); color: #fff; }
+      [data-theme="dark"] .cycle-card__badge--upcoming { color: var(--color-text-inverse); }
+
+      @media (max-width: 720px) {
+        .cycle-card { grid-template-columns: 60px 1fr; }
+        .cycle-card__num { font-size: 2rem; }
+        .cycle-card__badge { grid-column: 1 / -1; justify-self: start; }
+      }
+
+      .format-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-8);
+        margin-top: var(--space-12);
+      }
+      @media (max-width: 720px) { .format-grid { grid-template-columns: 1fr; } }
+      .format-card {
+        padding: var(--space-8);
+        border: 1px solid var(--color-divider);
+        background: var(--color-surface);
+        border-radius: var(--radius-md);
+      }
+      .format-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: var(--space-3);
+        font-weight: 500;
+      }
+      .format-card__icon {
+        width: 44px; height: 44px;
+        display: grid; place-items: center;
+        background: var(--color-accent-highlight);
+        color: var(--color-accent-active);
+        border-radius: var(--radius-sm);
+        margin-bottom: var(--space-5);
+      }
+      .format-card ul { list-style: none; margin-top: var(--space-4); }
+      .format-card li {
+        padding: var(--space-2) 0;
+        border-top: 1px solid var(--color-divider);
+        font-size: 0.95rem;
+        color: var(--color-text-muted);
+        display: flex; gap: var(--space-3);
+      }
+      .format-card li::before {
+        content: '·'; color: var(--color-accent); font-weight: 700;
+      }
+
+      /* Summer Workshop 2025 gallery */
+      .workshop-history {
+        background: var(--color-surface-2);
+        border-top: 1px solid var(--color-divider);
+        border-bottom: 1px solid var(--color-divider);
+      }
+      .workshop-gallery {
+        display: grid;
+        grid-template-columns: 1.3fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: var(--space-4);
+        margin-top: var(--space-10);
+      }
+      .workshop-gallery__cell {
+        position: relative;
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        background: var(--color-surface);
+        border: 1px solid var(--color-divider);
+      }
+      .workshop-gallery__cell--tall {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+      }
+      .workshop-gallery__cell--b { grid-column: 2 / span 2; grid-row: 1; }
+      .workshop-gallery__cell--c { grid-column: 2 / span 2; grid-row: 2; }
+      .workshop-gallery__cell img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 4 / 3;
+      }
+      .workshop-gallery__cell--tall img { aspect-ratio: 3 / 4; }
+      .workshop-gallery__cell--c img { aspect-ratio: 16 / 7; object-position: center top; }
+      .workshop-gallery__caption {
+        position: absolute;
+        left: 0; right: 0; bottom: 0;
+        padding: var(--space-5) var(--space-4) var(--space-3);
+        font-size: 0.78rem;
+        color: #fff;
+        background: linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0));
+        letter-spacing: 0.04em;
+        pointer-events: none;
+      }
+      .workshop-gallery__cell--c .workshop-gallery__caption {
+        left: auto; right: 0; bottom: auto; top: 0;
+        padding: var(--space-3) var(--space-4);
+        background: rgba(15, 30, 61, 0.92);
+        font-size: 0.7rem;
+        color: #f7ecd2;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-weight: 600;
+      }
+      @media (max-width: 860px) {
+        .workshop-gallery { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+        .workshop-gallery__cell--tall { grid-row: auto; grid-column: auto; }
+        .workshop-gallery__cell--a, .workshop-gallery__cell--b { grid-row: auto; grid-column: auto; }
+        .workshop-gallery__cell--c { grid-column: 1 / span 2; grid-row: auto; }
+        .workshop-gallery__cell img,
+        .workshop-gallery__cell--tall img { aspect-ratio: 4 / 3; }
+        .workshop-gallery__cell--c img { aspect-ratio: 16 / 7; }
+      }
+      @media (max-width: 520px) {
+        .workshop-gallery { grid-template-columns: 1fr; }
+        .workshop-gallery__cell--c { grid-column: 1; }
+      }
+
+      /* Participant presentations showcase */
+      .presentation-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-6);
+        margin-top: var(--space-10);
+      }
+      @media (max-width: 860px) { .presentation-grid { grid-template-columns: 1fr; } }
+      .presentation-card {
+        padding: var(--space-7);
+        border: 1px solid var(--color-divider);
+        background: var(--color-surface);
+        border-radius: var(--radius-md);
+        display: flex;
+        flex-direction: column;
+      }
+      .presentation-card__meta {
+        font-size: 0.76rem;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+        margin-bottom: var(--space-3);
+      }
+      .presentation-card__title {
+        font-family: var(--font-display);
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.25;
+        margin-bottom: var(--space-2);
+        color: var(--color-primary);
+      }
+      .presentation-card__coach {
+        font-size: 0.85rem;
+        color: var(--color-text-muted);
+        margin-bottom: var(--space-4);
+        font-style: italic;
+      }
+      .presentation-card__list {
+        list-style: none;
+        padding: 0;
+        margin-top: var(--space-3);
+        border-top: 1px solid var(--color-divider);
+      }
+      .presentation-card__list li {
+        padding: var(--space-3) 0;
+        border-bottom: 1px solid var(--color-divider);
+        font-size: 0.9rem;
+        color: var(--color-text);
+      }
+      .presentation-card__list li:last-child { border-bottom: none; }
+      .presentation-card__list li span {
+        display: block;
+        font-size: 0.78rem;
+        color: var(--color-text-muted);
+        margin-top: 2px;
+      }
+      /* Special engagement card (UAE IMO 2025) */
+      .special-card {
+        display: grid;
+        grid-template-columns: minmax(260px, 1fr) 1.4fr;
+        gap: var(--space-7);
+        align-items: stretch;
+        margin-top: var(--space-6);
+        background: var(--color-surface);
+        border: 1px solid var(--color-divider);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .special-card__photo {
+        background: linear-gradient(180deg, rgba(15,30,61,0.55) 0%, rgba(15,30,61,0.35) 100%), url('images/imo2025-group-outdoor.jpg') center / cover no-repeat;
+        min-height: 280px;
+      }
+      .special-card__body {
+        padding: var(--space-6) var(--space-7);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .special-card__chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.3rem 0.75rem;
+        background: rgba(184,137,58,0.12);
+        border: 1px solid rgba(184,137,58,0.5);
+        border-radius: 999px;
+        color: var(--color-accent);
+        font-family: var(--font-sans);
+        font-size: 0.7rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-weight: 600;
+        align-self: flex-start;
+        margin-bottom: var(--space-3);
+      }
+      .special-card__title {
+        font-family: var(--font-display);
+        font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+        color: var(--color-primary);
+        margin: 0 0 var(--space-3);
+      }
+      .special-card__body p {
+        line-height: 1.7;
+        margin: 0 0 var(--space-4);
+      }
+      .special-card__meta {
+        font-family: var(--font-sans);
+        font-size: 0.78rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+        margin: 0 0 var(--space-5) !important;
+      }
+      .special-card__cta { align-self: flex-start; }
+      @media (max-width: 860px) {
+        .special-card { grid-template-columns: 1fr; gap: 0; }
+        .special-card__photo { min-height: 240px; }
+        .special-card__body { padding: var(--space-5) var(--space-5); }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <a href="index.html" class="logo" aria-label="Math Olympiad Trainer Academy, home">
+          <svg class="logo__mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.5" /><path d="M24 7.5 L41.32 36 L6.68 36 Z" stroke-width="1.4" /><circle cx="24" cy="27" r="6.5" stroke-width="1.2" /><circle cx="24" cy="27" r="1.2" fill="currentColor" stroke="none" /></svg>
+          <span class="logo__text"><span class="logo__title">Math Olympiad Trainer Academy</span><span class="logo__subtitle">SITE · MIMS</span></span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <div class="nav__panel">
+          <ul class="nav__list" role="list">
+            <li><a class="nav__link" href="index.html">Home</a></li>
+            <li><a class="nav__link" href="about.html">About</a></li>
+            <li><a class="nav__link" href="programs.html" aria-current="page">Programs</a></li>
+            
+            <li class="nav__item--dropdown">
+              <button type="button" class="nav__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                Knowledge Hub <svg class="nav__dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <ul class="nav__dropdown-menu" role="list">
+                <li><a class="nav__dropdown-link" href="curriculum.html">Curriculum</a></li>
+                <li><a class="nav__dropdown-link" href="resources.html">Participant Resources</a></li>
+                <li><a class="nav__dropdown-link" href="atlas-methods.html">Methods</a></li>
+                
+                <li><a class="nav__dropdown-link" href="continuum.html">Mathematical Heritage</a></li>
+                <li><a class="nav__dropdown-link" href="atlas/index.html">Historical Profiles</a></li>
+                <li><a class="nav__dropdown-link" href="archive.html">Teaching Materials</a></li>
+                              <li><a class="nav__dropdown-link" href="glossary.html">Mathematics Glossary</a></li>
+              </ul>
+            </li>
+            <li><a class="nav__link" href="team.html">Team</a></li>
+            
+            <li><a class="nav__link" href="contact.html">Contact</a></li>
+          </ul>
+          <a class="btn btn--accent nav__cta" href="https://classroom.google.com/c/NzExNTk4MzQxNDI2" target="_blank" rel="noopener">Classroom</a>
+        </div>
+          <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
+          <button class="menu-toggle" data-menu-toggle aria-label="Toggle menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero__inner">
+          <p class="page-hero__eyebrow">Programs · Cycles · Schedule</p>
+          <h1>One <em>area</em> at a time, taught well.</h1>
+          <p class="page-hero__lede">
+            Launched in September 2024, the Academy completed its first year with a
+            weeklong onsite intensive at NYU Abu Dhabi in June 2025. Since
+            September 2025, its second year has moved through four cycles of olympiad
+            mathematics. Each cycle closes with teacher presentations.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Format</p>
+            <h2 class="section-title">One coach, one cycle, one or two related areas.</h2>
+            <p class="section-lede">
+              A guest coach leads each cycle through one or two related areas.
+              Live online sessions come with full written notes, and participant
+              presentations close the cycle.
+            </p>
+          </div>
+
+          <div class="format-grid">
+            <article class="format-card reveal">
+              <div class="format-card__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="1"/><path d="M8 22h8M12 18v4"/></svg>
+              </div>
+              <h3>Online live sessions</h3>
+              <p>
+                Approximately biweekly weekend sessions, each led by a guest coach
+                and hosted on the NYU Abu Dhabi Zoom platform. Sessions are normally
+                scheduled on Friday, Saturday, or Sunday in the late afternoon,
+                subject to coach availability and regional time differences.
+              </p>
+              <ul role="list">
+                <li>Opening and orientation (~10 min)</li>
+                <li>Lecture and worked exposition (~80 min)</li>
+                <li>Break (~15 min)</li>
+                <li>Collaborative problem solving (~75 min)</li>
+                <li>Accompanying LaTeX notes for every session</li>
+              </ul>
+            </article>
+
+            <article class="format-card reveal">
+              <div class="format-card__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7"/><path d="M5 9v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9"/><path d="M9 21V12h6v9"/></svg>
+              </div>
+              <h3>Year One capstone (June 2025)</h3>
+              <p>
+                Year One concluded with a weeklong onsite intensive at NYU
+                Abu Dhabi in June 2025, a single capstone bringing together
+                the year's participants and coaches.
+              </p>
+              <ul role="list">
+                <li>16 to 20 June 2025, A6 Building, NYU Abu Dhabi</li>
+                <li>Daily lectures and problem solving sessions with guest coaches</li>
+                <li>Hosted by SITE at NYU Abu Dhabi</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="curriculum">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Cycles to date</p>
+            <h2 class="section-title">A short history.</h2>
+            <p class="section-lede">
+              The Academy launched in September 2024. Year One closed with an
+              onsite intensive at NYU Abu Dhabi in June 2025. Year Two has
+              run four cycles since September 2025, each closing with teacher
+              teacher presentations.
+            </p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="cycle-year-head">Year One · 2024 to 2025</h3>
+            <article class="cycle-card">
+              <div class="cycle-card__num">i</div>
+              <div>
+                <p class="cycle-card__date">September 2024  to  June 2025</p>
+                <h3 class="cycle-card__title">Year One · Foundations of olympiad training</h3>
+                <p class="cycle-card__meta">Online sessions across algebra, geometry, number theory and combinatorics, closing with the inaugural onsite intensive at NYU Abu Dhabi, 16 to 20 June 2025.</p>
+              </div>
+              <span class="cycle-card__badge cycle-card__badge--past">Completed</span>
+            </article>
+
+            <h3 class="cycle-year-head">Year Two · 2025 to 2026</h3>
+            <article class="cycle-card">
+              <div class="cycle-card__num">1</div>
+              <div>
+                <p class="cycle-card__date">September  to  October 2025</p>
+                <h3 class="cycle-card__title">Cycle 1 · Olympiad Geometry &amp; Number Theory</h3>
+                <p class="cycle-card__meta">Coach: <strong>Melih Üçer</strong>. Four sessions: angle chasing, classical, directed and oriented (14 Sept), Miquel's lemma and circle problems (28 Sept), divisors, gcd and coprimality (12 Oct), gcd identities and exponential Diophantine problems (26 Oct).</p>
+              </div>
+              <span class="cycle-card__badge cycle-card__badge--past">Completed</span>
+            </article>
+
+            <article class="cycle-card">
+              <div class="cycle-card__num">2</div>
+              <div>
+                <p class="cycle-card__date">November  to  December 2025</p>
+                <h3 class="cycle-card__title">Cycle 2 · Combinatorial Games &amp; Invariants</h3>
+                <p class="cycle-card__meta">Coach: <strong>Ilja Uzelac Bujišić</strong>. The first session covered invariants, monovariants, parity, and coloring on 28 November 2025. The second explored combinatorial games and Nim on 12 December. A final session on 26 December connected Nim variations with cellular automata, Conway's Game of Life, simulation, and mathematical research. Teachers closed the cycle on 16 January 2026 with presentations about the Towers of Hanoi, Nim, a Japanese puzzle, and game theory.</p>
+              </div>
+              <span class="cycle-card__badge cycle-card__badge--past">Completed</span>
+            </article>
+
+            <article class="cycle-card">
+              <div class="cycle-card__num">3</div>
+              <div>
+                <p class="cycle-card__date">February  to  March 2026</p>
+                <h3 class="cycle-card__title">Cycle 3 · Cauchy Bunyakovsky Schwarz Inequality</h3>
+                <p class="cycle-card__meta">Coach: <strong>Prof. Zdravko Cvetkovski</strong> (Macedonia). Three live sessions developed the Cauchy Bunyakovsky Schwarz inequality through its variations, Engel and Titu forms, reverse techniques, and olympiad applications. The sessions took place on 6 February, 13 February, and 27 March 2026. Teachers closed the cycle on 10 April with presentations about the Cauchy Schwarz inequality.</p>
+              </div>
+              <span class="cycle-card__badge cycle-card__badge--past">Completed</span>
+            </article>
+
+            <article class="cycle-card">
+              <div class="cycle-card__num">4</div>
+              <div>
+                <p class="cycle-card__date">April  to  May 2026</p>
+                <h3 class="cycle-card__title">Cycle 4 · Advanced Number Theory</h3>
+                <p class="cycle-card__meta">Coach: <strong>Prof. Dušan Djukić</strong> (University of Belgrade · Mathematical Institute SANU). Three live sessions: Fermat's Little Theorem, Euler's Theorem, multiplicative orders and exponential Diophantine equations (24 April 2026); the Lifting the Exponent lemma and p adic valuation (9 May 2026); and primitive roots and residues (24 May 2026). The cycle closed on 14 June 2026 with a participant teacher presentation in which cohort members presented worked solutions to selected Cycle 4 problems.</p>
+              </div>
+              <span class="cycle-card__badge cycle-card__badge--past">Completed</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUMMER 2025 WORKSHOP HISTORY -->
+      <section class="workshop-history">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Summer Workshop · June 2025</p>
+            <h2 class="section-title">The inaugural onsite workshop at <em>NYU Abu Dhabi</em>.</h2>
+            <p class="section-lede">
+              From 16 to 20 June 2025, the Academy's first year closed with a weeklong
+              onsite workshop at the A6 Building on the NYU Abu Dhabi campus. Coaches
+              Đorđe Baralić and Ilja Uzelac Bujišić led daily lectures and problem sessions
+              across geometry, combinatorics, number theory and analysis, Brocard and
+              Brianchon, counting and bijection, Ceva and Menelaus, recursion and the
+              floor function, Pell's equation, polyominoes, and infinite descent.
+            </p>
+          </div>
+
+          <div class="workshop-gallery reveal">
+            <div class="workshop-gallery__cell workshop-gallery__cell--tall">
+              <img src="images/workshop-group.jpg" alt="Participants and faculty of the Year One onsite summer workshop, gathered on the steps of the NYU Abu Dhabi A6 Building, June 2025" />
+              <div class="workshop-gallery__caption">Cohort photo · NYUAD, June 2025</div>
+            </div>
+            <div class="workshop-gallery__cell workshop-gallery__cell--b">
+              <img src="images/workshop-teaching-2.jpg" alt="Workshop session in the A6 Building classroom at NYU Abu Dhabi" />
+              <div class="workshop-gallery__caption">A6 Building classroom</div>
+            </div>
+            <div class="workshop-gallery__cell workshop-gallery__cell--c">
+              <img src="images/workshop-flyer.jpg" alt="Programme flyer of the June 16 to 20, 2025 Math Olympiad Trainer Academy summer workshop at NYU Abu Dhabi, listing speakers Đorđe Baralić and Ilja Uzelac Bujišić" />
+              <div class="workshop-gallery__caption">Programme · 16 to 20 June 2025</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SPECIAL ENGAGEMENTS, UAE IMO 2025 -->
+      <section class="section--alt">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Special engagements</p>
+            <h2 class="section-title">Beyond the Academy: <em>when the Ministry called</em>.</h2>
+            <p class="section-lede">
+              The network behind the Academy also supports selected special
+              engagements. These projects extend its mathematical expertise into
+              a distinct program with its own remit.
+            </p>
+          </div>
+
+          <article class="special-card reveal">
+            <div class="special-card__photo" role="img" aria-label="UAE IMO 2025 cohort at NYU Abu Dhabi"></div>
+            <div class="special-card__body">
+              <span class="special-card__chip">Summer 2025 · single</span>
+              <h3 class="special-card__title">UAE IMO 2025 Training Camp</h3>
+              <p>
+                A residential and hybrid training camp lasting nineteen days, run by the
+                Academy's team in collaboration with the UAE Ministry of
+                Education, in preparation for the International Mathematical
+                Olympiad. It served seventeen of the country's strongest
+                secondary school mathematicians, including the six members of the
+                UAE's IMO team.
+              </p>
+              <p class="special-card__meta">
+                21 June  to  9 July 2025 · NYU Abu Dhabi · in partnership with the UAE Ministry of Education
+              </p>
+              <a class="btn btn--ghost special-card__cta" href="imo-2025.html">Read the full record →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PARTICIPANT PRESENTATIONS SHOWCASE -->
+      <section id="teach-backs">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Participant presentations</p>
+            <h2 class="section-title">Teachers <em>teaching teachers</em>.</h2>
+            <p class="section-lede">
+              Each cycle closes with participant led sessions: teachers present a topic
+              from the cycle to the cohort, reasoning through proofs aloud, taking
+              questions, and bringing the year's mathematics back into a teaching voice.
+              Four sessions to date.
+            </p>
+          </div>
+
+          <div class="presentation-grid reveal">
+            <article class="presentation-card">
+              <p class="presentation-card__meta">Cycle 1 teacher presentation · 9 November 2025</p>
+              <h3 class="presentation-card__title">Euclidean Geometry</h3>
+              <p class="presentation-card__coach">Coach session, closing presentations</p>
+              <ul class="presentation-card__list">
+                <li>Adnan Ahmed Saif Hasan<span>Miquel's theorem</span></li>
+                <li>Mohamed Hedi Ghomriani<span>Power of a point</span></li>
+                <li>Mohamed El Ibbaoui<span>Geometric reasoning</span></li>
+                <li>Tareq Ali Althuwami<span>Cyclic quadrilaterals (delivered in Arabic)</span></li>
+              </ul>
+            </article>
+
+            <article class="presentation-card">
+              <p class="presentation-card__meta">Cycle 2 teacher presentation · 16 January 2026</p>
+              <h3 class="presentation-card__title">Mathematical Games &amp; Strategy</h3>
+              <p class="presentation-card__coach">Coach session, closing presentations</p>
+              <ul class="presentation-card__list">
+                <li>Mekael Alhammoud<span>Towers of Hanoi</span></li>
+                <li>Adnan Ahmed Saif Hasan<span>Game of Piles · Nim</span></li>
+                <li>Mohamed El Ibbaoui<span>A Japanese puzzle</span></li>
+                <li>Tareq Ali Althawami<span>Introduction to game theory</span></li>
+              </ul>
+            </article>
+
+            <article class="presentation-card">
+              <p class="presentation-card__meta">Cycle 3 teacher presentation · 10 April 2026</p>
+              <h3 class="presentation-card__title">The Cauchy Schwarz Inequality</h3>
+              <p class="presentation-card__coach">With Prof. Zdravko Cvetkovski</p>
+              <ul class="presentation-card__list">
+                <li>Mohammed A. Dawood<span>Proof and motivation</span></li>
+                <li>Adnan Al-Sharabi &amp; Tariq Althawami<span>Olympiad applications</span></li>
+                <li>Ramadana Al-Tuwati · Libya<span>Engel form and consequences</span></li>
+                <li>Mekael Hammoud<span>Sharp cases and extensions</span></li>
+              </ul>
+            </article>
+
+            <article class="presentation-card">
+              <p class="presentation-card__meta">Cycle 4 teacher presentation · 14 June 2026 · 7:00 p.m. UAE time</p>
+              <h3 class="presentation-card__title">Advanced Number Theory</h3>
+              <p class="presentation-card__coach">With Prof. Dušan Djukić</p>
+              <p class="presentation-card__list" style="margin: 0; color: var(--color-text-muted);">
+                Cohort members presented worked solutions to selected Cycle 4 exercises,
+                drawing on Fermat's and Euler's theorems, multiplicative orders, the
+                Lifting the Exponent lemma, and primitive roots.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Anatomy of a session</p>
+            <h2 class="section-title">What a live session looks like.</h2>
+            <p class="section-lede">
+              Every cycle is built around live online sessions. The most recent one,
+              <em>Cycle 4 · Session 1</em>, 24 April 2026, is a useful example.
+            </p>
+          </div>
+
+          <div class="prose reveal" style="margin-top: var(--space-10);">
+            <h2>Cycle 4 · Session 1, Advanced Number Theory</h2>
+            <p><strong>Topic:</strong> Exponential congruences, Fermat's Little Theorem, Euler's Theorem and multiplicative orders.</p>
+            <p><strong>Live date:</strong> 24 April 2026 · NYU Abu Dhabi Zoom platform.</p>
+            <p><strong>Cycle coach &amp; live mathematical exposition:</strong> Prof. Dušan Djukić, University of Belgrade and Serbian Mathematical Society.</p>
+            <p><strong>Pedagogical development, mathematical expansion and LaTeX preparation:</strong> Dr. Dania Zantout, Academic Program Architect &amp; Director.</p>
+            <p>This session opens the advanced number theory strand. Participants develop the following skills:</p>
+            <ol>
+              <li>State and prove Fermat's Little Theorem using the residue permutation method.</li>
+              <li>State Euler's Theorem and compute Euler's totient function from a prime factorization.</li>
+              <li>Use small moduli, 4, 7 and 9, to force parity, divisibility and contradictions in exponential Diophantine equations.</li>
+              <li>Define multiplicative order and explain why ord_n(a) divides φ(n) when gcd(a, n) = 1.</li>
+              <li>Translate divisibility conditions such as 2<sup>a</sup>−1 | 2<sup>b</sup>−1 into conditions on exponents.</li>
+              <li>Apply the smallest prime divisor method in problems involving n | 2<sup>n</sup> ± 1.</li>
+              <li>Recognise how a short congruence argument can prepare the ground for the lifting the exponent lemma.</li>
+            </ol>
+            <blockquote>
+              The mathematical arc is Fermat → Euler → cycles of powers → multiplicative
+              order → olympiad applications. The pedagogical arc is to begin with
+              familiar small cycles and then reveal that those cycles are governed by
+              a general structure.
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="join">
+        <div class="join__bg"><img src="images/imo2025-campus.jpg" alt="NYU Abu Dhabi campus at golden hour" /></div>
+        <div class="join__overlay"></div>
+        <div class="container">
+          <h2>Ready to <em>join the next cycle</em>?</h2>
+          <p>Applications open between cycles. Submit your interest and we will be in touch when the next round opens.</p>
+          <div class="join__actions">
+            <a class="btn btn--accent btn--lg" href="contact.html#express-interest">Apply now</a>
+            <a class="btn btn--ghost btn--lg" href="curriculum.html">See the curriculum</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="logo">
+              <svg class="logo__mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.5" /><path d="M24 7.5 L41.32 36 L6.68 36 Z" stroke-width="1.4" /><circle cx="24" cy="27" r="6.5" stroke-width="1.2" /><circle cx="24" cy="27" r="1.2" fill="currentColor" stroke="none" /></svg>
+              <span class="logo__text"><span class="logo__title">Math Olympiad Trainer Academy</span><span class="logo__subtitle">SITE · MIMS</span></span>
+            </a>
+            <p>Training the trainers of secondary school mathematics across the MENA region. Developed with funding from SITE, which was part of the NYU Abu Dhabi Research Institute, in academic partnership with MIMS.</p>
+          </div>
+          <div class="footer__col"><h4>Academy</h4><ul role="list"><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="impact.html">Impact &amp; Evidence</a></li><li><a href="curriculum.html">Curriculum</a></li><li><a href="team.html">Team</a></li><li><a href="atlas/index.html">Historical Profiles</a></li><li><a href="editorial.html">Editorial policy</a></li></ul></div>
+          <div class="footer__col"><h4>Participants</h4><ul role="list"><li><a href="resources.html">Resources</a></li><li><a href="https://classroom.google.com/c/NzExNTk4MzQxNDI2" target="_blank" rel="noopener">Google Classroom</a></li><li><a href="contact.html#express-interest">Apply</a></li><li><a href="contact.html#faq">FAQ</a></li>
+              <li><a href="archive.html">Teaching Materials</a></li>
+              <li><a href="glossary.html">Glossary</a></li></ul></div>
+          <div class="footer__col"><h4>Contact</h4><ul role="list"><li><a href="contact.html">General enquiries</a></li><li><a href="mailto:dz41@nyu.edu">dz41@nyu.edu</a></li><li><a href="https://nyuad.nyu.edu" target="_blank" rel="noopener">NYU Abu Dhabi</a></li></ul></div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2024 to <span data-year>2026</span> Math Olympiad Trainer Academy. All rights reserved.</span>
+          <span>Built on a foundation of theorem, example, and method.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js" defer></script></body>
+</html>

@@ -1,0 +1,1068 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Methods Library, Math Olympiad Trainer Academy</title>
+    <meta name="description" content="Twenty two olympiad methods developed from the Academy's Year Two cycles, each with a statement, worked example, teaching note, and source record." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>window.MathJax = { tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] } };</script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <a href="index.html" class="logo" aria-label="Math Olympiad Trainer Academy, home">
+          <svg class="logo__mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.5" /><path d="M24 7.5 L41.32 36 L6.68 36 Z" stroke-width="1.4" /><circle cx="24" cy="27" r="6.5" stroke-width="1.2" /><circle cx="24" cy="27" r="1.2" fill="currentColor" stroke="none" /></svg>
+          <span class="logo__text"><span class="logo__title">Math Olympiad Trainer Academy</span><span class="logo__subtitle">SITE · MIMS</span></span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <div class="nav__panel">
+          <ul class="nav__list" role="list">
+            <li><a class="nav__link" href="index.html">Home</a></li>
+            <li><a class="nav__link" href="about.html">About</a></li>
+            <li><a class="nav__link" href="programs.html">Programs</a></li>
+            <li><a class="nav__link" href="impact.html">Impact</a></li>
+            
+            <li class="nav__item--dropdown is-active">
+              <button type="button" class="nav__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                Knowledge Hub <svg class="nav__dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <ul class="nav__dropdown-menu" role="list">
+                <li><a class="nav__dropdown-link" href="curriculum.html">Curriculum</a></li>
+                <li><a class="nav__dropdown-link" href="resources.html">Participant Resources</a></li>
+                <li><a class="nav__dropdown-link" href="atlas-methods.html" aria-current="page">Methods</a></li>
+                
+                <li><a class="nav__dropdown-link" href="continuum.html">Mathematical Heritage</a></li>
+                <li><a class="nav__dropdown-link" href="atlas/index.html">Historical Profiles</a></li>
+                <li><a class="nav__dropdown-link" href="archive.html">Teaching Materials</a></li>
+                              <li><a class="nav__dropdown-link" href="glossary.html">Mathematics Glossary</a></li>
+              </ul>
+            </li>
+            <li><a class="nav__link" href="team.html">Team</a></li>
+            
+            <li><a class="nav__link" href="contact.html">Contact</a></li>
+          </ul>
+          <a class="btn btn--accent nav__cta" href="https://classroom.google.com/c/NzExNTk4MzQxNDI2" target="_blank" rel="noopener">Classroom</a>
+        </div>
+          <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
+          <button class="menu-toggle" data-menu-toggle aria-label="Toggle menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero__inner">
+          <p class="page-hero__eyebrow">Methods Library</p>
+          <h1>Twenty two methods from <em>the Academy's Year Two curriculum</em>.</h1>
+          <p class="page-hero__lede">
+            Every card names a method, states it precisely, works one example all the way
+            through, and adds a teaching note about where students actually stumble. The
+            mathematics comes directly from the Academy's four Year Two cycles. Each
+            card identifies the cycle source and the coach or participant presentation
+            from which the material was developed.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="prose reveal" style="max-width:72ch;">
+            <p>
+              A method card makes the structure behind a problem explicit: the statement,
+              the conditions under which it applies, a complete worked example, and a
+              teaching note about where learners commonly struggle.
+            </p>
+            <p>
+              Read the cards as a working reference for the four pillars the Academy
+              teaches and as a record of how those ideas were developed in live sessions
+              and participant teacher presentations. Each byline identifies the instructional
+              source. Independent authorship is stated explicitly where it applies.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section style="padding-top:0;">
+        <div class="container">
+          <ol class="method-toc reveal" role="list">
+          <li class="method-toc__group-title">Cycle I · Foundations, Geometry</li>
+          <li><a href="#directed-angles">Directed Angles</a></li>
+          <li><a href="#miquel-point">The Miquel Point</a></li>
+          <li><a href="#power-of-a-point">Power of a Point</a></li>
+          <li class="method-toc__group-title">Cycle I · Foundations, Number Theory</li>
+          <li><a href="#p-adic-valuation">p adic Valuation</a></li>
+          <li><a href="#gcd-lcm-divisibility">GCD &amp; LCM Divisibility Characterization</a></li>
+          <li><a href="#greatest-proper-divisor-smallest-prime">Greatest Proper Divisor &amp; the Smallest Prime Method (M(n)=n/p(n))</a></li>
+          <li class="method-toc__group-title">Cycle II · Mathematical Games &amp; Strategy</li>
+          <li><a href="#nim-and-nim-sum">Nim and the Nim Sum</a></li>
+          <li><a href="#winning-losing-positions">Winning &amp; Losing Positions</a></li>
+          <li><a href="#invariants-monovariants">Invariants</a></li>
+          <li><a href="#monovariants">Monovariants</a></li>
+          <li><a href="#two-pile-symmetry">Two Pile Symmetry (Copycat Strategy)</a></li>
+          <li class="method-toc__group-title">Cycle III · Cauchy Bunyakovsky Schwarz Inequality</li>
+          <li><a href="#cbs-equality-cases">Cauchy Schwarz &amp; Equality Cases</a></li>
+          <li><a href="#titus-lemma">Titu's Lemma (Engel Form)</a></li>
+          <li><a href="#cbs-with-amgm">arithmetic and geometric mean with algebraic reorganization</a></li>
+          <li><a href="#nesbitt-via-titu">Nesbitt's Inequality via Titu</a></li>
+          <li><a href="#homogenization-weights">Homogenization &amp; Choosing Weights</a></li>
+          <li class="method-toc__group-title">Cycle IV · Number Theory</li>
+          <li><a href="#fermat-little-theorem-order">Fermat and coprime factorization</a></li>
+          <li><a href="#eulers-theorem">Euler's Theorem</a></li>
+          <li><a href="#lifting-the-exponent">Lifting the Exponent (LTE)</a></li>
+          <li><a href="#divisibility-2a-pm-1">Divisibility of 2^a ± 1</a></li>
+          <li><a href="#order-smallest-prime-divisor">Order &amp; the Smallest Prime Divisor Method (n|2^n−1 ⇒ n=1)</a></li>
+          <li><a href="#primitive-roots">Primitive Roots</a></li>
+          </ol>
+
+      <div class="cycle-group reveal">
+        <div class="cycle-group__head">
+          <p class="cycle-group__eyebrow">Cycle I</p>
+          <h2 class="cycle-group__title">Foundations, Geometry</h2>
+          <p class="cycle-group__coach">Coach: Melih Üçer</p>
+        </div>
+        <div class="method-grid">
+        <article class="method-card reveal" id="directed-angles">
+          <div class="method-card__header">
+            <h3 class="method-card__name">Directed Angles</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Geometry</span>
+              <span class="method-pill method-pill--level">Foundational</span>
+            </div>
+            <p class="method-card__tagline">Angles modulo 180° let one calculation cover every configuration.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">For lines \(\ell_1,\ell_2\) define the directed angle \(\angle(\ell_1,\ell_2)\) as the angle of rotation (mod \(180^\circ\)) taking \(\ell_1\) to \(\ell_2\). Then: \[\angle(\ell_1,\ell_2) = -\angle(\ell_2,\ell_1), \qquad \angle(\ell,m)=0 \iff \ell \parallel m,\] and directed angles are additive: \[\angle(\ell_1,\ell_2)+\angle(\ell_2,\ell_3)=\angle(\ell_1,\ell_3).\] For points, \(\angle ABC := \angle(BA,BC)\), so \(\angle ABC = -\angle CBA\), and \(\angle ABC = 0\) iff \(A,B,C\) are collinear. A consequence of additivity is \[\angle ABC+\angle BCA+\angle CAB = 0 \pmod{180^\circ},\] which recovers the usual triangle angle sum of \(180^\circ\).</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">Using directed angles, show that four points \(A,B,C,D\) lie on a common circle (or common line) if and only if \(\angle(CA,CB) = \angle(DA,DB)\).</div>
+              <div class="method-worked__solution">
+          <p>This is the directed angle form of the inscribed angle theorem, and its value is that it needs no case split for the position of \(D\) relative to arc \(AB\). Forward direction: if \(A,B,C,D\) lie on a circle \(\omega\), the inscribed angle theorem for chord \(AB\) says every point of \(\omega\) (other than \(A,B\)) sees \(AB\) under the same directed angle mod \(180^\circ\); in the classical (undirected) statement this splits into 'same arc' and 'opposite arcs give supplementary angles' cases, but working mod \(180^\circ\) collapses both cases into the single equality \(\angle(CA,CB)=\angle(DA,DB)\). Converse: suppose \(\angle(CA,CB)=\angle(DA,DB)\) with \(A,B,C,D\) not collinear. Let \(\omega\) be the circumcircle of \(A,B,C\), and suppose for contradiction \(D\notin\omega\). Let \(D'\) be the second intersection of line \(BD\) with \(\omega\) (other than \(B\)). By the forward direction applied to \(A,B,C,D'\), \(\angle(CA,CB)=\angle(D'A,D'B)\). Combined with the hypothesis, \(\angle(D'A,D'B)=\angle(DA,DB)\), and since \(D,D'\) both lie on line \(BD\), this forces \(D=D'\), so \(D\in\omega\) after all, a contradiction. Hence \(A,B,C,D\) are concyclic. This is exactly the tool used to prove Miquel's theorem: to show three circles meet at one point \(M\), one names \(M\) as the second intersection of two of them and shows the directed angle condition forces \(M\) onto the third.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>Begin with three meanings of angle: the classical angle between rays, the angle between lines modulo 180°, and an oriented angle modulo 360°. This comparison gives the directed definition a clear purpose. The identities \(\angle(\ell,\ell)=0\) and \(\angle ABC=0\) then become natural tools.</p>
+          <p>Additivity requires careful notation. Students rewrite the perpendicular chords problem using a directed angle equation at every step. This practice separates angles between lines from angles attached to labelled points and prevents assumptions based on the drawing.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Melih Üçer <span class="method-byline__role">· Cycle I · coach</span></span>
+            <small class="method-source">Cycle I · Session 1 (Sep 14, 2025), Melih Üçer, Whiteboard-sept14 + exercises-sept14</small>
+          </div>
+        </article>
+        <article class="method-card reveal" id="miquel-point">
+          <div class="method-card__header">
+            <h3 class="method-card__name">The Miquel Point</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Geometry</span>
+              <span class="method-pill method-pill--level">Advanced</span>
+            </div>
+            <p class="method-card__tagline">Three circles built from one triangle and three points always meet at a single secret point.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">Miquel's Theorem: Let \(ABC\) be a triangle, and let \(X,Y,Z\) be points on lines \(BC, CA, AB\) respectively. Then the three circumcircles \((AYZ)\), \((BXZ)\), and \((CXY)\) pass through a common point, the Miquel point of \(X,Y,Z\) with respect to \(\triangle ABC\).</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">Prove Miquel's theorem using directed angles.</div>
+              <div class="method-worked__solution">
+          <p>Let \(M\) be the second intersection point of circles \((BXZ)\) and \((CXY)\) (they already share the point \(X\)). We show \(M\) also lies on \((AYZ)\). Since \(B,X,Z,M\) are concyclic, the directed angle form of the inscribed angle theorem gives \[\angle(MZ,ZB) = \angle(MX,XB).\] Since \(C,X,Y,M\) are concyclic, \[\angle(MX,XC) = \angle(MY,YC).\] Because \(X\) lies on line \(BC\), \(XB\) and \(XC\) are the same line, so \(\angle(MX,XB)=\angle(MX,XC)\). Chaining the two equalities: \[\angle(MZ,ZB) = \angle(MY,YC).\] Now \(Z\) lies on line \(AB\) and \(Y\) lies on line \(AC\), so \(ZB\) is the same line as \(ZA\) and \(YC\) is the same line as \(YA\); rewriting, \[\angle(MZ,ZA) = \angle(MY,YA).\] By the converse of the inscribed angle theorem (directed angle form), this equality of directed angles subtended by segment \(MA\) at \(Z\) and at \(Y\) means \(A, Y, Z, M\) are concyclic. Hence \(M\) lies on \((AYZ)\) as well, so all three circles pass through \(M\).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>Teach Miquel after the directed angle converse of the inscribed angle theorem. The proof defines the second intersection of two circles and then forces that point onto the third. Writing each collinear pair explicitly keeps the angle substitutions clear.</p>
+          <p>Define \(M\) as the second intersection of two circles. The remaining task is to prove that the third circle passes through \(M\). Stating those two steps prevents the diagram from replacing the proof.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Melih Üçer <span class="method-byline__role">· Cycle I · coach</span></span>
+            <small class="method-source">Cycle I · Session 2 (Sep 28, 2025), Melih Üçer, Whiteboard-sept28/sept28-1 + exercises</small>
+          </div>
+        </article>
+        <article class="method-card reveal" id="power-of-a-point">
+          <div class="method-card__header">
+            <h3 class="method-card__name">Power of a Point</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Geometry</span>
+              <span class="method-pill method-pill--level">Foundational</span>
+            </div>
+            <p class="method-card__tagline">Two secant lines through the same point always multiply out to the same product, whether the point sits inside or outside the circle.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">Power of a Point: let \(\Gamma\) have center \(O\) and radius \(r\). The signed power of a point \(P\) is \(\operatorname{Pow}_{\Gamma}(P)=PO^2-r^2\). If an oriented line through \(P\) meets \(\Gamma\) at \(A,B\), then \[\overline{PA}\,\overline{PB}=\operatorname{Pow}_{\Gamma}(P).\] For two chords \(AB\) and \(CD\) meeting at an interior point \(P\), the corresponding ordinary positive lengths satisfy \[PA\cdot PB=PC\cdot PD=r^2-PO^2=-\operatorname{Pow}_{\Gamma}(P).\] If a tangent from an exterior point \(P\) touches \(\Gamma\) at \(T\), then \(PT^2=\operatorname{Pow}_{\Gamma}(P)\).</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">Two chords of a circle, \(AB\) and \(CD\), meet at an interior point \(P\) with \(PA=8\), \(PB=3\), and \(PC=6\). Find \(PD\).</div>
+              <div class="method-worked__solution">
+          <p>By the intersecting chords form of Power of a Point, using ordinary positive lengths, \[PA\cdot PB = PC\cdot PD.\] Substituting gives \[8\cdot 3 = 6\cdot PD \implies PD = 4.\] Both positive chord products equal \(24\). Under the signed convention, the actual power of the interior point is therefore \(-24\).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>I introduce Power of a Point right after the inscribed angle theorem, as the natural next question: 'if two chords cross, is there a hidden relationship between the four pieces?' I have students discover the relationship themselves by measuring on a drawn circle before I name the theorem, because the moment they see \(PA\cdot PB\) match \(PC\cdot PD\) on their own diagram, the identity stops being a formula to memorize and becomes something they already believe.</p>
+          <p>Signed lengths let one identity cover interior chords, external secants, and the tangent case. Derive \(PA^2=PC\cdot PD\) by letting \(C\) approach \(D\) in the secant configuration. The tangent formula then appears as a limiting form of the same theorem.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Melih Üçer <span class="method-byline__role">· Cycle I · coach</span></span>
+            <small class="method-source">Cycle I · Session 1 to 2 (Sep 14 &amp; Sep 28, 2025), Melih Üçer, Whiteboard-sept14/sept28 + exercises</small>
+          </div>
+        </article>
+        </div>
+      </div>
+
+      <div class="cycle-group reveal">
+        <div class="cycle-group__head">
+          <p class="cycle-group__eyebrow">Cycle I</p>
+          <h2 class="cycle-group__title">Foundations, Number Theory</h2>
+          <p class="cycle-group__coach">Coach: Melih Üçer</p>
+        </div>
+        <div class="method-grid">
+        <article class="method-card reveal" id="p-adic-valuation">
+          <div class="method-card__header">
+            <h3 class="method-card__name">p adic Valuation</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Number Theory</span>
+              <span class="method-pill method-pill--level">Developing</span>
+            </div>
+            <p class="method-card__tagline">Measuring exactly how many times a prime divides a number turns messy divisibility puzzles into simple exponent arithmetic.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">For a prime \(p\) and a nonzero integer \(n\), the \(p\)-adic valuation \(\nu_p(n)\) is the unique nonnegative integer such that \[p^{\nu_p(n)} \mid n \quad\text{and}\quad p^{\nu_p(n)+1} \nmid n.\] Equivalently, for any integer \(k \ge 0\), \[p^k \mid n \iff k \le \nu_p(n).\] Unique factorization gives the fundamental product rule \[\nu_p(mn)=\nu_p(m)+\nu_p(n)\] for all nonzero integers \(m,n\).</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">Find \(\nu_2(12!)\), the exact power of 2 dividing \(12!\).</div>
+              <div class="method-worked__solution">
+          <p>Every multiple of \(2\) up to \(12\) contributes one factor of \(2\). Multiples of \(4\) contribute a second factor, and the multiple of \(8\) contributes a third. Therefore \[\nu_2(12!)=\left\lfloor\frac{12}{2}\right\rfloor+\left\lfloor\frac{12}{4}\right\rfloor+\left\lfloor\frac{12}{8}\right\rfloor=6+3+1=10.\] Direct factorisation gives the same total.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>Introduce \(\nu_p\) as a measure of how many times \(p\) divides \(n\). Students first compute several valuations by direct factorisation, then compare them with the factorial formula on a small case such as \(12!\).</p>
+          <p>The valuation is additive under multiplication. The example \(\nu_2(2+6)=3\) while \(\nu_2(2)+\nu_2(6)=2\) shows the different behaviour of addition.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Melih Üçer <span class="method-byline__role">· Cycle I · coach</span></span>
+            <small class="method-source">Cycle I · Sessions 3 to 4 (Oct 12 &amp; Oct 26, 2025), Melih Üçer, Whiteboard-oct12 + nyuad-exercises-oct12, oct26</small>
+          </div>
+        </article>
+        <article class="method-card reveal" id="gcd-lcm-divisibility">
+          <div class="method-card__header">
+            <h3 class="method-card__name">GCD &amp; LCM Divisibility Characterization</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Number Theory</span>
+              <span class="method-pill method-pill--level">Foundational</span>
+            </div>
+            <p class="method-card__tagline">Divisibility into a gcd and divisibility by an lcm mirror the same question.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">For positive integers \(a_1,\dots,a_n\) and \(k\): \[k \mid \gcd(a_1,\dots,a_n) \iff k\mid a_1,\ k\mid a_2,\ \dots,\ k\mid a_n,\] and dually, \[a_1\mid k,\ a_2\mid k,\ \dots,\ a_n\mid k \iff \operatorname{lcm}(a_1,\dots,a_n) \mid k.\] In terms of \(p\)-adic valuations, these follow from \(\nu_p(\gcd(a_1,\dots,a_n)) = \min_i \nu_p(a_i)\) and \(\nu_p(\operatorname{lcm}(a_1,\dots,a_n)) = \max_i \nu_p(a_i)\) for every prime \(p\).</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">Verify the characterization on \(a_1=12,\ a_2=18,\ a_3=30\): compute \(\gcd(12,18,30)\) and \(\operatorname{lcm}(12,18,30)\), and confirm the divisibility characterizations.</div>
+              <div class="method-worked__solution">
+          <p>Factor each number: \(12=2^2\cdot3,\ 18=2\cdot3^2,\ 30=2\cdot3\cdot5\). For the gcd, take the minimum exponent of each prime across all three: \(\nu_2\) minimum is \(\min(2,1,1)=1\); \(\nu_3\) minimum is \(\min(1,2,1)=1\); \(\nu_5\) minimum is \(\min(0,0,1)=0\). So \(\gcd(12,18,30) = 2^1\cdot3^1 = 6\). Check the characterization: \(k=6\) divides all three of \(12,18,30\), and indeed \(6\mid\gcd(12,18,30)=6\); no larger \(k\) divides all three, consistent with \(6\) being exactly the gcd. For the lcm, take the maximum exponent of each prime: \(\nu_2\) maximum is \(\max(2,1,1)=2\); \(\nu_3\) maximum is \(\max(1,2,1)=2\); \(\nu_5\) maximum is \(\max(0,0,1)=1\). So \(\operatorname{lcm}(12,18,30) = 2^2\cdot3^2\cdot5 = 4\cdot9\cdot5 = 180\). Check: \(12,18,30\) all divide \(180\) (\(180/12=15\), \(180/18=10\), \(180/30=6\), all integers), and \(180\) is the smallest such common multiple, confirming the dual characterization.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>Present gcd and lcm together on matching prime factorizations. The gcd takes each minimum exponent, while the lcm takes each maximum exponent. Full prime power form makes the symmetry visible and reduces calculation errors.</p>
+          <p>The recurring stumble is applying only 'half' the characterization, students happily verify \(k\) divides the gcd once they've found it, but forget that the definition also demands checking \(k\) divides *every* \(a_i\) individually, and on more abstract problems (where the numbers aren't given explicitly) that's the direction that actually does the logical work. I make them write both implications of the 'iff' out loud on any new problem before using the characterization as a black box.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Melih Üçer <span class="method-byline__role">· Cycle I · coach</span></span>
+            <small class="method-source">Cycle I · Sessions 3 to 4 (Oct 12 &amp; Oct 26, 2025), Melih Üçer, Whiteboard-oct12 + nyuad-exercises-oct12, oct26</small>
+          </div>
+        </article>
+        <article class="method-card reveal" id="greatest-proper-divisor-smallest-prime">
+          <div class="method-card__header">
+            <h3 class="method-card__name">Greatest Proper Divisor &amp; the Smallest Prime Method (M(n)=n/p(n))</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Number Theory</span>
+              <span class="method-pill method-pill--level">Developing</span>
+            </div>
+            <p class="method-card__tagline">To find the biggest divisor a number has (other than itself), just knock out its smallest prime factor.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">For a positive integer \(n>1\), let \(M(n)\) denote the greatest proper divisor of \(n\), and let \(p(n)\) denote the smallest prime factor of \(n\). Then \[M(n)=\frac{n}{p(n)}.\] Indeed, if \(d&lt;n\) divides \(n\), then the cofactor \(n/d>1\) divides \(n\). Every prime factor of that cofactor is therefore at least \(p(n)\), so \(n/d\ge p(n)\) and \(d\le n/p(n)\). Equality is attained by \(d=n/p(n)\).</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">Find the greatest proper divisor of \(756\) and prove its maximality.</div>
+              <div class="method-worked__solution">
+          <p>Factor \(756=2^2\cdot3^3\cdot7\). Its smallest prime factor is \(2\), so the identity gives \[M(756)=\frac{756}{2}=378.\] To justify maximality, let \(d&lt;756\) be any divisor and write \(756=dq\). Because \(d\) is proper, \(q>1\). Every prime factor of \(q\) is also a prime factor of \(756\), so \(q\ge2\). Hence \(d=756/q\le756/2=378\). Since \(378\mid756\), the bound is attained and \(378\) is the greatest proper divisor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>Students first prove \(M(n)=n/p(n)\) as an introductory lemma. The proof turns a simple observation about the smallest prime factor into a reliable tool for later sequence problems.</p>
+          <p>A large divisor still requires a proof of maximality. Every proper divisor has a cofactor greater than \(1\), and the least prime factor gives the smallest possible cofactor.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Melih Üçer <span class="method-byline__role">· Cycle I · coach</span></span>
+            <small class="method-source">Cycle I · Sessions 3 to 4 (Oct 12 &amp; Oct 26, 2025), Melih Üçer, Whiteboard-oct12 + nyuad-exercises-oct12, oct26</small>
+          </div>
+        </article>
+        </div>
+      </div>
+
+      <div class="cycle-group reveal">
+        <div class="cycle-group__head">
+          <p class="cycle-group__eyebrow">Cycle II</p>
+          <h2 class="cycle-group__title">Mathematical Games &amp; Strategy</h2>
+          <p class="cycle-group__coach">Coach: Ilja Uzelac Bujišić</p>
+        </div>
+        <div class="method-grid">
+        <article class="method-card reveal" id="nim-and-nim-sum">
+          <div class="method-card__header">
+            <h3 class="method-card__name">Nim and the Nim Sum</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Combinatorics</span>
+              <span class="method-pill method-pill--level">Advanced</span>
+            </div>
+            <p class="method-card__tagline">XOR the pile sizes to reveal the status of the position.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">In the game of Nim with piles of sizes \(x_1, x_2, \dots, x_m\), a move removes any positive number of stones from one pile, and the player who takes the last stone wins. Define the nim sum as the bitwise exclusive OR of the pile sizes: \[x_1 \oplus x_2 \oplus \cdots \oplus x_m.\] XOR adds binary digits modulo 2 with zero carrying. Bouton's Theorem classifies a position as winning when the nim sum is nonzero and losing when it equals \(0\). From a winning position, one legal reduction produces a nim sum of \(0\). Every move from a zero nim sum produces a nonzero result.</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">In a game of Nim there are three piles with \(5\), \(7\), and \(3\) stones. Determine whether the player to move can force a win, and if so, give a winning first move.</div>
+              <div class="method-worked__solution">
+          <p>Write each pile size in binary: \(5 = 101_2\), \(7 = 111_2\), and \(3 = 011_2\). Their nim sum is \(101 \oplus 111 \oplus 011 = 001\), so the position is winning. To make the nim sum zero, reduce the pile of \(7\) to \(6\), because \(5 \oplus 3 = 6\). The new position \((5,6,3)\) has nim sum \(000_2\). Repeating this response after each opposing move leads to the final stone.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>Begin with several rounds of three pile Nim and record the losing positions. The XOR formula then answers a question created by play. Writing each pile in binary makes the digit by digit operation visible.</p>
+          <p>Students compare nim sum with ordinary addition, then test each pile against the target value \(x_i \oplus (\text{total nim sum})\). A valid move reduces the chosen pile to that target.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Adnan Ahmed Saif Hasan <span class="method-byline__role">· Cycle II · presenter</span></span>
+            <small class="method-source">Cycle II · teacher presentation (Jan 16, 2026), Adnan Ahmed Saif Hasan, "A Brief Overview of Winning Strategies Between Two Players in the Game of Piles", CycleII-Presentations.pdf; theory per coach Ilja Uzelac Bujišić</small>
+          </div>
+        </article>
+        <article class="method-card reveal" id="winning-losing-positions">
+          <div class="method-card__header">
+            <h3 class="method-card__name">Winning &amp; Losing Positions</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Combinatorics</span>
+              <span class="method-pill method-pill--level">Developing</span>
+            </div>
+            <p class="method-card__tagline">Label every game state W or L by working backwards. Recursion does the work.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">In a finite impartial game with perfect information, normal play, and identical move options for each player, classify every position by backward induction. A winning position \(\mathcal{W}\) has at least one move to a losing position \(\mathcal{L}\). Every move from a losing position reaches a winning position. Optimal play follows directly: move from \(\mathcal{W}\) to \(\mathcal{L}\) whenever possible.</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">Two players alternately remove either 1 or 2 stones from a single pile of \(n\) stones; the player who removes the last stone wins. For which \(n\) does the first player have a winning strategy?</div>
+              <div class="method-worked__solution">
+          <p>Classify small pile sizes by backward induction. Position \(0\) is losing. Positions \(1\) and \(2\) can reach \(0\), so they are winning. Position \(3\) reaches only winning positions, so it is losing. The pattern repeats every three values: losing positions satisfy \(n\equiv0\pmod3\). The first player wins when \(n\equiv1\) or \(2\pmod3\) by leaving a multiple of \(3\) after each move.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>Build the W and L table for the first eight to ten values before proposing a pattern. Applying the two recursive rules from the base case reveals the losing residue reliably.</p>
+          <p>State the ending condition and the status of position \(0\) in words before assigning labels. This base case determines the entire table.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Tareq Ali Althawami <span class="method-byline__role">· Cycle II · presenter</span></span>
+            <small class="method-source">Cycle II · teacher presentation (Jan 16, 2026), Tareq Ali Althawami, "Excerpts from Game Theory", CycleII-Presentations.pdf; theory per coach Ilja Uzelac Bujišić</small>
+          </div>
+        </article>
+        <article class="method-card reveal" id="invariants-monovariants">
+          <div class="method-card__header">
+            <h3 class="method-card__name">Invariants</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Combinatorics</span>
+              <span class="method-pill method-pill--level">Developing</span>
+            </div>
+            <p class="method-card__tagline">Find the quantity that remains constant, and it will constrain every reachable state.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">An invariant is a quantity that remains constant under every allowed move. States with different invariant values belong to separate reachability classes. Common examples include parity, coloring arguments, signed sums such as \(S_R - S_B\), and quantities fixed modulo \(n\). A proof checks the effect of every legal move directly.</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">On a \(15\times15\) board, 15 rooks occupy distinct rows and columns. All rooks simultaneously make an L shaped knight jump. Prove that the final position contains two rooks sharing a row or column.</div>
+              <div class="method-worked__solution">
+          <p>Number the rows and columns \(1,2,\dots,15\). Before the jumps, the rooks occupy every row and every column exactly once, so the sum of all row and column coordinates is \[\sum_{i=1}^{15}(r_i+c_i)=2(1+2+\cdots+15)=240,\] an even number. A knight style jump changes one coordinate by \(\pm1\) and the other by \(\pm2\), so it changes \(r_i+c_i\) by an odd integer. The total change produced by all 15 rooks is therefore a sum of 15 odd integers, hence odd. If the rooks were again in distinct rows and distinct columns after the simultaneous jumps, the final coordinate sum would again be \(240\), so the total change would be \(0\), an even number. This contradiction shows that the final placement cannot have one rook in every row and every column; at least two rooks must share a row or a column.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>Ask what remains constant before simulating the next state. A short move table often reveals a repeated quantity, and parity provides an accessible first example.</p>
+          <p>Choose a global quantity tied to the conditions of the problem. In the rook problem, the parity of the total coordinate sum captures the row and column structure. Check every move type directly.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Mekael Alhammoud <span class="method-byline__role">· Cycle II · presenter</span></span>
+            <small class="method-source">Cycle II · teacher presentation (Jan 16, 2026), Mekael Alhammoud, "The Mystery of the Towers of Hanoi", CycleII-Presentations.pdf; theory per coach Ilja Uzelac Bujišić</small>
+          </div>
+        </article>
+        <article class="method-card reveal" id="monovariants">
+          <div class="method-card__header">
+            <h3 class="method-card__name">Monovariants</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Combinatorics</span>
+              <span class="method-pill method-pill--level">Developing</span>
+            </div>
+            <p class="method-card__tagline">A bounded quantity moving in one direction controls how long a process can continue.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">A monovariant is a quantity that moves in one direction under every legal move. Finite termination follows when it changes strictly on each move and takes values in a discrete set with a lower bound. A nonnegative integer decreasing by at least \(1\) is a standard example. When some moves preserve the quantity, the argument bounds the number of moves that change it. A second mechanism can then control the remaining moves.</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">Two players move coins between piles \(A\) and \(B\). One move transfers 2 coins from \(A\) to \(B\), another transfers 1 coin from \(B\) to \(A\), and a third adds a new coin to \(A\). Show that \(A+B\) is nondecreasing. Then prove that a fixed upper bound \(N\) allows only finitely many coin additions.</div>
+              <div class="method-worked__solution">
+          <p>Let \(T=A+B\). Each transfer preserves \(T\), while each coin addition increases it by \(1\). Thus \(T\) is a nondecreasing monovariant. If \(T\le N\) and the starting total is \(T_0\), at most \(N-T_0\) coin additions can occur.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>For every monotone quantity, ask whether it has a bound. In the coin example, checking each move separately shows that transfers preserve \(A+B\), while additions increase it. This distinction identifies exactly what the monovariant controls.</p>
+          <p>The common stumble is claiming that the whole process terminates when the chosen quantity can remain unchanged. In this example, the argument proves only that coin adding moves occur finitely many times; redistribution moves require separate control. Students should state exactly what the monovariant bounds.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Ilja Uzelac Bujišić <span class="method-byline__role">· Cycle II · coach</span></span>
+            <small class="method-source">Cycle II · Combinatorial games &amp; Invariants lecture (Dec 2025), Ilja Uzelac Bujišić, theory as taught in Cycle II sessions</small>
+          </div>
+        </article>
+        <article class="method-card reveal" id="two-pile-symmetry">
+          <div class="method-card__header">
+            <h3 class="method-card__name">Two Pile Symmetry (Copycat Strategy)</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Combinatorics</span>
+              <span class="method-pill method-pill--level">Foundational</span>
+            </div>
+            <p class="method-card__tagline">When both piles match, mirror the opponent's move and restore symmetry after every round.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">In two pile Nim (or similar symmetric two pile games where a move removes stones from a single pile), a position with two equal piles \((x,x)\) is always a Losing position for the player about to move. The winning strategy for the opponent is the copycat (mirror) strategy: whatever move the first player makes on one pile, the second player immediately repeats the identical move on the other pile, restoring equality \((x',x')\) after every full round. Since the piles are always equal exactly after the second player's move, and a move to \((0,0)\), the terminal, equal position, must eventually be forced, the second player takes the last stone and wins.</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">Two piles each start with \(7\) stones. Players alternate removing any positive number of stones from a single pile; the player who takes the last stone wins. Show the second player can always force a win, and describe the strategy explicitly.</div>
+              <div class="method-worked__solution">
+          <p>The starting position \((7,7)\) has equal piles, so by the two pile symmetry principle it is a Losing position for the player to move, here, the first player. The second player's strategy: whenever the first player reduces one pile from \(x\) to some smaller value \(x'&lt;x\) (leaving piles \((x',x)\) with \(x'\ne x\)), the second player immediately reduces the other pile from \(x\) down to \(x'\) as well, restoring the equal position \((x',x')\). This is always a legal move, since the pile being reduced still has \(x>x'\) stones in it before the copycat move. Following this strategy, the position is exactly equal piles after every one of the second player's turns: \((7,7)\to(x_1',x_1)\to(x_1',x_1')\to(x_2',x_1')\to(x_2',x_2')\to\cdots\), with the common pile size strictly decreasing each round. Since the common size is a nonnegative integer that strictly decreases, it must eventually reach \((0,0)\) right after one of the second player's moves, meaning the second player takes the last stone and wins.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>Introduce two pile symmetry before the general theory of Nim. Students can execute the strategy by watching one move and copying it on the other pile. A few rounds starting from \((5,5)\) make the pattern concrete before the proof.</p>
+          <p>The stumble is students trying to overcomplicate the strategy by planning several moves ahead, when the entire point is that the copycat rule requires zero lookahead, it's purely reactive. I make them prove the key structural fact explicitly: the copycat move is always legal because the pile being mirrored still has more stones than the target value, and the common pile size is a strict monovariant driving the game to \((0,0)\); skipping that verification is how students later misapply 'just copy the opponent' to asymmetric games where the strategy doesn't actually transfer.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Ilja Uzelac Bujišić <span class="method-byline__role">· Cycle II · coach</span></span>
+            <small class="method-source">Cycle II · Combinatorial games lecture (Dec 2025) &amp; teacher presentation (Jan 16, 2026, Tareq Ali Althawami touched on two pile symmetry), Ilja Uzelac Bujišić, theory as taught in Cycle II sessions</small>
+          </div>
+        </article>
+        </div>
+      </div>
+
+      <div class="cycle-group reveal">
+        <div class="cycle-group__head">
+          <p class="cycle-group__eyebrow">Cycle III</p>
+          <h2 class="cycle-group__title">Cauchy Bunyakovsky Schwarz Inequality</h2>
+          <p class="cycle-group__coach">Coach: Zdravko Cvetkovski</p>
+        </div>
+        <div class="method-grid">
+        <article class="method-card reveal" id="cbs-equality-cases">
+          <div class="method-card__header">
+            <h3 class="method-card__name">Cauchy Schwarz &amp; Equality Cases</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Algebra</span>
+              <span class="method-pill method-pill--level">Foundational</span>
+            </div>
+            <p class="method-card__tagline">Two sequences, one universal inequality, and the equality case is the real key to solving with it.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">Cauchy Bunyakovsky Schwarz (CBS) Inequality: for real numbers \(a_1,\dots,a_n\) and \(b_1,\dots,b_n\), \[\left(\sum_{i=1}^n a_i^2\right)\left(\sum_{i=1}^n b_i^2\right) \ge \left(\sum_{i=1}^n a_i b_i\right)^2.\] Equality holds if and only if the two vectors are linearly dependent (including the case in which either vector is zero).</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">For positive reals \(x,y,z\), prove that \((x+y+z)\left(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}\right) \ge 9\), and determine when equality holds.</div>
+              <div class="method-worked__solution">
+          <p>Apply CBS with sequences \(a_i=\sqrt{x_i}\) and \(b_i = 1/\sqrt{x_i}\) for \(x_i \in \{x,y,z\}\): take vectors \((\sqrt{x},\sqrt{y},\sqrt{z})\) and \((1/\sqrt{x}, 1/\sqrt{y}, 1/\sqrt{z})\). Then \[\left(\sqrt{x}\cdot\tfrac{1}{\sqrt{x}} + \sqrt{y}\cdot\tfrac{1}{\sqrt{y}} + \sqrt{z}\cdot\tfrac{1}{\sqrt{z}}\right)^2 \le (x+y+z)\left(\frac1x+\frac1y+\frac1z\right).\] The left side is \((1+1+1)^2 = 9\), so \[9 \le (x+y+z)\left(\frac1x+\frac1y+\frac1z\right).\] Equality in CBS requires \(\left(\sqrt{x},\sqrt{y},\sqrt{z}\right)\) proportional to \(\left(\tfrac{1}{\sqrt{x}},\tfrac{1}{\sqrt{y}},\tfrac{1}{\sqrt{z}}\right)\), i.e. \(x = y = z\) (up to the same positive constant of proportionality), so equality holds exactly when \(x=y=z\).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>Begin with the two dimensional vector picture \(|\vec a \cdot \vec b| \le |\vec a||\vec b|\). Its geometric meaning makes the algebraic inequality intuitive. Students expand the case \(n=2\) before extending the pattern to \(n\) terms.</p>
+          <p>Every solution should name the two sequences before applying CBS. This single step reveals the bound and makes the equality condition easy to reconstruct.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Ramadana Al-Tuwati <span class="method-byline__role">· Cycle III · presenter</span></span>
+            <small class="method-source">Cycle III · teacher presentation (Apr 10, 2026), Ramadana Al-Tuwati (from Libya), "Exercises on the Cauchy Bunyakovsky Schwarz Inequality", CycleIII-Presentations.pdf; theory per coach Zdravko Cvetkovski</small>
+          </div>
+        </article>
+        <article class="method-card reveal" id="titus-lemma">
+          <div class="method-card__header">
+            <h3 class="method-card__name">Titu's Lemma (Engel Form)</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Algebra</span>
+              <span class="method-pill method-pill--level">Developing</span>
+            </div>
+            <p class="method-card__tagline">Turn a sum of fractions into a single fraction and get a lower bound for free.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">Titu's Lemma (Engel form of Cauchy Bunyakovsky Schwarz): for real numbers \(a_1,\dots,a_n\) and positive reals \(b_1,\dots,b_n\), \[\frac{a_1^2}{b_1} + \frac{a_2^2}{b_2} + \cdots + \frac{a_n^2}{b_n} \;\ge\; \frac{(a_1+a_2+\cdots+a_n)^2}{b_1+b_2+\cdots+b_n}.\] Equality holds if and only if \(\frac{a_1}{b_1} = \frac{a_2}{b_2} = \cdots = \frac{a_n}{b_n}\).</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">For real numbers \(x,y\) and positive reals \(a,b\), prove that \[\frac{x^2}{a}+\frac{y^2}{b}\ge\frac{(x+y)^2}{a+b},\] and determine the equality condition.</div>
+              <div class="method-worked__solution">
+          <p>This is the two term case of Titu's lemma. Taking numerators \(x,y\) and positive denominators \(a,b\) gives immediately \[\frac{x^2}{a}+\frac{y^2}{b}\ge\frac{(x+y)^2}{a+b}.\] Equality in Titu's lemma holds exactly when \(x/a=y/b\), equivalently \(bx=ay\). This example isolates the lemma before combining it with other inequalities.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>Derive Titu's Lemma from CBS using the vectors \((a_1/\sqrt{b_1}, \dots)\) and \((\sqrt{b_1}, \dots)\). The derivation helps students recognize a sum of squares over linear terms. Introduce the proportionality condition for equality at the same time.</p>
+          <p>The recurring stumble is failing to identify the numerator and denominator sequences explicitly. Writing those sequences first makes the direction of the inequality and the equality condition transparent before the lemma is used inside a longer proof.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Mohammed A. Dawood <span class="method-byline__role">· Cycle III · presenter</span></span>
+            <small class="method-source">Cycle III · teacher presentation (Apr 10, 2026), Mohammed A. Dawood, "Applications of Cauchy Bunyakovsky Schwarz Inequality and its Variations in Solving Olympiad Problems", CycleIII-Presentations.pdf; theory per coach Zdravko Cvetkovski</small>
+          </div>
+        </article>
+        <article class="method-card reveal" id="cbs-with-amgm">
+          <div class="method-card__header">
+            <h3 class="method-card__name">arithmetic and geometric mean with Algebraic Reorganization</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Algebra</span>
+              <span class="method-pill method-pill--level">Developing</span>
+            </div>
+            <p class="method-card__tagline">Use AM GM to control a product, then reorganize the target expression so that bound becomes decisive.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">For positive reals \(u,v\), AM GM gives \[\frac{u+v}{2}\ge\sqrt{uv},\] with equality exactly when \(u=v\). Under a fixed sum condition, this controls the product: if \(a+b=s\), then \(ab\le s^2/4\), with equality exactly when \(a=b=s/2\). Rewriting the target can make this bounded product explicit.</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">For positive reals \(a,b\) with \(a+b=2\), prove that \(\dfrac{1}{a^2+1} + \dfrac{1}{b^2+1} \ge 1\).</div>
+              <div class="method-worked__solution">
+          <p>By AM GM, \(ab \le \left(\dfrac{a+b}{2}\right)^2 = 1\), so \(a^2+b^2 = (a+b)^2 - 2ab = 4-2ab \ge 4-2=2\). Now combine the two fractions over a common denominator: \[\frac{1}{a^2+1}+\frac{1}{b^2+1} = \frac{(a^2+1)+(b^2+1)}{(a^2+1)(b^2+1)} = \frac{a^2+b^2+2}{(a^2+1)(b^2+1)}.\] Expand the denominator: \((a^2+1)(b^2+1) = a^2b^2+a^2+b^2+1\). By AM GM on \(a^2,b^2\) (or directly since \(ab\le1\)), \(a^2b^2 = (ab)^2 \le 1\), so the denominator satisfies \((a^2+1)(b^2+1) \le 1 + (a^2+b^2) + 1 = a^2+b^2+2\). Therefore, since both the numerator \(a^2+b^2+2\) and denominator \((a^2+1)(b^2+1)\) are positive and the denominator is at most the numerator, \[\frac{1}{a^2+1}+\frac{1}{b^2+1} = \frac{a^2+b^2+2}{(a^2+1)(b^2+1)} \ge \frac{a^2+b^2+2}{a^2+b^2+2} = 1.\] Hence \(\dfrac{1}{a^2+1}+\dfrac{1}{b^2+1}\ge1\), with equality when \(ab=1\) and \(a=b\) simultaneously, i.e. \(a=b=1\), which is consistent with \(a+b=2\).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>This example separates the inequality step from the algebraic step. AM GM supplies \(ab\le1\); combining the fractions reveals exactly where that product bound is needed.</p>
+          <p>The common stumble is chasing the first inequality that comes to mind in the wrong direction, for instance trying to bound \(1/(a^2+1)\) from below by bounding \(a^2+1\) from below, when the AM GM step \(ab\le1\) is what actually controls the denominator's product. I now require students to write down, before combining anything, exactly which direction each intermediate inequality needs to point to reach the final goal, that single habit eliminates almost every sign error in these composite proofs.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Mekael Hammoud <span class="method-byline__role">· Cycle III · presenter</span></span>
+            <small class="method-source">Cycle III · teacher presentation (Apr 10, 2026), Mekael Hammoud, "Exercise Solutions Using CBS Inequality", CycleIII-Presentations.pdf; theory per coach Zdravko Cvetkovski</small>
+          </div>
+        </article>
+        <article class="method-card reveal" id="nesbitt-via-titu">
+          <div class="method-card__header">
+            <h3 class="method-card__name">Nesbitt's Inequality via Titu</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Algebra</span>
+              <span class="method-pill method-pill--level">Foundational</span>
+            </div>
+            <p class="method-card__tagline">A classic inequality that becomes concise after rewriting it for Titu's Lemma.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">Nesbitt's Inequality: for positive reals \(a,b,c\), \[\frac{a}{b+c}+\frac{b}{c+a}+\frac{c}{a+b} \ge \frac{3}{2},\] with equality if and only if \(a=b=c\). Rewriting each term as \(\dfrac{a^2}{a(b+c)}\) (and similarly for the others) puts the sum into Titu's Lemma form with numerators \(a,b,c\) and denominators \(a(b+c), b(c+a), c(a+b)\), reducing the inequality to \[\frac{a}{b+c}+\frac{b}{c+a}+\frac{c}{a+b} \ge \frac{(a+b+c)^2}{2(ab+bc+ca)},\] together with the elementary fact \((a+b+c)^2 \ge 3(ab+bc+ca)\).</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">Prove Nesbitt's inequality directly, showing every algebraic step explicitly, and confirm the equality case.</div>
+              <div class="method-worked__solution">
+          <p>Step 1 (Titu setup): write \(\dfrac{a}{b+c}=\dfrac{a^2}{a(b+c)}\), \(\dfrac{b}{c+a}=\dfrac{b^2}{b(c+a)}\), \(\dfrac{c}{a+b}=\dfrac{c^2}{c(a+b)}\). Step 2 (apply Titu's Lemma): \[\frac{a^2}{a(b+c)}+\frac{b^2}{b(c+a)}+\frac{c^2}{c(a+b)} \ge \frac{(a+b+c)^2}{a(b+c)+b(c+a)+c(a+b)}.\] Step 3 (simplify the denominator): expand \(a(b+c)+b(c+a)+c(a+b) = ab+ac+bc+ab+ac+bc = 2(ab+bc+ca)\). So the bound becomes \(\dfrac{(a+b+c)^2}{2(ab+bc+ca)}\). Step 4 (finish with a quadratic fact): expand \((a+b+c)^2 = a^2+b^2+c^2+2(ab+bc+ca)\), so \((a+b+c)^2 \ge 3(ab+bc+ca)\) is equivalent to \(a^2+b^2+c^2 \ge ab+bc+ca\), which follows from \(\tfrac12[(a-b)^2+(b-c)^2+(c-a)^2]\ge0\). Substituting, \[\frac{(a+b+c)^2}{2(ab+bc+ca)} \ge \frac{3(ab+bc+ca)}{2(ab+bc+ca)} = \frac{3}{2}.\] Chaining Steps 2 to 4 gives \(\frac{a}{b+c}+\frac{b}{c+a}+\frac{c}{a+b}\ge\frac32\) as required. Equality requires both \(a/(a(b+c)) = b/(b(c+a)) = c/(c(a+b))\) (Titu's equality condition, i.e. \(1/(b+c)=1/(c+a)=1/(a+b)\), forcing \(a=b=c\)) and \(a=b=c\) from Step 4, both conditions coincide exactly at \(a=b=c\), confirming equality holds there and only there (checked directly: at \(a=b=c\), each fraction equals \(1/2\), summing to \(3/2\)).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>Nesbitt's inequality is a useful final exercise for Titu's Lemma because the expression must first be rewritten into the required form. Writing every intermediate inequality develops the chain of reasoning used throughout the CBS unit.</p>
+          <p>Verify the equality conditions from Titu's Lemma and the quadratic step side by side. Both lead to \(a=b=c\), completing the proof of the equality case.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Zdravko Cvetkovski <span class="method-byline__role">· Cycle III · coach</span></span>
+            <small class="method-source">Cycle III · Coach lecture, "Applications of CBS Inequality, Part 1" (Apr 10, 2026), Zdravko Cvetkovski, problem bank explicitly includes Nesbitt's inequality via CBS/Titu</small>
+          </div>
+        </article>
+        <article class="method-card reveal" id="homogenization-weights">
+          <div class="method-card__header">
+            <h3 class="method-card__name">Homogenization &amp; Choosing Weights</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Algebra</span>
+              <span class="method-pill method-pill--level">Developing</span>
+            </div>
+            <p class="method-card__tagline">Match the degree on both sides of an inequality and CBS almost always tells you exactly which weights to pick.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">An inequality is homogeneous of degree \(k\) if scaling every variable by \(t>0\) scales both sides by \(t^k\); many olympiad inequalities are already homogeneous, or can be made homogeneous by using a given constraint to rewrite one side. When applying Cauchy Schwarz or Titu's Lemma, choosing the numerator and denominator sequences (the "weights") so that both sides of the resulting bound have matching degree is what makes the bound tight enough to close the problem; mismatched degrees typically signal that the wrong pairing of numerators/denominators was chosen, or that a constraint still needs to be substituted in to restore homogeneity.</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">For positive reals \(a,b,c\), prove that \[\frac{a^2}{b}+\frac{b^2}{c}+\frac{c^2}{a} \ge a+b+c.\]</div>
+              <div class="method-worked__solution">
+          <p>Both sides are homogeneous of degree \(1\), so the correct weights are sufficient. Apply Titu's Lemma with numerators \(a,b,c\) and denominators \(b,c,a\): \[\frac{a^2}{b}+\frac{b^2}{c}+\frac{c^2}{a} \ge \frac{(a+b+c)^2}{b+c+a}=a+b+c.\] Equality requires \(a/b=b/c=c/a\), which gives \(a=b=c\).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>Check the degree of every term before applying an inequality. A constraint such as \(a+b+c=3\) or \(abc=1\) can restore matching degrees. The example \(a^2/b+b^2/c+c^2/a\ge a+b+c\) is already homogeneous, so the focus stays on choosing effective weights.</p>
+          <p>Begin every homogenization solution by recording the degree of each side. This check guides the weight pairing in Titu's Lemma and keeps the resulting bound useful.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Zdravko Cvetkovski <span class="method-byline__role">· Cycle III · coach</span></span>
+            <small class="method-source">Cycle III · Coach lecture, "Applications of CBS Inequality, Part 1" (Apr 10, 2026), Zdravko Cvetkovski, homogeneous bounds documented as part of the CBS problem bank and lecture purpose</small>
+          </div>
+        </article>
+        </div>
+      </div>
+
+      <div class="cycle-group reveal">
+        <div class="cycle-group__head">
+          <p class="cycle-group__eyebrow">Cycle IV</p>
+          <h2 class="cycle-group__title">Number Theory</h2>
+          <p class="cycle-group__coach">Coach: Prof. Dušan Đukić</p>
+        </div>
+        <div class="method-grid">
+        <article class="method-card reveal" id="fermat-little-theorem-order">
+          <div class="method-card__header">
+            <h3 class="method-card__name">Fermat's Little Theorem &amp; Coprime Factorization</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Number Theory</span>
+              <span class="method-pill method-pill--level">Foundational</span>
+            </div>
+            <p class="method-card__tagline">Powers of an integer mod a prime cycle back to 1 in lockstep with the prime's structure, and the cycle length is the order.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">Fermat's Little Theorem: if \(p\) is prime and \(\gcd(a,p)=1\), then \(a^{p-1} \equiv 1 \pmod p\). Equivalently, the sequence \(1, a, a^2, a^3, \dots \pmod p\) is periodic with period dividing \(p-1\). Euler's Theorem generalizes this: for \(\gcd(a,n)=1\), \(a^{\varphi(n)} \equiv 1 \pmod n\), where \(\varphi\) is Euler's totient function. The order of \(a\) modulo \(n\), written \(\operatorname{ord}_n(a)\), is the smallest positive integer \(d\) with \(a^d \equiv 1 \pmod n\); it always divides \(\varphi(n)\) (and in particular divides \(p-1\) when \(n=p\) is prime), and more generally \(a^k \equiv 1 \pmod n \iff \operatorname{ord}_n(a) \mid k\).</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">Find all primes \(p\) such that \(\dfrac{2^{p-1}-1}{p}\) is a perfect square.</div>
+              <div class="method-worked__solution">
+          <p>For \(p=2\) the expression is not an integer. Let \(p\) be odd and put \(m=(p-1)/2\). If \((2^{p-1}-1)/p=q^2\), then \[(2^m-1)(2^m+1)=pq^2.\] The two odd factors are coprime, so one is a square and the other is \(p\) times a square. If \(2^m-1=x^2\), then for \(m\ge3\) reduction modulo \(8\) gives \(x^2\equiv7\pmod8\), impossible; checking \(m=1,2\) leaves \(p=3\). If \(2^m+1=y^2\), then \((y-1)(y+1)=2^m\). The two factors are powers of two differing by \(2\), hence they are \(2\) and \(4\); thus \(y=3\), \(m=3\), and \(p=7\). Direct substitution confirms that \(p=3\) and \(p=7\) both work.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>Start Fermat's Little Theorem with the orbit created by multiplication by \(a\) among the nonzero residues modulo \(p\). The order is the length of the return cycle, which explains why it divides \(p-1\).</p>
+          <p>Small cases suggest \(p=3\) and \(p=7\). The proof then uses the order of \(2\) modulo \(p\) and the square condition to restrict the possible primes.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Prof. Dušan Đukić <span class="method-byline__role">· Cycle IV · coach</span></span>
+            <small class="method-source">Cycle IV · Session (Apr to May 2026), Prof. Dušan Đukić, CycleIV session PDFs</small>
+          </div>
+        </article>
+        <article class="method-card reveal" id="eulers-theorem">
+          <div class="method-card__header">
+            <h3 class="method-card__name">Euler's Theorem</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Number Theory</span>
+              <span class="method-pill method-pill--level">Developing</span>
+            </div>
+            <p class="method-card__tagline">Fermat's Little Theorem's generalization to any modulus, count the units, and every unit's power cycle divides that count.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">Euler's Theorem: if \(\gcd(a,n)=1\), then \[a^{\varphi(n)} \equiv 1 \pmod n,\] where \(\varphi(n)\) (Euler's totient function) counts the integers in \(\{1,\dots,n\}\) coprime to \(n\). When \(n=p\) is prime, \(\varphi(p)=p-1\) and Euler's theorem reduces exactly to Fermat's Little Theorem. A standard consequence used for computing large powers: if \(\gcd(a,n)=1\) and \(k \equiv r \pmod{\varphi(n)}\), then \(a^k \equiv a^r \pmod n\), since \(a^{\varphi(n)}\equiv1\) lets any exponent be reduced modulo \(\varphi(n)\).</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">Find the last digit of \(7^{222}\).</div>
+              <div class="method-worked__solution">
+          <p>The last digit of \(7^{222}\) is \(7^{222} \bmod 10\). Since \(\gcd(7,10)=1\), Euler's theorem applies with \(n=10\): \(\varphi(10) = 10\left(1-\tfrac12\right)\left(1-\tfrac15\right) = 10\cdot\tfrac12\cdot\tfrac45 = 4\), so \(7^4 \equiv 1 \pmod{10}\). Reduce the exponent modulo \(\varphi(10)=4\): \(222 = 4\cdot55+2\), so \(222 \equiv 2 \pmod 4\), giving \[7^{222} \equiv 7^2 = 49 \equiv 9 \pmod{10}.\] Thus \(7^{222}\) ends in \(9\). The cycle \(7,9,3,1\) confirms the period of four.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>Present Euler's theorem as the extension of Fermat's theorem to a general modulus. The identity \(\varphi(p)=p-1\) connects the two results when the modulus is prime. Compute \(\varphi(n)\) explicitly before applying the theorem.</p>
+          <p>Write \(\gcd(a,n)=1\) as the first check. This hypothesis determines whether exponent reduction modulo \(\varphi(n)\) applies.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Prof. Dušan Đukić <span class="method-byline__role">· Cycle IV · coach</span></span>
+            <small class="method-source">Cycle IV · Session (Apr to May 2026), Prof. Dušan Đukić, CycleIV session PDFs (Euler's theorem and φ(n) formula documented alongside Fermat's Little Theorem)</small>
+          </div>
+        </article>
+        <article class="method-card reveal" id="lifting-the-exponent">
+          <div class="method-card__header">
+            <h3 class="method-card__name">Lifting the Exponent (LTE)</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Number Theory</span>
+              <span class="method-pill method-pill--level">Advanced</span>
+            </div>
+            <p class="method-card__tagline">One formula extracts the exact prime power inside \(a^n-b^n\) directly.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">Lifting the Exponent Lemma: let \(p\) be an odd prime, and let \(a,b\) be integers with \(p \mid a-b\) and \(p \nmid a, p\nmid b\). Then for any positive integer \(n\), \[\nu_p(a^n - b^n) = \nu_p(a-b) + \nu_p(n).\]</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">Find \(\nu_5(6^{100} - 1)\).</div>
+              <div class="method-worked__solution">
+          <p>Here \(a=6, b=1, p=5, n=100\). Check the hypotheses: \(p \mid a-b\) since \(5 \mid 6-1=5\), yes; and \(5 \nmid 6\), \(5\nmid1\), so both hold. By LTE, \[\nu_5(6^{100}-1^{100}) = \nu_5(6-1) + \nu_5(100) = \nu_5(5) + \nu_5(100).\] Now \(\nu_5(5)=1\), and \(100 = 4\cdot25 = 2^2\cdot5^2\), so \(\nu_5(100)=2\). Hence \[\nu_5(6^{100}-1) = 1+2 = 3,\] meaning \(5^3=125\) divides \(6^{100}-1\) but \(5^4=625\) does not.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>Check the three LTE hypotheses before using the formula: \(p\) is an odd prime, \(p\mid a-b\), and \(p\nmid a,b\). Writing these checks makes the legal application visible.</p>
+          <p>When the original bases miss the divisibility condition, rewrite the expression. For example, \(2^{100}=4^{50}\) changes the pair to \((4,1)\), whose difference is divisible by \(3\).</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Prof. Dušan Đukić <span class="method-byline__role">· Cycle IV · coach</span></span>
+            <small class="method-source">Cycle IV · Session 2 (Apr to May 2026), Prof. Dušan Đukić, CycleIV session PDFs (LTE lemma boxed in Session 2)</small>
+          </div>
+        </article>
+        <article class="method-card reveal" id="divisibility-2a-pm-1">
+          <div class="method-card__header">
+            <h3 class="method-card__name">Divisibility of 2^a ± 1</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Number Theory</span>
+              <span class="method-pill method-pill--level">Developing</span>
+            </div>
+            <p class="method-card__tagline">Two clean divisibility rules for powers of two, minus or plus one, that turn exponent divisibility into number divisibility.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">For positive integers \(a,b\): \[2^a - 1 \mid 2^b - 1 \iff a \mid b,\] and \[2^a + 1 \mid 2^b + 1 \iff \frac{b}{a} \text{ is an odd integer}.\]</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">Prove that if \(n \mid 2^n - 1\) and \(n>1\), a contradiction arises, so \(n=1\) is the only positive integer with \(n \mid 2^n-1\).</div>
+              <div class="method-worked__solution">
+          <p>Suppose \(n>1\) and \(n \mid 2^n-1\). Let \(p\) be the smallest prime divisor of \(n\). Since \(n \mid 2^n-1\), also \(p \mid 2^n - 1\), so \(2^n \equiv 1 \pmod p\). Note \(p\) is odd, since \(2^n-1\) is odd so \(p\ne2\). Let \(d = \operatorname{ord}_p(2)\); then \(d \mid n\) (since \(2^n\equiv1\pmod p\)). Also by Fermat's Little Theorem, \(2^{p-1}\equiv1\pmod p\), so \(d \mid p-1\). Since \(d \mid p-1\), we have \(d &lt; p\) (as \(d\le p-1\)); but \(d\mid n\) and \(p\) is the smallest prime factor of \(n\), so \(d\) cannot have any prime factor smaller than \(p\) while still dividing \(n\), since every divisor of \(n\) greater than 1 has a prime factor at least \(p\), and \(d&lt;p\), the only divisor of \(n\) that is less than \(p\) is \(1\). Hence \(d=1\), meaning \(2^1 \equiv 1 \pmod p\), i.e. \(p \mid 1\), which is impossible for a prime \(p\). This contradiction shows no \(n>1\) satisfies \(n\mid2^n-1\), so \(n=1\) is the only solution (and indeed \(1 \mid 2^1-1=1\) trivially holds).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>Compare the divisibility rules for \(2^a-1\) and \(2^a+1\). The first uses \(a\mid b\), while the second also requires odd \(b/a\). Small numerical checks make the asymmetry clear before the general proof.</p>
+          <p>For \(n\mid2^n-1\), choose the smallest prime factor \(p\) of \(n\). The order \(\operatorname{ord}_p(2)\) divides both \(n\) and \(p-1\), which forces it to equal \(1\). Explain this choice before beginning the calculation.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Prof. Dušan Đukić <span class="method-byline__role">· Cycle IV · coach</span></span>
+            <small class="method-source">Cycle IV · Session (Apr to May 2026), Prof. Dušan Đukić, CycleIV session PDFs</small>
+          </div>
+        </article>
+        <article class="method-card reveal" id="order-smallest-prime-divisor">
+          <div class="method-card__header">
+            <h3 class="method-card__name">Order &amp; the Smallest Prime Divisor Method (n|2^n−1 ⇒ n=1)</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Number Theory</span>
+              <span class="method-pill method-pill--level">Advanced</span>
+            </div>
+            <p class="method-card__tagline">Pick the smallest prime factor of n, squeeze its order between n and p−1, and the only room left is order 1.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">Smallest Prime Divisor Method: to show a divisibility relation like \(n \mid a^n - 1\) (or a close variant) forces \(n\) into a very restricted set, let \(p\) be the smallest prime factor of \(n\) and set \(d = \operatorname{ord}_p(a)\). Two divisibility facts trap \(d\): (1) \(d \mid n\), because \(p \mid a^n-1\) forces \(a^n\equiv1\pmod p\); and (2) \(d \mid p-1\), by Fermat's Little Theorem. Since \(p\) is the *smallest* prime factor of \(n\), every divisor of \(n\) greater than \(1\) has a prime factor \(\ge p\); but \(d\mid p-1&lt;p\) means \(d\) cannot have any prime factor at all that is \(\ge p\), so \(d=1\) is the only divisor of \(n\) available below \(p\). This typically collapses the problem to a single, easily checked residue condition.</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">Prove that if \(n \mid 2^n + 1\) for a positive integer \(n>1\), then \(3 \mid n\).</div>
+              <div class="method-worked__solution">
+          <p>Suppose \(n>1\) and \(n\mid2^n+1\). Let \(p\) be the smallest prime factor of \(n\); since \(2^n+1\) is odd, \(p\ne2\), so \(p\) is odd. From \(n\mid2^n+1\), also \(p\mid2^n+1\), so \(2^n\equiv-1\pmod p\), hence \(2^{2n}\equiv1\pmod p\). Let \(d=\operatorname{ord}_p(2)\). Then \(d\mid2n\) (from \(2^{2n}\equiv1\)), and \(d\mid p-1\) (Fermat). Also, since \(2^n\equiv-1\not\equiv1\pmod p\) (as \(p\) is odd, \(-1\ne1\) mod \(p\)), \(d\nmid n\); combined with \(d\mid 2n\), this forces \(d\) to contain a factor of \(2\) that \(n\) alone doesn't supply, i.e. \(d\mid2n\) but \(d\nmid n\) means \(\nu_2(d) = \nu_2(2n)\) exceeds \(\nu_2(n)\) by exactly one, so \(d = 2e\) for some \(e\mid n\) with \(d/\gcd(d,n) = 2\). Since \(p\) is the smallest prime factor of \(n\), any divisor \(e\mid n\) with \(e>1\) has \(e\ge p\); the smallest prime divisor squeeze on \(d\mid p-1&lt;p\) forces \(e=1\), so \(d=2\). Then \(\operatorname{ord}_p(2)=2\) means \(2^2\equiv1\pmod p\), i.e. \(p\mid3\), so \(p=3\) (since \(p\) is an odd prime). As \(p\) is the smallest prime factor of \(n\) and \(p=3\), we conclude \(3\mid n\).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>The congruence \(2^n\equiv-1\pmod p\) leads first to \(2^{2n}\equiv1\pmod p\). Prove as a short lemma that the order divides \(2n\) and excludes \(n\). This is the key distinction from the companion problem with residue \(1\).</p>
+          <p>Compare the two smallest prime divisor proofs side by side. A target residue of \(1\) forces \(d=1\), while a target residue of \(-1\) forces \(d=2\). The comparison reveals the shared method and the different order calculation.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Prof. Dušan Đukić <span class="method-byline__role">· Cycle IV · coach</span></span>
+            <small class="method-source">Cycle IV · Session (Apr to May 2026), Prof. Dušan Đukić, CycleIV session PDFs (n|2^n−1 ⇒ n=1 and n|2^n+1 ⇒ 3|n or n=1 both documented as worked problems)</small>
+          </div>
+        </article>
+        <article class="method-card reveal" id="primitive-roots">
+          <div class="method-card__header">
+            <h3 class="method-card__name">Primitive Roots</h3>
+            <div class="method-card__meta">
+              <span class="method-pill">Number Theory</span>
+              <span class="method-pill method-pill--level">Advanced</span>
+            </div>
+            <p class="method-card__tagline">One special residue whose powers visit every nonzero residue mod p exactly once before cycling back to 1.</p>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Statement</span>
+            <div class="method-card__statement">A primitive root modulo a prime \(p\) is an integer \(g\) whose order modulo \(p\) equals \(p-1\), equivalently, the powers \(g^1, g^2, \dots, g^{p-1}\) run through every nonzero residue class mod \(p\) exactly once, so \(g\) generates the entire multiplicative group of nonzero residues mod \(p\). Primitive roots exist for every prime \(p\) (and more generally modulo \(n\) exactly when \(n \in \{1,2,4,p^k,2p^k\}\) for an odd prime \(p\)). If \(g\) is a primitive root mod \(p\), then \(g^k\) is also a primitive root mod \(p\) if and only if \(\gcd(k,p-1)=1\), so there are exactly \(\varphi(p-1)\) primitive roots mod \(p\).</div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Worked example</span>
+            <div class="method-worked">
+              <div class="method-worked__prompt">Show that \(3\) is a primitive root modulo \(7\), and use it to find how many primitive roots exist mod \(7\) in total.</div>
+              <div class="method-worked__solution">
+          <p>Compute successive powers of \(3\) mod \(7\): \(3^1=3,\ 3^2=9\equiv2,\ 3^3=3\cdot2=6,\ 3^4=3\cdot6=18\equiv4,\ 3^5=3\cdot4=12\equiv5,\ 3^6=3\cdot5=15\equiv1\pmod7\). The powers \(3,2,6,4,5,1\) are exactly the six nonzero residues \(\{1,2,3,4,5,6\}\) mod \(7\), each appearing exactly once, and the order of \(3\) is \(6=p-1\). So \(3\) is indeed a primitive root mod \(7\). By the counting fact, the primitive roots mod \(7\) are exactly \(3^k\) for \(\gcd(k,6)=1\), i.e. \(k\in\{1,5\}\) among \(\{1,\dots,6\}\): these give \(3^1=3\) and \(3^5=5\). So there are \(\varphi(6)=\varphi(2\cdot3)=6\cdot\tfrac12\cdot\tfrac23=2\) primitive roots mod \(7\), namely \(3\) and \(5\), and indeed neither \(2\) (order \(3\), since \(2^3=8\equiv1\)) nor \(4,6\) has order \(6\), confirming exactly two primitive roots exist mod \(7\).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-card__section">
+            <span class="method-card__label">Teaching note</span>
+            <div class="method-note">
+          <p>Introduce primitive roots after order and Euler's theorem. Students first compute a complete power table for \(p=7\) and list each element's order. A primitive root then appears naturally as an element with the maximum order \(p-1\).</p>
+          <p>Use the count \(\varphi(p-1)\) after finding one primitive root. For \(p=7\), generate the remaining roots as \(g^k\) with \(\gcd(k,p-1)=1\). This is faster than checking every residue separately.</p>
+              <span class="method-note__attr">MOTA, Academic Direction</span>
+            </div>
+          </div>
+
+          <div class="method-card__footer">
+            <span class="method-byline">Prof. Dušan Đukić <span class="method-byline__role">· Cycle IV · coach</span></span>
+            <small class="method-source">Cycle IV · Sessions &amp; registration problem topics (Apr to Jun 2026), Prof. Dušan Đukić, CycleIV session PDFs (primitive roots documented alongside LTE, ν_p); registration submissions on primitive roots from Adnan Hasan and Ramadana Altwati</small>
+          </div>
+        </article>
+        </div>
+      </div>
+        </div>
+      </section>
+
+      <section class="page-hero" style="border-top:1px solid var(--color-divider);">
+        <div class="container page-hero__inner">
+          <p class="page-hero__eyebrow">Next</p>
+          <h2 style="font-size:clamp(2rem,1.5rem + 2vw,3rem);">From learning a method to <em>teaching</em> it.</h2>
+          <p class="page-hero__lede">
+            The Academy's participant teacher presentations ask teachers to present a method,
+            work an example, justify the proof, and explain how they would teach it.
+          </p>
+          <p style="margin-top:1.5rem;"><a class="btn btn--accent btn--lg" href="programs.html#teach-backs">See the participant teacher presentations</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="logo">
+              <svg class="logo__mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.5" /><path d="M24 7.5 L41.32 36 L6.68 36 Z" stroke-width="1.4" /><circle cx="24" cy="27" r="6.5" stroke-width="1.2" /><circle cx="24" cy="27" r="1.2" fill="currentColor" stroke="none" /></svg>
+              <span class="logo__text"><span class="logo__title">Math Olympiad Trainer Academy</span><span class="logo__subtitle">SITE · MIMS</span></span>
+            </a>
+            <p>Training the trainers of secondary school mathematics across the MENA region. Developed with funding from SITE, which was part of the NYU Abu Dhabi Research Institute, in academic partnership with MIMS.</p>
+          </div>
+          <div class="footer__col"><h4>Academy</h4><ul role="list"><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="impact.html">Impact &amp; Evidence</a></li><li><a href="curriculum.html">Curriculum</a></li><li><a href="team.html">Team</a></li><li><a href="atlas/index.html">Historical Profiles</a></li><li><a href="editorial.html">Editorial policy</a></li></ul></div>
+          <div class="footer__col"><h4>Participants</h4><ul role="list"><li><a href="resources.html">Resources</a></li><li><a href="https://classroom.google.com/c/NzExNTk4MzQxNDI2" target="_blank" rel="noopener">Google Classroom</a></li><li><a href="contact.html#express-interest">Apply</a></li><li><a href="contact.html#faq">FAQ</a></li>
+              <li><a href="archive.html">Teaching Materials</a></li>
+              <li><a href="glossary.html">Glossary</a></li></ul></div>
+          <div class="footer__col"><h4>Contact</h4><ul role="list"><li><a href="contact.html">General enquiries</a></li><li><a href="mailto:dz41@nyu.edu">dz41@nyu.edu</a></li><li><a href="https://nyuad.nyu.edu" target="_blank" rel="noopener">NYU Abu Dhabi</a></li></ul></div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2024 to <span data-year>2026</span> Math Olympiad Trainer Academy. All rights reserved.</span>
+          <span>Built on a foundation of theorem, example, and method.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js" defer></script></body>
+</html>

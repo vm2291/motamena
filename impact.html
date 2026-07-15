@@ -1,0 +1,1745 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Impact &amp; Evidence, Math Olympiad Trainer Academy</title>
+    <meta name="description" content="Explore verified delivery and engagement records, the MOTA evidence framework, anonymized participant evidence trails, and teacher reflections from AY 2025 to 2026." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/impact.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <a href="index.html" class="logo" aria-label="Math Olympiad Trainer Academy, home">
+          <svg class="logo__mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.5" /><path d="M24 7.5 L41.32 36 L6.68 36 Z" stroke-width="1.4" /><circle cx="24" cy="27" r="6.5" stroke-width="1.2" /><circle cx="24" cy="27" r="1.2" fill="currentColor" stroke="none" /></svg>
+          <span class="logo__text"><span class="logo__title">Math Olympiad Trainer Academy</span><span class="logo__subtitle">SITE · MIMS</span></span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <div class="nav__panel">
+            <ul class="nav__list" role="list">
+              <li><a class="nav__link" href="index.html">Home</a></li>
+              <li><a class="nav__link" href="about.html">About</a></li>
+              <li><a class="nav__link" href="programs.html">Programs</a></li>
+              <li><a class="nav__link" href="impact.html" aria-current="page">Impact</a></li>
+              <li class="nav__item--dropdown">
+                <button type="button" class="nav__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                  Knowledge Hub <svg class="nav__dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <ul class="nav__dropdown-menu" role="list">
+                  <li><a class="nav__dropdown-link" href="curriculum.html">Curriculum</a></li>
+                  <li><a class="nav__dropdown-link" href="resources.html">Participant Resources</a></li>
+                  <li><a class="nav__dropdown-link" href="atlas-methods.html">Methods</a></li>
+                  <li><a class="nav__dropdown-link" href="continuum.html">Mathematical Heritage</a></li>
+                  <li><a class="nav__dropdown-link" href="atlas/index.html">Historical Profiles</a></li>
+                  <li><a class="nav__dropdown-link" href="archive.html">Teaching Materials</a></li>
+                  <li><a class="nav__dropdown-link" href="glossary.html">Mathematics Glossary</a></li>
+                </ul>
+              </li>
+              <li><a class="nav__link" href="team.html">Team</a></li>
+              <li><a class="nav__link" href="contact.html">Contact</a></li>
+            </ul>
+            <a class="btn btn--accent nav__cta" href="https://classroom.google.com/c/NzExNTk4MzQxNDI2" target="_blank" rel="noopener">Classroom</a>
+          </div>
+          <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
+          <button class="menu-toggle" data-menu-toggle aria-label="Toggle menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="impact-page">
+<div id="mota-impact-explorer">
+  <style>
+    #mota-impact-explorer {
+      color: var(--foreground);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #mota-impact-explorer .mota-toolbar {
+      display: grid;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    #mota-impact-explorer .mota-status {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem 1rem;
+      color: var(--muted-foreground);
+    }
+
+    #mota-impact-explorer .mota-status strong {
+      color: var(--foreground);
+      font-weight: 500;
+    }
+
+    #mota-impact-explorer .mota-view-switch {
+      display: inline-flex;
+      gap: 0.35rem;
+    }
+
+    #mota-impact-explorer .mota-filter-fields {
+      display: grid;
+      grid-template-columns: minmax(14rem, 2fr) repeat(4, minmax(9rem, 1fr));
+      gap: 0.65rem;
+      align-items: end;
+      width: 100%;
+    }
+
+    #mota-impact-explorer .mota-filter-fields .form-label {
+      margin: 0;
+    }
+
+    #mota-impact-explorer .mota-filter-fields .form-control,
+    #mota-impact-explorer .mota-filter-fields .form-select {
+      width: 100%;
+    }
+
+    #mota-impact-explorer .mota-map-wrap {
+      display: grid;
+      place-items: center;
+      margin: 0.5rem 0 0.75rem;
+    }
+
+    #mota-impact-explorer .mota-map {
+      display: block;
+      width: min(100%, 52rem);
+      height: auto;
+      overflow: visible;
+    }
+
+    #mota-impact-explorer .mota-ring {
+      fill: none;
+      stroke: var(--border);
+      stroke-width: 2;
+    }
+
+    #mota-impact-explorer .mota-ray {
+      stroke: var(--border);
+      stroke-width: 1;
+    }
+
+    #mota-impact-explorer .mota-map-label,
+    #mota-impact-explorer .mota-map-note {
+      fill: var(--muted-foreground);
+    }
+
+    #mota-impact-explorer .mota-centre {
+      fill: var(--primary);
+      stroke: var(--background);
+      stroke-width: 5;
+    }
+
+    #mota-impact-explorer .mota-centre-title,
+    #mota-impact-explorer .mota-centre-note {
+      fill: var(--primary-foreground);
+      text-anchor: middle;
+    }
+
+    #mota-impact-explorer .case-node {
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    #mota-impact-explorer .case-node circle {
+      stroke: var(--background);
+      stroke-width: 5;
+      transition: transform 160ms ease, stroke-width 160ms ease;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    #mota-impact-explorer .case-node:hover circle,
+    #mota-impact-explorer .case-node:focus circle,
+    #mota-impact-explorer .case-node.is-selected circle {
+      stroke: var(--foreground);
+      stroke-width: 7;
+      transform: scale(1.08);
+    }
+
+    #mota-impact-explorer .case-node text {
+      fill: var(--primary-foreground);
+      font-weight: 500;
+      text-anchor: middle;
+      dominant-baseline: central;
+      pointer-events: none;
+    }
+
+    #mota-impact-explorer .category-classroom circle,
+    #mota-impact-explorer .swatch-classroom {
+      fill: var(--viz-series-1);
+      background: var(--viz-series-1);
+    }
+
+    #mota-impact-explorer .category-community circle,
+    #mota-impact-explorer .swatch-community {
+      fill: var(--viz-series-2);
+      background: var(--viz-series-2);
+    }
+
+    #mota-impact-explorer .category-system circle,
+    #mota-impact-explorer .swatch-system {
+      fill: var(--viz-series-3);
+      background: var(--viz-series-3);
+    }
+
+    #mota-impact-explorer .category-emerging circle,
+    #mota-impact-explorer .swatch-emerging {
+      fill: var(--viz-series-4);
+      background: var(--viz-series-4);
+    }
+
+    #mota-impact-explorer .mota-level-key,
+    #mota-impact-explorer .mota-category-key {
+      margin: 0.5rem 0;
+    }
+
+    #mota-impact-explorer .mota-key-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    #mota-impact-explorer .mota-key-swatch {
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 50%;
+      flex: 0 0 auto;
+    }
+
+    #mota-impact-explorer .mota-boundary-note {
+      margin: 0.5rem 0 1rem;
+      color: var(--muted-foreground);
+    }
+
+    #mota-impact-explorer .mota-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin: 0.75rem 0 1rem;
+    }
+
+    #mota-impact-explorer .mota-case-card {
+      display: grid;
+      gap: 0.55rem;
+      align-content: start;
+    }
+
+    #mota-impact-explorer .mota-case-card h3,
+    #mota-impact-explorer .mota-detail h2,
+    #mota-impact-explorer .mota-detail h3,
+    #mota-impact-explorer .mota-detail p {
+      margin: 0;
+    }
+
+    #mota-impact-explorer .mota-case-id {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    #mota-impact-explorer .mota-case-id h3,
+    #mota-impact-explorer .mota-detail h2,
+    #mota-impact-explorer .mota-detail h3 {
+      font-weight: 500;
+    }
+
+    #mota-impact-explorer .mota-detail {
+      display: grid;
+      gap: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    #mota-impact-explorer .mota-detail-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 0.75rem;
+      align-items: start;
+    }
+
+    #mota-impact-explorer .mota-detail-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem 1rem;
+    }
+
+    #mota-impact-explorer .mota-detail-meta div {
+      display: grid;
+      gap: 0.25rem;
+    }
+
+    #mota-impact-explorer .mota-detail-meta dt {
+      color: var(--muted-foreground);
+    }
+
+    #mota-impact-explorer .mota-detail-meta dd {
+      margin: 0;
+    }
+
+    #mota-impact-explorer .mota-trail {
+      display: grid;
+      gap: 0.55rem;
+      padding-left: 1.25rem;
+      margin: 0;
+    }
+
+    #mota-impact-explorer .mota-trail strong {
+      font-weight: 500;
+    }
+
+    #mota-impact-explorer .mota-empty {
+      margin: 1rem 0;
+      color: var(--muted-foreground);
+    }
+
+    #mota-impact-explorer [hidden] {
+      display: none !important;
+    }
+
+    @media (max-width: 980px) {
+      #mota-impact-explorer .mota-filter-fields {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      #mota-impact-explorer .mota-search-field {
+        grid-column: 1 / -1;
+      }
+
+      #mota-impact-explorer .mota-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      #mota-impact-explorer .mota-filter-fields,
+      #mota-impact-explorer .mota-card-grid,
+      #mota-impact-explorer .mota-detail-meta,
+      #mota-impact-explorer .mota-detail-head {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      #mota-impact-explorer .mota-search-field {
+        grid-column: auto;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #mota-impact-explorer .case-node circle {
+        transition: none;
+      }
+    }
+
+    /* Restored MOTA evidence-canvas design */
+    #mota-impact-explorer {
+      --mota-navy: #102f43;
+      --mota-navy-deep: #082838;
+      --mota-ink: #273d48;
+      --mota-teal: #07888c;
+      --mota-green: #5f918c;
+      --mota-blue: #4e7396;
+      --mota-gold: #b98f54;
+      --mota-grey: #7c8992;
+      --mota-cream: #f7f4ee;
+      --mota-paper: #fcfbf7;
+      --mota-card: #efede6;
+      --mota-line: #d7d1c5;
+      --mota-muted: #6c7d84;
+      overflow: hidden;
+      color: var(--mota-ink);
+      background: var(--mota-cream);
+      border: 1px solid var(--mota-line);
+      border-radius: 1.8rem;
+      box-shadow: 0 1.5rem 4rem rgba(16, 47, 67, 0.12);
+    }
+
+    #mota-impact-explorer .mota-shell-section {
+      padding: clamp(1.6rem, 5vw, 4.5rem);
+    }
+
+    #mota-impact-explorer .mota-eyebrow,
+    #mota-impact-explorer .mota-section-label,
+    #mota-impact-explorer .mota-metric-label,
+    #mota-impact-explorer .mota-pathway h3,
+    #mota-impact-explorer .mota-state,
+    #mota-impact-explorer .mota-case-overline,
+    #mota-impact-explorer .mota-detail-section-title,
+    #mota-impact-explorer .mota-trail-head {
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    #mota-impact-explorer .mota-hero {
+      color: #f8f4ea;
+      background:
+        radial-gradient(circle at 82% 18%, rgba(74, 132, 137, 0.25), transparent 34%),
+        linear-gradient(140deg, var(--mota-navy-deep), var(--mota-navy) 62%, #174857);
+    }
+
+    #mota-impact-explorer .mota-hero .mota-eyebrow {
+      margin: 0 0 1.6rem;
+      color: #9bd2c4;
+    }
+
+    #mota-impact-explorer .mota-hero h1 {
+      max-width: 58rem;
+      margin: 0;
+      color: #f8f4ea;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 7vw, 5.8rem);
+      font-weight: 400;
+      letter-spacing: -0.035em;
+      line-height: 0.98;
+    }
+
+    #mota-impact-explorer .mota-proposition {
+      max-width: 66rem;
+      margin: 2rem 0 2.6rem;
+      color: #f6f2e9;
+      font-size: clamp(1.15rem, 2.5vw, 1.7rem);
+      line-height: 1.55;
+    }
+
+    #mota-impact-explorer .mota-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      overflow: hidden;
+      border: 1px solid rgba(242, 238, 228, 0.26);
+      border-radius: 1.4rem;
+      background: rgba(5, 31, 43, 0.28);
+    }
+
+    #mota-impact-explorer .mota-metric {
+      min-height: 8.5rem;
+      padding: clamp(1.2rem, 3vw, 2.2rem);
+      border-right: 1px solid rgba(242, 238, 228, 0.18);
+      border-bottom: 1px solid rgba(242, 238, 228, 0.18);
+    }
+
+    #mota-impact-explorer .mota-metric:nth-child(2n) {
+      border-right: 0;
+    }
+
+    #mota-impact-explorer .mota-metric:nth-child(n+3) {
+      border-bottom: 0;
+    }
+
+    #mota-impact-explorer .mota-metric-value {
+      display: block;
+      margin-bottom: 0.45rem;
+      color: #fffaf0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.6rem, 7vw, 4rem);
+      line-height: 1;
+    }
+
+    #mota-impact-explorer .mota-metric-label {
+      color: #e8e4db;
+    }
+
+    #mota-impact-explorer .mota-pathway-section,
+    #mota-impact-explorer .mota-topography-section,
+    #mota-impact-explorer .mota-detail-section {
+      background: var(--mota-cream);
+    }
+
+    #mota-impact-explorer .mota-section-label {
+      margin: 0 0 1.5rem;
+      color: #4d827f;
+    }
+
+    #mota-impact-explorer .mota-pathway {
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    #mota-impact-explorer .mota-path-card {
+      padding: clamp(1.25rem, 3vw, 2rem);
+      border: 1px solid var(--mota-line);
+      border-radius: 1.25rem;
+      background: rgba(252, 251, 247, 0.62);
+    }
+
+    #mota-impact-explorer .mota-pathway h3 {
+      margin: 0 0 1rem;
+      color: var(--mota-ink);
+    }
+
+    #mota-impact-explorer .mota-pathway p {
+      margin: 0 0 1rem;
+      color: #52656d;
+      font-size: 1.05rem;
+    }
+
+    #mota-impact-explorer .mota-state {
+      display: inline-flex;
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      background: #dfe9e5;
+      color: #46756f;
+    }
+
+    #mota-impact-explorer .mota-state.not-established {
+      background: #f0e2dd;
+      color: #8c514c;
+    }
+
+    #mota-impact-explorer .mota-arrow {
+      color: #4c8580;
+      font-size: 1.8rem;
+      line-height: 1;
+      text-align: center;
+    }
+
+    #mota-impact-explorer .mota-topography-section {
+      border-top: 1px solid var(--mota-line);
+    }
+
+    #mota-impact-explorer .mota-toolbar {
+      gap: 1rem;
+      margin: 0 0 1.4rem;
+    }
+
+    #mota-impact-explorer .mota-status {
+      color: var(--mota-muted);
+    }
+
+    #mota-impact-explorer .mota-status strong {
+      color: var(--mota-ink);
+    }
+
+    #mota-impact-explorer .mota-filter-fields {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    #mota-impact-explorer .mota-filter-fields .form-label {
+      color: transparent;
+      font-size: 0;
+    }
+
+    #mota-impact-explorer .mota-filter-fields .form-control,
+    #mota-impact-explorer .mota-filter-fields .form-select {
+      min-height: 3.8rem;
+      padding: 0.85rem 1rem;
+      color: var(--mota-ink);
+      background: rgba(252, 251, 247, 0.64);
+      border: 1px solid var(--mota-line);
+      border-radius: 1rem;
+      font-size: 1rem;
+    }
+
+    #mota-impact-explorer .mota-view-switch {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.3rem;
+      min-height: 3.8rem;
+      padding: 0.3rem;
+      border: 1px solid var(--mota-line);
+      border-radius: 1rem;
+      background: rgba(252, 251, 247, 0.64);
+    }
+
+    #mota-impact-explorer .mota-view-switch .btn {
+      border: 0;
+      border-radius: 0.75rem;
+      color: #40545d;
+      background: transparent;
+      box-shadow: none;
+      font-weight: 700;
+    }
+
+    #mota-impact-explorer .mota-view-switch .btn-primary {
+      color: #f9f5eb;
+      background: var(--mota-navy);
+      box-shadow: 0 0.4rem 1rem rgba(16, 47, 67, 0.18);
+    }
+
+    #mota-impact-explorer #mota-reset {
+      color: #517673;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+    }
+
+    #mota-impact-explorer #mota-map-view {
+      padding-top: 0.3rem;
+    }
+
+    #mota-impact-explorer .mota-map-wrap {
+      min-height: 38rem;
+      margin: 1rem 0;
+      border: 1px solid rgba(215, 209, 197, 0.7);
+      border-radius: 1.4rem;
+      background:
+        radial-gradient(circle at 50% 52%, rgba(95, 145, 140, 0.07), transparent 43%),
+        var(--mota-paper);
+    }
+
+    #mota-impact-explorer .mota-map {
+      width: min(100%, 58rem);
+      padding: 0.8rem;
+    }
+
+    #mota-impact-explorer .mota-ring {
+      stroke: #cdd5d2;
+      stroke-width: 1.5;
+      stroke-dasharray: 5 8;
+    }
+
+    #mota-impact-explorer .mota-ray {
+      stroke: #dbe0dd;
+      stroke-width: 1;
+    }
+
+    #mota-impact-explorer .mota-map-label {
+      fill: #84918f;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    #mota-impact-explorer .mota-centre {
+      fill: var(--mota-navy);
+      stroke: var(--mota-paper);
+    }
+
+    #mota-impact-explorer .mota-centre-title,
+    #mota-impact-explorer .mota-centre-note {
+      fill: #f8f4ea;
+    }
+
+    #mota-impact-explorer .case-node circle {
+      stroke: var(--mota-paper);
+      filter: drop-shadow(0 4px 3px rgba(16, 47, 67, 0.16));
+    }
+
+    #mota-impact-explorer .case-node:hover circle,
+    #mota-impact-explorer .case-node:focus circle,
+    #mota-impact-explorer .case-node.is-selected circle {
+      stroke: var(--mota-navy);
+    }
+
+    #mota-impact-explorer .case-node text {
+      fill: #fffaf0;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+    }
+
+    #mota-impact-explorer .category-classroom circle,
+    #mota-impact-explorer .swatch-classroom {
+      fill: var(--mota-blue);
+      background: var(--mota-blue);
+    }
+
+    #mota-impact-explorer .category-community circle,
+    #mota-impact-explorer .swatch-community {
+      fill: var(--mota-green);
+      background: var(--mota-green);
+    }
+
+    #mota-impact-explorer .category-system circle,
+    #mota-impact-explorer .swatch-system {
+      fill: var(--mota-gold);
+      background: var(--mota-gold);
+    }
+
+    #mota-impact-explorer .category-emerging circle,
+    #mota-impact-explorer .swatch-emerging {
+      fill: var(--mota-grey);
+      background: var(--mota-grey);
+    }
+
+    #mota-impact-explorer .mota-category-key,
+    #mota-impact-explorer .mota-level-key {
+      gap: 0.75rem 1.3rem;
+      color: #556870;
+    }
+
+    #mota-impact-explorer .mota-level-key .viz-badge,
+    #mota-impact-explorer .mota-detail-chip,
+    #mota-impact-explorer .mota-domain {
+      color: #415761;
+      background: transparent;
+      border: 1px solid #c9c7bf;
+      border-radius: 999px;
+    }
+
+    #mota-impact-explorer .mota-boundary-note {
+      color: #78868b;
+    }
+
+    #mota-impact-explorer .mota-card-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    #mota-impact-explorer .mota-case-card {
+      padding: 1.2rem;
+      border: 1px solid var(--mota-line);
+      border-radius: 1.1rem;
+      background: var(--mota-card);
+      box-shadow: none;
+    }
+
+    #mota-impact-explorer .mota-case-card .btn {
+      color: #f8f4ea;
+      background: var(--mota-navy);
+      border: 0;
+    }
+
+    #mota-impact-explorer .mota-detail-section {
+      border-top: 1px solid var(--mota-line);
+    }
+
+    #mota-impact-explorer .mota-detail {
+      padding: 0;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    #mota-impact-explorer .mota-case-overline,
+    #mota-impact-explorer .mota-detail-section-title,
+    #mota-impact-explorer .mota-trail-head {
+      color: #3f7571;
+    }
+
+    #mota-impact-explorer .mota-detail h2 {
+      max-width: 62rem;
+      color: var(--mota-ink);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 5vw, 4.5rem);
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      line-height: 1.02;
+    }
+
+    #mota-impact-explorer .mota-position-banner {
+      display: block;
+      margin: 0.5rem 0;
+      padding: 0.8rem 1rem;
+      border: 1px solid #c9c7bf;
+      border-radius: 999px;
+      color: #263f4c;
+      background: rgba(239, 237, 230, 0.66);
+      font-weight: 700;
+    }
+
+    #mota-impact-explorer .mota-detail-chips,
+    #mota-impact-explorer .mota-domains {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    #mota-impact-explorer .mota-detail-chip,
+    #mota-impact-explorer .mota-domain {
+      display: inline-flex;
+      padding: 0.65rem 1rem;
+      font-weight: 700;
+    }
+
+    #mota-impact-explorer .mota-detail-summary {
+      max-width: 68rem;
+      color: #4f6169;
+      font-size: 1.1rem;
+      line-height: 1.65;
+    }
+
+    #mota-impact-explorer .mota-evidence-trail {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    #mota-impact-explorer .mota-trail-card {
+      padding: 1.15rem 1.3rem;
+      border-left: 0.38rem solid #4d817d;
+      background: var(--mota-card);
+    }
+
+    #mota-impact-explorer .mota-trail-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+      gap: 1rem;
+      margin-bottom: 0.7rem;
+    }
+
+    #mota-impact-explorer .mota-trail-card p {
+      color: #4d5f67;
+      line-height: 1.55;
+    }
+
+    #mota-impact-explorer .mota-context-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.85rem;
+    }
+
+    #mota-impact-explorer .mota-context-card,
+    #mota-impact-explorer .mota-interpretive-boundary {
+      padding: 1.25rem 1.4rem;
+      border: 1px solid var(--mota-line);
+      border-radius: 1rem;
+      background: rgba(252, 251, 247, 0.55);
+    }
+
+    #mota-impact-explorer .mota-context-card dt {
+      margin-bottom: 0.4rem;
+      color: #3f7571;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    #mota-impact-explorer .mota-context-card dd {
+      margin: 0;
+      color: #52656d;
+    }
+
+    #mota-impact-explorer .mota-interpretive-boundary {
+      color: #53656d;
+      font-size: 1.06rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 820px) {
+      #mota-impact-explorer .mota-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      #mota-impact-explorer {
+        border-radius: 1rem;
+      }
+
+      #mota-impact-explorer .mota-metrics,
+      #mota-impact-explorer .mota-filter-fields,
+      #mota-impact-explorer .mota-card-grid,
+      #mota-impact-explorer .mota-context-grid,
+      #mota-impact-explorer .mota-trail-top {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      #mota-impact-explorer .mota-metric {
+        border-right: 0;
+        border-bottom: 1px solid rgba(242, 238, 228, 0.18);
+      }
+
+      #mota-impact-explorer .mota-metric:last-child {
+        border-bottom: 0;
+      }
+
+      #mota-impact-explorer .mota-map-wrap {
+        min-height: 26rem;
+      }
+    }
+  </style>
+
+  <header class="mota-hero mota-shell-section">
+    <p class="mota-eyebrow">MOTA · AY 2025 to 26 · EVIDENCE SYNTHESIS</p>
+    <h1>Opening the Gate:<br>an impact topography of teacher agency</h1>
+    <p class="mota-proposition">A sustained Olympiad to Classroom community helps teachers learn advanced mathematics, translate it for students, and build new teaching practice. Participant accounts also record early signals of learner change.</p>
+
+    <div class="mota-metrics" aria-label="Programme delivery and engagement">
+      <div class="mota-metric"><span class="mota-metric-value">17</span><span class="mota-metric-label">Participant sessions</span></div>
+      <div class="mota-metric"><span class="mota-metric-value">51</span><span class="mota-metric-label">Scheduled live hours</span></div>
+      <div class="mota-metric"><span class="mota-metric-value">354</span><span class="mota-metric-label">Recorded attendances</span></div>
+      <div class="mota-metric"><span class="mota-metric-value">681</span><span class="mota-metric-label">Participant hours</span></div>
+    </div>
+  </header>
+
+  <section class="mota-pathway-section mota-shell-section" aria-labelledby="mota-pathway-title">
+    <h2 class="mota-section-label" id="mota-pathway-title">The programme evidence pathway</h2>
+    <div class="mota-pathway">
+      <article class="mota-path-card">
+        <h3>Delivery</h3>
+        <p>17 participant sessions · 51 scheduled hours</p>
+        <span class="mota-state">Established</span>
+      </article>
+      <div class="mota-arrow" aria-hidden="true">↓</div>
+      <article class="mota-path-card">
+        <h3>Engagement</h3>
+        <p>354 attendances · 681 participant hours</p>
+        <span class="mota-state">Established</span>
+      </article>
+      <div class="mota-arrow" aria-hidden="true">↓</div>
+      <article class="mota-path-card">
+        <h3>Teacher agency</h3>
+        <p>teacher presentations plus reports of designing, adapting, training, and coordinating</p>
+        <span class="mota-state">Supported</span>
+      </article>
+      <div class="mota-arrow" aria-hidden="true">↓</div>
+      <article class="mota-path-card">
+        <h3>Transfer</h3>
+        <p>15 of 16 cases contain specific enacted use</p>
+        <span class="mota-state">Reported by participants evidence</span>
+      </article>
+      <div class="mota-arrow" aria-hidden="true">↓</div>
+      <article class="mota-path-card">
+        <h3>Downstream outcomes</h3>
+        <p>12 of 16 cases contain learner focused signals</p>
+        <span class="mota-state not-established">Evidence pending</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="mota-topography-section mota-shell-section" aria-labelledby="mota-topography-title">
+    <h2 class="mota-section-label" id="mota-topography-title">Participant evidence topography</h2>
+
+    <div class="mota-toolbar">
+      <div class="mota-status" aria-live="polite">
+        <span><strong>17 submissions · 16 unique anonymized cases · all included</strong></span>
+        <span id="mota-result-count">Showing 16 cases</span>
+        <button type="button" class="btn btn-ghost" id="mota-reset">Reset filters</button>
+      </div>
+
+      <div class="viz-controls mota-filter-fields" aria-label="Filter participant evidence">
+        <label class="form-label mota-search-field" for="mota-search">Search
+          <input class="form-control" id="mota-search" type="search" placeholder="Search topics, contexts, or participants">
+        </label>
+        <label class="form-label" for="mota-action-filter">Constellation
+          <select class="form-select" id="mota-action-filter">
+            <option value="all">All constellations</option>
+            <option value="classroom">Classroom translation</option>
+            <option value="community">Community multiplication</option>
+            <option value="system">System building</option>
+            <option value="emerging">Emerging evidence</option>
+          </select>
+        </label>
+        <label class="form-label" for="mota-level-filter">Evidence position
+          <select class="form-select" id="mota-level-filter">
+            <option value="all">All evidence positions</option>
+            <option value="0">L0 · Testimonial</option>
+            <option value="1">L1 · Reported by participants learning</option>
+            <option value="2">L2 · Planned transfer</option>
+            <option value="3">L3 · Enacted transfer</option>
+            <option value="4">L4 · Supported by artifacts use</option>
+            <option value="5">L5 · Learner focused signal</option>
+          </select>
+        </label>
+        <div class="mota-view-switch" aria-label="Choose a view">
+          <button type="button" class="btn btn-primary" id="mota-map-button" aria-pressed="true">Constellation</button>
+          <button type="button" class="btn" id="mota-card-button" aria-pressed="false">Cards</button>
+        </div>
+      </div>
+    </div>
+
+  <section id="mota-map-view" aria-label="Concentric evidence map">
+    <div class="mota-map-wrap">
+      <svg class="mota-map" viewBox="110 120 780 780" role="img" aria-labelledby="mota-map-title mota-map-desc">
+        <title id="mota-map-title">Concentric map of sixteen anonymized MOTA participant cases</title>
+        <desc id="mota-map-desc">Distance from the centre shows the highest evidence position reached in each reflection. Colour shows the primary professional action constellation. Select a participant marker to inspect the evidence trail.</desc>
+
+        <g aria-hidden="true">
+          <circle class="mota-ring" cx="500" cy="500" r="104"></circle>
+          <circle class="mota-ring" cx="500" cy="500" r="150"></circle>
+          <circle class="mota-ring" cx="500" cy="500" r="196"></circle>
+          <circle class="mota-ring" cx="500" cy="500" r="242"></circle>
+          <circle class="mota-ring" cx="500" cy="500" r="288"></circle>
+          <circle class="mota-ring" cx="500" cy="500" r="334"></circle>
+          <line class="mota-ray" x1="500" y1="500" x2="527" y2="400"></line>
+          <line class="mota-ray" x1="500" y1="500" x2="563" y2="266"></line>
+          <line class="mota-ray" x1="500" y1="500" x2="500" y2="166"></line>
+          <line class="mota-ray" x1="500" y1="500" x2="692" y2="226"></line>
+          <line class="mota-ray" x1="500" y1="500" x2="814" y2="386"></line>
+          <line class="mota-ray" x1="500" y1="500" x2="814" y2="614"></line>
+          <line class="mota-ray" x1="500" y1="500" x2="692" y2="774"></line>
+          <line class="mota-ray" x1="500" y1="500" x2="500" y2="834"></line>
+          <line class="mota-ray" x1="500" y1="500" x2="263" y2="737"></line>
+          <line class="mota-ray" x1="500" y1="500" x2="671" y2="671"></line>
+          <line class="mota-ray" x1="500" y1="500" x2="272" y2="583"></line>
+          <line class="mota-ray" x1="500" y1="500" x2="186" y2="614"></line>
+          <line class="mota-ray" x1="500" y1="500" x2="166" y2="500"></line>
+          <line class="mota-ray" x1="500" y1="500" x2="226" y2="308"></line>
+          <line class="mota-ray" x1="500" y1="500" x2="372" y2="809"></line>
+          <line class="mota-ray" x1="500" y1="500" x2="333" y2="210"></line>
+          <text class="mota-map-label" x="397" y="443">L0</text>
+          <text class="mota-map-label" x="357" y="420">L1</text>
+          <text class="mota-map-label" x="318" y="397">L2</text>
+          <text class="mota-map-label" x="278" y="374">L3</text>
+          <text class="mota-map-label" x="238" y="351">L4</text>
+          <text class="mota-map-label" x="198" y="328">L5</text>
+        </g>
+
+        <circle class="mota-centre" cx="500" cy="500" r="78"></circle>
+        <text class="mota-centre-title" x="500" y="491">MOTA</text>
+        <text class="mota-centre-note" x="500" y="522">Sustained cycles</text>
+        <text class="mota-centre-note" x="500" y="544">+ teacher presentations</text>
+
+        <g id="mota-node-layer"></g>
+      </svg>
+    </div>
+
+    <div class="viz-legend mota-category-key" aria-label="Professional-action constellations">
+      <span class="mota-key-item"><span class="mota-key-swatch swatch-classroom" aria-hidden="true"></span>Classroom translation</span>
+      <span class="mota-key-item"><span class="mota-key-swatch swatch-community" aria-hidden="true"></span>Community multiplication</span>
+      <span class="mota-key-item"><span class="mota-key-swatch swatch-system" aria-hidden="true"></span>System building</span>
+      <span class="mota-key-item"><span class="mota-key-swatch swatch-emerging" aria-hidden="true"></span>Emerging evidence</span>
+    </div>
+
+    <div class="viz-legend mota-level-key" aria-label="Evidence levels">
+      <span class="viz-badge">L0 Testimonial</span>
+      <span class="viz-badge">L1 Reported by participants learning</span>
+      <span class="viz-badge">L2 Planned transfer</span>
+      <span class="viz-badge">L3 Enacted transfer</span>
+      <span class="viz-badge">L4 Supported by artifacts use</span>
+      <span class="viz-badge">L5 Learner focused signal</span>
+    </div>
+
+    <p class="mota-boundary-note text-small">A case may contain several levels, and its marker shows the highest supported position. Distance from the centre represents the type of evidence reported. Teacher importance, causal certainty, and independently established outcomes require separate evidence.</p>
+  </section>
+
+  <section id="mota-card-view" aria-label="Participant card view" hidden>
+    <div class="mota-card-grid" id="mota-card-grid"></div>
+    <p class="mota-empty" id="mota-empty" hidden>The current filters return zero cases.</p>
+  </section>
+  </section>
+
+  <section class="mota-detail-section mota-shell-section">
+    <div class="card mota-detail" id="mota-case-detail" aria-live="polite" aria-label="Selected participant evidence"></div>
+  </section>
+
+  <script>
+    (function () {
+      "use strict";
+
+      const root = document.getElementById("mota-impact-explorer");
+      if (!root) return;
+
+      const levels = {
+        0: "Testimonial / insufficient specificity",
+        1: "Reported by participants learning",
+        2: "Planned transfer",
+        3: "Reported by participants enacted transfer",
+        4: "Supported by artifacts use",
+        5: "Learner focused signal"
+      };
+
+      const actionLabels = {
+        classroom: "Classroom translation",
+        community: "Community multiplication",
+        system: "System building",
+        emerging: "Emerging evidence"
+      };
+
+      const cases = [
+        {
+          id: "P01",
+          highest: 0,
+          levels: [0],
+          primary: "emerging",
+          actions: ["emerging"],
+          motaLink: "none",
+          position: [527, 400],
+          title: "A positive response with limited detail",
+          summary: "The participant affirmed training, method use, a student moment, and an outcome. Specific examples remain pending, so the record supports a testimonial level claim.",
+          roles: ["Participant role unspecified"],
+          topics: ["Number theory"],
+          artifacts: "Artifact description unavailable.",
+          trail: [
+            { level: 0, text: "Affirmative one word responses indicate a positive experience. Details about the change remain pending." }
+          ],
+          boundary: "The available answers support a testimonial. Evidence for learning, transfer, and learner outcomes remains pending."
+        },
+        {
+          id: "P02",
+          highest: 3,
+          levels: [0, 2, 3],
+          primary: "community",
+          actions: ["community", "system"],
+          motaLink: "weak",
+          position: [563, 266],
+          title: "Operating across trainer development, coaching, and competition coordination",
+          summary: "The participant described trainer development in Côte d’Ivoire, support for Tunisian and African students, work in Djibouti, coordination of PAMO 2026, and preparation of specialized Olympiad pedagogical content.",
+          roles: ["Olympiad trainer", "Competition coordinator"],
+          topics: ["Geometry", "Number theory", "LTE"],
+          artifacts: "Specialized pedagogical content was described as in development. Inspection awaits a completed copy.",
+          trail: [
+            { level: 3, text: "Delivered or supported trainer and student development across several African contexts and coordinated an international competition." },
+            { level: 2, text: "Reported preparing specialized Olympiad pedagogical content for students." },
+            { level: 0, text: "A supplementary message described the Academy as a high-quality opportunity for knowledge and skill development." }
+          ],
+          boundary: "The record supports the professional activity. Evidence connecting its cause or development to MOTA remains pending."
+        },
+        {
+          id: "P03",
+          highest: 5,
+          levels: [3, 5],
+          primary: "community",
+          actions: ["community", "classroom"],
+          motaLink: "mixed",
+          position: [500, 166],
+          title: "Using Academy algebra in training while resisting over-attribution",
+          summary: "The participant reported using Academy algebra material with students and intensifying remote contact. Students were described as using AI tools to investigate solutions and showing greater ambition to solve more problems and seek Olympiad resources.",
+          roles: ["National-team trainer"],
+          topics: ["Algebra", "Geometry", "Inequalities"],
+          artifacts: "Student work and usage records await submission.",
+          trail: [
+            { level: 3, text: "Used material from the Academy’s algebra work in student training." },
+            { level: 3, text: "Applied remote communication with students more intensively." },
+            { level: 5, text: "Reported AI-assisted solution searching, increased ambition, and greater use of Olympiad problem sites." }
+          ],
+          boundary: "The participant treated MOTA attribution as uncertain. The record therefore presents the student change and the Academy connection as separate claims."
+        },
+        {
+          id: "P04",
+          highest: 5,
+          levels: [3, 5],
+          primary: "community",
+          actions: ["community", "classroom"],
+          motaLink: "strong",
+          position: [692, 226],
+          title: "Extending Academy geometry into multi-method teaching and student production",
+          summary: "Two submissions describe a 20-day training programme, nine lectures, teacher development, and youth and national-team preparation. Academy geometry was combined with complex numbers, coordinate and barycentric methods, and sequences.",
+          roles: ["Scientific-committee leader", "Olympiad trainer", "Academic supervisor"],
+          topics: ["Geometry", "Complex numbers", "Sequences", "Coordinate geometry", "Barycentric methods"],
+          artifacts: "Project files, photographs, and videos were offered. The source workbook omitted them, so inspection remains pending.",
+          trail: [
+            { level: 3, text: "Reused Academy geometry and incidence methods within an extended sequence of lectures and training programmes." },
+            { level: 3, text: "Withheld diagrams and digital tools so students had to construct representations and compare multiple solution routes." },
+            { level: 5, text: "Students connected complex numbers and sequences, generalized regular-polygon constructions, and used induction." },
+            { level: 5, text: "Twenty-five students working in five groups produced polygon, mosaic, and linear-programming projects." }
+          ],
+          boundary: "The account provides specific detail. Independent inspection of the student products and media remains pending."
+        },
+        {
+          id: "P05",
+          highest: 5,
+          levels: [1, 3, 5],
+          primary: "classroom",
+          actions: ["classroom"],
+          motaLink: "strong",
+          position: [814, 386],
+          title: "Moving advanced heuristics into challenges and more creative assessments",
+          summary: "The participant reported introducing Academy-inspired challenges and making university examinations more creative. Students were described as becoming more interested and bringing Olympiad problems they had attempted.",
+          roles: ["University mathematics professor"],
+          topics: ["Inequalities", "Number theory", "Sequences", "Geometry", "problem solving heuristics"],
+          artifacts: "Creative examinations and Academy inspired problems were referenced. Copies await submission.",
+          trail: [
+            { level: 3, text: "Introduced Academy-inspired problems and redesigned examinations to be more creative." },
+            { level: 1, text: "Named specific heuristics for choosing inequality methods, constructing sequences, and angle chasing." },
+            { level: 5, text: "Reported that students showed more interest and began bringing Olympiad problems they had tried to solve." }
+          ],
+          boundary: "The response supports changed practice and student interest. Measured learning gains require additional evidence."
+        },
+        {
+          id: "P06",
+          highest: 5,
+          levels: [3, 5],
+          primary: "system",
+          actions: ["system", "community"],
+          motaLink: "strong",
+          position: [814, 614],
+          title: "Transferring inequality methods into challenge design and trainer learning",
+          summary: "The participant helped prepare Yemeni Olympiad challenges and trained Olympiad coaches. Cycle III and the Cauchy Bunyakovsky Schwarz inequality were identified as especially influential.",
+          roles: ["Olympiad challenge designer", "Coach trainer"],
+          topics: ["Inequalities", "Cauchy Bunyakovsky Schwarz inequality"],
+          artifacts: "The trainee’s unexpected inequality solution was described. A copy awaits submission.",
+          trail: [
+            { level: 3, text: "Helped design national Olympiad challenges and trained other coaches." },
+            { level: 3, text: "Reported using the Cauchy Bunyakovsky Schwarz approach to solve inequalities after Cycle III." },
+            { level: 5, text: "A trainee transformed an inequality into an equivalent form and proved it through an unexpected valid approach." }
+          ],
+          boundary: "Independent checking of the trainee’s mathematical argument remains pending."
+        },
+        {
+          id: "P07",
+          highest: 5,
+          levels: [1, 3, 5],
+          primary: "system",
+          actions: ["system", "community", "classroom"],
+          motaLink: "strong",
+          position: [692, 774],
+          title: "A direct content-to-system pathway across multiple Olympiad domains",
+          summary: "The reflection and supplementary message identify where Academy ideas entered two seasons of Yemeni Olympiad challenges, often at reduced difficulty for an early-stage programme.",
+          roles: ["Olympiad challenge designer", "Teacher educator"],
+          topics: ["Inequalities", "Combinatorics", "Invariants", "Nim", "Geometry", "Number theory"],
+          artifacts: "Two seasons of challenge files were referenced and await retrieval from an archive. The analyzed source omits the files.",
+          trail: [
+            { level: 1, text: "Explained equality cases as a guide to AM GM and named CBS, Engel form, primitive roots, Fermat, and Euler as active tools." },
+            { level: 3, text: "Mapped Academy topics to specific stages and question numbers across two Olympiad seasons." },
+            { level: 3, text: "Reported simplifying Academy material for early seasons and sequencing advanced techniques gradually." },
+            { level: 5, text: "Students independently discovered a first-player winning strategy for a two pile Nim situation." },
+            { level: 5, text: "The challenges were reported as shared with more than 200,000 students." }
+          ],
+          boundary: "The detailed mapping strengthens the MOTA connection. The challenge files and reach figure remain uninspected participant reports."
+        },
+        {
+          id: "P08",
+          highest: 5,
+          levels: [3, 5],
+          primary: "classroom",
+          actions: ["classroom"],
+          motaLink: "strong",
+          position: [500, 834],
+          title: "From asking for formulas to investigating what remains invariant",
+          summary: "The participant used invariants to shift problem solving away from immediate formula seeking. A previously hesitant student tried several strategies, found a hidden pattern, and explained the reasoning to the class.",
+          roles: ["Mathematics teacher"],
+          topics: ["Combinatorial games", "Invariants", "Problem solving"],
+          artifacts: "Student work and grade records await submission.",
+          trail: [
+            { level: 3, text: "Encouraged students to begin with patterns and properties that remain constant." },
+            { level: 5, text: "A previously hesitant student tried multiple strategies, identified a hidden pattern, and explained the reasoning to the class." },
+            { level: 5, text: "The participant perceived improved final-exam grades and believed deeper problem solving contributed." }
+          ],
+          boundary: "The student episode provides a specific behavioral signal. The grade statement remains a perception until comparison data become available."
+        },
+        {
+          id: "P09",
+          highest: 5,
+          levels: [1, 3, 5],
+          primary: "community",
+          actions: ["community", "classroom"],
+          motaLink: "strong",
+          position: [263, 737],
+          title: "Professional agency through understanding, practice, and explanation",
+          summary: "An experienced Olympiad leader described MOTA as extending existing work through additional resources and expert learning. Participants also explain what they learn to others.",
+          roles: ["Olympiad coordinator", "Trainer", "Association executive-committee member"],
+          topics: ["Inequalities", "Number theory", "AM GM", "Cauchy Schwarz inequality"],
+          artifacts: "Training materials and student work await submission.",
+          trail: [
+            { level: 1, text: "Reported gaining resources and knowledge from Academy experts." },
+            { level: 3, text: "Defined the participant role through active understanding, practice, and explanation." },
+            { level: 3, text: "Reported increased capability and confidence in online training and later serving as a francophone trainer for African students." },
+            { level: 5, text: "Students were reported as more comfortable with inequalities and number theory and able to use AM GM and Cauchy Schwarz appropriately." }
+          ],
+          boundary: "The account supports refinement within an established leadership trajectory and presents MOTA as one contributor to that development."
+        },
+        {
+          id: "P10",
+          highest: 3,
+          levels: [3],
+          primary: "community",
+          actions: ["community", "classroom"],
+          motaLink: "strong",
+          position: [671, 671],
+          title: "Reusing Academy exercises across onsite and remote training",
+          summary: "The participant reported several face-to-face and online training circles and camps, serving as a trainer and using exercises from Academy sessions.",
+          roles: ["Olympiad trainer"],
+          topics: ["Academy exercises", "Problem solving"],
+          artifacts: "The reused exercises and training materials await submission.",
+          trail: [
+            { level: 3, text: "Used several Academy exercises in face-to-face and remote training activities." }
+          ],
+          boundary: "The response supports enacted use. Evidence of a specific learner focused result remains pending."
+        },
+        {
+          id: "P11",
+          highest: 3,
+          levels: [3],
+          primary: "system",
+          actions: ["system"],
+          motaLink: "weak",
+          position: [272, 583],
+          title: "Establishing the first Mathematics Olympiad in Anbar",
+          summary: "The participant coordinated and supervised the first Mathematics Olympiad in Anbar, involving four schools and using simulations modelled on regional and international competitions.",
+          roles: ["Olympiad coordinator", "Competition supervisor", "Question-development supervisor"],
+          topics: ["Combinatorial games", "Invariants", "Cauchy Bunyakovsky Schwarz inequality"],
+          artifacts: "Competition materials and question sets were described. Copies await submission.",
+          trail: [
+            { level: 3, text: "Coordinated the first Mathematics Olympiad in Anbar and supervised question development and four-school delivery." }
+          ],
+          boundary: "The response describes the initiative in detail. Evidence connecting its development to MOTA remains pending."
+        },
+        {
+          id: "P12",
+          highest: 5,
+          levels: [3, 4, 5],
+          primary: "community",
+          actions: ["community", "system", "classroom"],
+          motaLink: "strong",
+          position: [186, 614],
+          title: "Connecting Academy methods to national-team training and student confidence",
+          summary: "The participant described three stage selection, intensive Libyan team training, and use of CBS, Euler, and Fermat. Students were reported as using Fermat enthusiastically for last digit problems.",
+          roles: ["National Olympiad committee member", "National-team trainer"],
+          topics: ["Cauchy Bunyakovsky Schwarz inequality", "Euler’s theorem", "Fermat’s theorem", "Number theory"],
+          artifacts: "The response referenced a Google Classroom competition, an assessment, and a strong student response. The source omitted the files, so inspection remains pending.",
+          trail: [
+            { level: 3, text: "Reported training the team on material studied through the Academy and using CBS in proofs." },
+            { level: 5, text: "Students used Fermat’s theorem enthusiastically for last digit and final two digit problems." },
+            { level: 4, text: "Reported sending a student competition through Google Classroom." },
+            { level: 4, text: "A supplementary message reported an assessment and a best student response after training." },
+            { level: 5, text: "Reported a gold medal in an Arab mathematics-games and logic competition." }
+          ],
+          boundary: "The learner behavior is a meaningful self-report. The competition, assessment, and medal references require the absent source materials before functioning as inspected evidence."
+        },
+        {
+          id: "P13",
+          highest: 5,
+          levels: [3, 5],
+          primary: "system",
+          actions: ["system", "classroom"],
+          motaLink: "mixed",
+          position: [166, 500],
+          title: "Building a national challenge structure while deepening classroom explanation",
+          summary: "The participant described a three-person team preparing three-stage Yemeni Olympiad questions across two seasons while participating in MOTA and emphasized deeper concepts and connections through cyclic-quadrilateral teaching.",
+          roles: ["Scientific-committee chair", "Olympiad question designer"],
+          topics: ["Geometry", "Cyclic quadrilaterals"],
+          artifacts: "Olympiad question sets, training references, and reach records were described. Copies await submission.",
+          trail: [
+            { level: 3, text: "Helped prepare multi-stage Olympiad questions across two seasons." },
+            { level: 3, text: "Deepened conceptual connections and attention to detail through cyclic-quadrilateral teaching." },
+            { level: 5, text: "Students showed increased desire to develop in Olympiad mathematics and requested references and training materials." },
+            { level: 5, text: "Students achieved local first places. The participant held a scientific leadership role that excluded direct coaching." },
+            { level: 5, text: "The national initiative was reported as targeting more than 200,000 students." }
+          ],
+          boundary: "The reflection presents Academy participation alongside the initiative and separates it from direct causation. The participant held a scientific leadership role, and independent inspection of the reach figure remains pending."
+        },
+        {
+          id: "P14",
+          highest: 5,
+          levels: [3, 5],
+          primary: "classroom",
+          actions: ["classroom", "community"],
+          motaLink: "strong",
+          position: [226, 308],
+          title: "teacher presentation preparation becoming material for student use",
+          summary: "The participant reported reteaching an Academy session, revising Nim material while preparing a participant presentation, and later giving the revised material to students.",
+          roles: ["Olympiad trainer"],
+          topics: ["Nim", "Geometry", "Power of a point"],
+          artifacts: "The participant presentation and revised student material were described. Copies await submission.",
+          trail: [
+            { level: 3, text: "Prepared and delivered a participant presentation, then reused the revised content with students." },
+            { level: 3, text: "Reported prior involvement training students preparing for the IMO." },
+            { level: 5, text: "Students were excited by power of a point, explored with technology, and persisted after hints to find solutions independently." }
+          ],
+          boundary: "The response offers a direct pathway from a teacher presentation to student use. Independent assessment of student learning remains pending."
+        },
+        {
+          id: "P15",
+          highest: 5,
+          levels: [1, 3, 5],
+          primary: "classroom",
+          actions: ["classroom", "community"],
+          motaLink: "strong",
+          position: [372, 809],
+          title: "Making strategic orientation precede execution and calculation",
+          summary: "The participant highlighted Cycle I’s emphasis on the heuristic dimension of problem solving and reported using that orientation with students before they begin execution and calculation.",
+          roles: ["National-team deputy leader", "International competition team leader", "Gifted-student camp trainer"],
+          topics: ["problem solving heuristics", "Strategic problem solving"],
+          artifacts: "Lesson material, observation records, and student work await submission.",
+          trail: [
+            { level: 1, text: "Identified the heuristic dimension of problem solving as the lasting idea from Cycle I." },
+            { level: 3, text: "Applied a deliberate pause before execution and calculation, asking students to decide where to look." },
+            { level: 5, text: "Reported that students now pause before calculating and ask, ‘Where should I look?’" }
+          ],
+          boundary: "The reflection supports a specific change in students’ problem solving stance as observed by the participant. Independent observation and student work await submission."
+        },
+        {
+          id: "P16",
+          highest: 5,
+          levels: [1, 3, 5],
+          primary: "community",
+          actions: ["community", "classroom"],
+          motaLink: "mixed",
+          position: [333, 210],
+          title: "Simplifying inequality ideas within Libyan team training",
+          summary: "The participant described training Libyan students for mathematics and logic competitions, simplifying inequalities through foundational laws, and reporting strong competition performance.",
+          roles: ["Libyan team trainer"],
+          topics: ["Geometry", "Inequalities", "Number theory", "Arithmetic and geometric means"],
+          artifacts: "Competition results and supporting records await submission and inspection.",
+          trail: [
+            { level: 1, text: "Identified simplification of inequalities and early introduction of arithmetic-mean and geometric-mean laws as useful learning." },
+            { level: 3, text: "Reported applying these ideas while training a Libyan team for mathematics and logic competitions." },
+            { level: 5, text: "Reported a gold medal in the Arab competition and a high result in the international competition." }
+          ],
+          boundary: "The participant reported the result. Independent verification and evidence isolating MOTA’s contribution remain pending."
+        }
+      ];
+
+      const mapView = root.querySelector("#mota-map-view");
+      const cardView = root.querySelector("#mota-card-view");
+      const nodeLayer = root.querySelector("#mota-node-layer");
+      const cardGrid = root.querySelector("#mota-card-grid");
+      const emptyState = root.querySelector("#mota-empty");
+      const detail = root.querySelector("#mota-case-detail");
+      const resultCount = root.querySelector("#mota-result-count");
+      const mapButton = root.querySelector("#mota-map-button");
+      const cardButton = root.querySelector("#mota-card-button");
+      const searchInput = root.querySelector("#mota-search");
+      const levelFilter = root.querySelector("#mota-level-filter");
+      const actionFilter = root.querySelector("#mota-action-filter");
+      const resetButton = root.querySelector("#mota-reset");
+
+      let currentView = "map";
+      let selectedId = "P08";
+      let filteredCases = cases.slice();
+
+      function escapeHtml(value) {
+        return String(value)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/\"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+
+      function normalize(value) {
+        return String(value || "").toLocaleLowerCase();
+      }
+
+      function caseSearchText(item) {
+        return normalize([
+          item.id,
+          item.title,
+          item.summary,
+          item.roles.join(" "),
+          item.topics.join(" "),
+          item.artifacts,
+          item.boundary,
+          item.actions.map(function (key) { return actionLabels[key]; }).join(" "),
+          item.trail.map(function (entry) { return entry.text; }).join(" ")
+        ].join(" "));
+      }
+
+      function createNodes() {
+        const ns = "http://www.w3.org/2000/svg";
+        cases.forEach(function (item) {
+          const anchor = document.createElementNS(ns, "a");
+          anchor.setAttribute("href", "#mota-case-detail");
+          anchor.setAttribute("class", "case-node category-" + item.primary);
+          anchor.setAttribute("data-id", item.id);
+          anchor.setAttribute("aria-label", item.id + ", highest evidence L" + item.highest + ", " + actionLabels[item.primary] + ". Select to inspect.");
+
+          const circle = document.createElementNS(ns, "circle");
+          circle.setAttribute("cx", item.position[0]);
+          circle.setAttribute("cy", item.position[1]);
+          circle.setAttribute("r", "28");
+
+          const text = document.createElementNS(ns, "text");
+          text.setAttribute("x", item.position[0]);
+          text.setAttribute("y", item.position[1]);
+          text.textContent = item.id;
+
+          anchor.appendChild(circle);
+          anchor.appendChild(text);
+          anchor.addEventListener("click", function (event) {
+            event.preventDefault();
+            selectCase(item.id);
+          });
+          nodeLayer.appendChild(anchor);
+        });
+      }
+
+      function cardMarkup(item) {
+        const actionText = item.actions.map(function (key) { return actionLabels[key]; }).join(" · ");
+        return [
+          '<article class="card mota-case-card category-' + escapeHtml(item.primary) + '" data-card-id="' + escapeHtml(item.id) + '">',
+          '  <div class="mota-case-id"><h3>' + escapeHtml(item.id) + '</h3><span class="mota-key-swatch swatch-' + escapeHtml(item.primary) + '" aria-hidden="true"></span></div>',
+          '  <p><strong>L' + item.highest + ' · ' + escapeHtml(levels[item.highest]) + '</strong></p>',
+          '  <p>' + escapeHtml(item.title) + '</p>',
+          '  <p class="text-small text-muted">' + escapeHtml(actionText) + ' · MOTA: ' + escapeHtml(item.motaLink) + '</p>',
+          '  <button type="button" class="btn" data-inspect="' + escapeHtml(item.id) + '">Inspect evidence</button>',
+          '</article>'
+        ].join("");
+      }
+
+      function renderCards() {
+        cardGrid.innerHTML = filteredCases.map(cardMarkup).join("");
+        emptyState.hidden = filteredCases.length !== 0;
+        cardGrid.querySelectorAll("[data-inspect]").forEach(function (button) {
+          button.addEventListener("click", function () {
+            selectCase(button.getAttribute("data-inspect"));
+          });
+        });
+      }
+
+      function positionStatement(level) {
+        if (level === 0) return "L0 · Testimonial only; insufficient specificity for a change claim";
+        if (level === 1) return "L1 · Reported by participants mathematical or professional learning";
+        if (level === 2) return "L2 · Planned transfer awaiting enactment";
+        if (level === 3) return "L3 · Reported by participants enacted transfer";
+        if (level === 4) return "L4 · Supported by artifacts use; inspection status remains explicit";
+        return "L5 · Reported by participants downstream signal unless independently documented";
+      }
+
+      function trailKind(item, entry, index) {
+        if (item.id === "P08" && index === 0) return "Pedagogical transfer";
+        if (item.id === "P08" && index === 1) return "Student agency";
+        if (item.id === "P08" && index === 2) return "Academic outcome claim";
+        if (entry.level === 0) return "Testimonial";
+        if (entry.level === 1) return "Reported learning";
+        if (entry.level === 2) return "Planned transfer";
+        if (entry.level === 3 && item.primary === "classroom") return "Pedagogical transfer";
+        if (entry.level === 3 && item.primary === "community") return "Training / community transfer";
+        if (entry.level === 3 && item.primary === "system") return "System-building transfer";
+        if (entry.level === 4) return "Referenced artifact";
+        if (/grade|gold|medal|result|first place|200,000/i.test(entry.text)) return "Outcome claim";
+        return "Learner focused signal";
+      }
+
+      function trailSource(item, entry, index) {
+        if (item.id === "P08" && index === 0) return "Reported by participants; explicit Cycle II connection";
+        if (item.id === "P08" && index === 1) return "Specific self-reported observation";
+        if (item.id === "P08" && index === 2) return "Reported by participants; grades and attribution await testing";
+        if (entry.level === 0) return "Reported by participants; non-specific";
+        if (entry.level === 1) return "Reported by participants learning";
+        if (entry.level === 2) return "Reported by participants intention";
+        if (entry.level === 4) return "Referenced; material awaits inspection";
+        if (entry.level === 5 && /grade|gold|medal|result|first place|200,000/i.test(entry.text)) return "Reported by participants; independent verification pending";
+        if (entry.level === 5) return "Specific self-reported observation";
+        return "Reported by participants; MOTA connection " + item.motaLink;
+      }
+
+      function renderDetail(item) {
+        if (!item) {
+          detail.innerHTML = '<p class="mota-empty">Select a visible participant case to inspect its evidence trail.</p>';
+          return;
+        }
+
+        const actionText = item.actions.map(function (key) { return actionLabels[key]; }).join(" · ");
+        const trail = item.trail.map(function (entry, index) {
+          return [
+            '<article class="mota-trail-card">',
+            '  <div class="mota-trail-top">',
+            '    <span class="mota-trail-head">L' + entry.level + ' · ' + escapeHtml(trailKind(item, entry, index)) + '</span>',
+            '    <span class="mota-trail-head">' + escapeHtml(trailSource(item, entry, index)) + '</span>',
+            '  </div>',
+            '  <p>' + escapeHtml(entry.text) + '</p>',
+            '</article>'
+          ].join("");
+        }).join("");
+        const domains = item.topics.map(function (topic) {
+          return '<span class="mota-domain">' + escapeHtml(topic) + '</span>';
+        }).join("");
+        const motaText = item.motaLink === "none" ? "Connection unspecified" : item.motaLink;
+
+        detail.innerHTML = [
+          '<p class="mota-case-overline">' + escapeHtml(item.id) + ' · Anonymized case</p>',
+          '<h2>' + escapeHtml(item.title) + '</h2>',
+          '<span class="mota-position-banner">' + escapeHtml(positionStatement(item.highest)) + '</span>',
+          '<div class="mota-detail-chips">',
+          '  <span class="mota-detail-chip">MOTA · ' + escapeHtml(motaText) + '</span>',
+          '  <span class="mota-detail-chip">' + escapeHtml(actionText) + '</span>',
+          '</div>',
+          '<p class="mota-detail-summary">' + escapeHtml(item.summary) + '</p>',
+          '<h3 class="mota-detail-section-title">Evidence trail</h3>',
+          '<div class="mota-evidence-trail">' + trail + '</div>',
+          '<div class="mota-context-grid">',
+          '  <dl class="mota-context-card"><dt>Professional context</dt><dd>' + escapeHtml(item.roles.join(" · ")) + '</dd></dl>',
+          '  <dl class="mota-context-card"><dt>Artifacts</dt><dd>' + escapeHtml(item.artifacts) + '</dd></dl>',
+          '</div>',
+          '<h3 class="mota-detail-section-title">Mathematical domains</h3>',
+          '<div class="mota-domains">' + domains + '</div>',
+          '<h3 class="mota-detail-section-title">Interpretive boundary</h3>',
+          '<div class="mota-interpretive-boundary">' + escapeHtml(item.boundary) + '</div>'
+        ].join("");
+      }
+
+      function selectCase(id) {
+        const item = cases.find(function (candidate) { return candidate.id === id; });
+        if (!item) return;
+        selectedId = id;
+        root.querySelectorAll(".case-node").forEach(function (node) {
+          node.classList.toggle("is-selected", node.getAttribute("data-id") === id);
+        });
+        renderDetail(item);
+      }
+
+      function applyFilters() {
+        const query = normalize(searchInput.value).trim();
+        const levelValue = levelFilter.value;
+        const actionValue = actionFilter.value;
+
+        filteredCases = cases.filter(function (item) {
+          const matchesQuery = !query || caseSearchText(item).includes(query);
+          const matchesLevel = levelValue === "all" || item.levels.includes(Number(levelValue));
+          const matchesAction = actionValue === "all" || item.actions.includes(actionValue);
+          return matchesQuery && matchesLevel && matchesAction;
+        });
+
+        resultCount.textContent = "Showing " + filteredCases.length + (filteredCases.length === 1 ? " case" : " cases");
+
+        const visibleIds = new Set(filteredCases.map(function (item) { return item.id; }));
+        root.querySelectorAll(".case-node").forEach(function (node) {
+          node.style.display = visibleIds.has(node.getAttribute("data-id")) ? "" : "none";
+        });
+
+        renderCards();
+
+        if (!visibleIds.has(selectedId)) {
+          if (filteredCases.length) {
+            selectCase(filteredCases[0].id);
+          } else {
+            selectedId = "";
+            root.querySelectorAll(".case-node").forEach(function (node) { node.classList.remove("is-selected"); });
+            renderDetail(null);
+          }
+        } else {
+          selectCase(selectedId);
+        }
+      }
+
+      function setView(view) {
+        currentView = view;
+        const isMap = currentView === "map";
+        mapView.hidden = !isMap;
+        cardView.hidden = isMap;
+        mapButton.setAttribute("aria-pressed", String(isMap));
+        cardButton.setAttribute("aria-pressed", String(!isMap));
+        mapButton.classList.toggle("btn-primary", isMap);
+        cardButton.classList.toggle("btn-primary", !isMap);
+      }
+
+      function resetFilters() {
+        searchInput.value = "";
+        levelFilter.value = "all";
+        actionFilter.value = "all";
+        applyFilters();
+      }
+
+      createNodes();
+
+      searchInput.addEventListener("input", applyFilters);
+      levelFilter.addEventListener("change", applyFilters);
+      actionFilter.addEventListener("change", applyFilters);
+      resetButton.addEventListener("click", resetFilters);
+      mapButton.addEventListener("click", function () { setView("map"); });
+      cardButton.addEventListener("click", function () { setView("cards"); });
+
+      setView("map");
+      applyFilters();
+    }());
+  </script>
+</div>
+
+      <section class="impact-reflections" id="teacher-reflections" aria-labelledby="teacher-reflections-title">
+        <div class="container">
+          <div class="section-head impact-reflections__head">
+            <p class="eyebrow">Teacher reflections</p>
+            <h2 class="section-title" id="teacher-reflections-title">What participants reported changing.</h2>
+            <p class="section-lede">The anonymous quotations below preserve each participant&rsquo;s original grammar and wording. They are grouped by the change they describe. Each reflection records a participant account. Independent verification of learner outcomes and causal attribution requires additional evidence.</p>
+          </div>
+
+          <section class="reflection-theme" aria-labelledby="reflection-learning">
+            <div class="reflection-theme__head">
+              <p class="reflection-theme__level">Learning and mathematical method · L1 to L3</p>
+              <h3 id="reflection-learning">From named techniques to usable ways of thinking</h3>
+            </div>
+            <div class="reflection-grid">
+              <blockquote class="reflection-card" lang="en">
+                <p>In number theory  choose as big as you can ... in i.equalities am gm how to indentify thé ves inequality... in séquences how to suppose thé solution exists and construct it ... in geometry angle chasing</p>
+                <footer>P05 · Anonymous participant reflection</footer>
+              </blockquote>
+              <blockquote class="reflection-card" lang="en">
+                <p>One idea I now use is the invariant method from Cycle II. It changed the way I approach and teach problems by encouraging me to look for what remains unchanged rather than immediately searching for a formula. For example, when teaching problem solving, I encourage students to identify patterns or properties that stay constant throughout a process, helping them develop deeper logical thinking and explore problems more creatively.</p>
+                <footer>P08 · Anonymous participant reflection</footer>
+              </blockquote>
+              <blockquote class="reflection-card reflection-card--rtl" lang="ar" dir="rtl">
+                <p>الاهتمام بتعميق المفاهيم الرياضية أثناء التدريس وتدريب الطلاب على التركيز على أدق التفاصيل وأيضا الربط بين معطيات السؤال وكمثال عند تدريس خواص الرباعي الدائري</p>
+                <footer>P13 · تأمل مشارك دون ذكر الاسم</footer>
+              </blockquote>
+            </div>
+          </section>
+
+          <section class="reflection-theme" aria-labelledby="reflection-agency">
+            <div class="reflection-theme__head">
+              <p class="reflection-theme__level">Teacher agency and authorship · L2 to L3</p>
+              <h3 id="reflection-agency">Explaining mathematics and building with it</h3>
+            </div>
+            <div class="reflection-grid">
+              <blockquote class="reflection-card reflection-card--rtl" lang="ar" dir="rtl">
+                <p>أعمل حاليًا على إعداد محتوى بيداغوجي متخصص في الأولمبياد الرياضي، يهدف إلى مرافقة التلاميذ وتطوير مهاراتهم استعدادًا للمشاركة في مسابقات الرياضيات.</p>
+                <footer>P02 · تأمل مشارك دون ذكر الاسم</footer>
+              </blockquote>
+              <blockquote class="reflection-card" lang="en">
+                <p>With this academy, we are not merely recipients. We must also be able to grasp, practice, and re-explain what we have learned from the experts. That is what is very important.<br><br>Furthermore, this academy calls upon experts in the field to lead the training sessions, such as former IMO medalists who are highly regarded professors today.</p>
+                <footer>P09 · Anonymous participant reflection</footer>
+              </blockquote>
+              <blockquote class="reflection-card" lang="en">
+                <p>Cycle IV - the Nim game - everything that i revised and give it to my students- while preparing the presentation</p>
+                <footer>P14 · Anonymous participant reflection</footer>
+              </blockquote>
+            </div>
+          </section>
+
+          <section class="reflection-theme" aria-labelledby="reflection-transfer">
+            <div class="reflection-theme__head">
+              <p class="reflection-theme__level">Enacted transfer · L3</p>
+              <h3 id="reflection-transfer">Work carried into training, challenge design, camps, and competitions</h3>
+            </div>
+            <div class="reflection-grid">
+              <blockquote class="reflection-card reflection-card--rtl" lang="ar" dir="rtl">
+                <p>شاركت في إعداد تحديات أولمبياد الرياضيات في اليمن</p>
+                <footer>P06 · تأمل مشارك دون ذكر الاسم</footer>
+              </blockquote>
+              <blockquote class="reflection-card reflection-card--rtl" lang="ar" dir="rtl">
+                <p>لقد شاركت في إعداد   تحديات ألمبياد الرياضيات لموسمين ٢٠٢٤ وحتى الآن  في اليمن والذي تبنته الهيئة العامة للإبتكار التابعة لحكومة صنعاء حيث كل موسم له ثلاث مراحل. لقد أثرت الأكاديمية معرفتنا بأهم عناصر الأولمبياد التي يجب أن تضمن في التحديات ونوع الأسئلة ومستوياتها المختلفة. وللعلم يعتبر هذان اول مؤسمين يتم إطلاق ألمبياد الرياضيات فيها.</p>
+                <footer>P07 · تأمل مشارك دون ذكر الاسم</footer>
+              </blockquote>
+              <blockquote class="reflection-card reflection-card--rtl" lang="ar" dir="rtl">
+                <p>عدة حلقات تكونية حضورية و عن بعد و َان أثر التكوين واصحا و استعملت عدة تمارين من حصصكم</p>
+                <footer>P10 · تأمل مشارك دون ذكر الاسم</footer>
+              </blockquote>
+              <blockquote class="reflection-card" lang="en">
+                <p>I coordinated and prepared for the first Mathematics Olympiad in Anbar and was the supervisor of the competition and supervised the development of questions commensurate with the topics of the World Mathematics Olympiad.</p>
+                <footer>P11 · Anonymous participant reflection</footer>
+              </blockquote>
+            </div>
+          </section>
+
+          <section class="reflection-theme" aria-labelledby="reflection-learners">
+            <div class="reflection-theme__head">
+              <p class="reflection-theme__level">Learner focused signals · L5</p>
+              <h3 id="reflection-learners">Early reports of curiosity, confidence, strategy, and student work</h3>
+            </div>
+            <div class="reflection-grid">
+              <blockquote class="reflection-card reflection-card--rtl" lang="ar" dir="rtl">
+                <p>زيادة الطموح والتطلع لحل أكبر عدد من المسائل وزيارة مواقع تمارين الأولمبياد، ورغم التزامن فقد لا يوجد ربط مباشر بين هذه النتيجة مع تأثير الأكاديمية</p>
+                <footer>P03 · تأمل مشارك دون ذكر الاسم</footer>
+              </blockquote>
+              <blockquote class="reflection-card reflection-card--rtl" lang="ar" dir="rtl">
+                <p>مشروع الموازييك.   مشروع البرمجة الخطية    ومشروع عمل استهدف هندسة الدوائر والعدد باي</p>
+                <footer>P04 · تأمل مشارك دون ذكر الاسم</footer>
+              </blockquote>
+              <blockquote class="reflection-card reflection-card--rtl" lang="ar" dir="rtl">
+                <p>نظرية  أويلر ونظرية فيرما -- خاصة عندما أطلب من طلابي إيجاد رقم الآحاد أو رقمي الآحاد والعشرات في عدد له أس كبير أجدهم يستخدمون فيرما بكل شغف ويجدون الحل مما يعزز ثقتهم بأنفسهم</p>
+                <footer>P12 · تأمل مشارك دون ذكر الاسم</footer>
+              </blockquote>
+            </div>
+          </section>
+
+          <div class="impact-report-callout">
+            <div>
+              <p class="eyebrow">Full evidence account</p>
+              <h3>Read the AY 2025 to 2026 Impact Topography Report.</h3>
+              <p>The report explains the six level coding framework and the construction of 16 anonymized cases. It also presents the evidence pathway, case findings, and the boundary between participant reports and independently established outcomes.</p>
+            </div>
+            <a class="btn btn--primary btn--lg" href="files/MOTA-AY-2025-2026-Impact-Topography-Report.pdf" target="_blank" rel="noopener">Read the report</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="logo">
+              <svg class="logo__mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.5" /><path d="M24 7.5 L41.32 36 L6.68 36 Z" stroke-width="1.4" /><circle cx="24" cy="27" r="6.5" stroke-width="1.2" /><circle cx="24" cy="27" r="1.2" fill="currentColor" stroke="none" /></svg>
+              <span class="logo__text"><span class="logo__title">Math Olympiad Trainer Academy</span><span class="logo__subtitle">SITE · MIMS</span></span>
+            </a>
+            <p>Training the trainers of secondary school mathematics across the MENA region. Developed with funding from SITE, which was part of the NYU Abu Dhabi Research Institute, in academic partnership with MIMS.</p>
+          </div>
+          <div class="footer__col"><h4>Academy</h4><ul role="list"><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="impact.html">Impact &amp; Evidence</a></li><li><a href="curriculum.html">Curriculum</a></li><li><a href="team.html">Team</a></li><li><a href="editorial.html">Editorial policy</a></li></ul></div>
+          <div class="footer__col"><h4>Participants</h4><ul role="list"><li><a href="resources.html">Resources</a></li><li><a href="https://classroom.google.com/c/NzExNTk4MzQxNDI2" target="_blank" rel="noopener">Google Classroom</a></li><li><a href="contact.html#express-interest">Apply</a></li><li><a href="contact.html#faq">FAQ</a></li><li><a href="archive.html">Teaching Materials</a></li></ul></div>
+          <div class="footer__col"><h4>Contact</h4><ul role="list"><li><a href="contact.html">General enquiries</a></li><li><a href="mailto:dz41@nyu.edu">dz41@nyu.edu</a></li><li><a href="https://nyuad.nyu.edu" target="_blank" rel="noopener">NYU Abu Dhabi</a></li></ul></div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2024 to <span data-year>2026</span> Math Olympiad Trainer Academy. All rights reserved.</span>
+          <span>Credited materials remain subject to their source terms.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

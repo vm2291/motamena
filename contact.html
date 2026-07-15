@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact &amp; Apply, Math Olympiad Trainer Academy</title>
+    <meta name="description" content="Apply for the next cycle of the Math Olympiad Trainer Academy, or get in touch with the academic team." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(var(--space-10), 6vw, var(--space-20));
+        align-items: start;
+      }
+      @media (max-width: 880px) { .contact-grid { grid-template-columns: 1fr; } }
+      .contact-info h3 {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: var(--space-5);
+        padding-bottom: var(--space-3);
+        border-bottom: 1px solid var(--color-divider);
+      }
+      .contact-info dl { display: grid; gap: var(--space-5); margin-bottom: var(--space-8); }
+      .contact-info dt {
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+        margin-bottom: var(--space-1);
+      }
+      .contact-info dd {
+        font-size: 1.0625rem;
+        color: var(--color-text);
+        line-height: 1.5;
+      }
+      .contact-info dd a { color: var(--color-text); border-bottom: 1px solid var(--color-divider); }
+      .contact-info dd a:hover { color: var(--color-accent); border-bottom-color: var(--color-accent); }
+
+      .faq-item {
+        border-top: 1px solid var(--color-divider);
+        padding-block: var(--space-6);
+      }
+      .faq-item:last-child { border-bottom: 1px solid var(--color-divider); }
+      .faq-item summary {
+        font-family: var(--font-display);
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: var(--color-primary);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--space-4);
+        list-style: none;
+      }
+      .faq-item summary::-webkit-details-marker { display: none; }
+      .faq-item summary::after {
+        content: '+';
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        color: var(--color-accent);
+        transition: transform var(--transition-interactive);
+        font-weight: 300;
+      }
+      .faq-item[open] summary::after { transform: rotate(45deg); }
+      .faq-item p {
+        margin-top: var(--space-4);
+        color: var(--color-text-muted);
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <a href="index.html" class="logo" aria-label="Math Olympiad Trainer Academy, home">
+          <svg class="logo__mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.5" /><path d="M24 7.5 L41.32 36 L6.68 36 Z" stroke-width="1.4" /><circle cx="24" cy="27" r="6.5" stroke-width="1.2" /><circle cx="24" cy="27" r="1.2" fill="currentColor" stroke="none" /></svg>
+          <span class="logo__text"><span class="logo__title">Math Olympiad Trainer Academy</span><span class="logo__subtitle">SITE · MIMS</span></span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <div class="nav__panel">
+          <ul class="nav__list" role="list">
+            <li><a class="nav__link" href="index.html">Home</a></li>
+            <li><a class="nav__link" href="about.html">About</a></li>
+            <li><a class="nav__link" href="programs.html">Programs</a></li>
+            <li><a class="nav__link" href="impact.html">Impact</a></li>
+            
+            <li class="nav__item--dropdown">
+              <button type="button" class="nav__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                Knowledge Hub <svg class="nav__dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <ul class="nav__dropdown-menu" role="list">
+                <li><a class="nav__dropdown-link" href="curriculum.html">Curriculum</a></li>
+                <li><a class="nav__dropdown-link" href="resources.html">Participant Resources</a></li>
+                <li><a class="nav__dropdown-link" href="atlas-methods.html">Methods</a></li>
+                
+                <li><a class="nav__dropdown-link" href="continuum.html">Mathematical Heritage</a></li>
+                <li><a class="nav__dropdown-link" href="atlas/index.html">Historical Profiles</a></li>
+                <li><a class="nav__dropdown-link" href="archive.html">Teaching Materials</a></li>
+                              <li><a class="nav__dropdown-link" href="glossary.html">Mathematics Glossary</a></li>
+              </ul>
+            </li>
+            <li><a class="nav__link" href="team.html">Team</a></li>
+            
+            <li><a class="nav__link" href="contact.html" aria-current="page">Contact</a></li>
+          </ul>
+          <a class="btn btn--accent nav__cta" href="https://classroom.google.com/c/NzExNTk4MzQxNDI2" target="_blank" rel="noopener">Classroom</a>
+        </div>
+          <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
+          <button class="menu-toggle" data-menu-toggle aria-label="Toggle menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero__inner">
+          <p class="page-hero__eyebrow">Contact &amp; Apply</p>
+          <h1>Apply to the <em>next cycle</em>, or write to us.</h1>
+          <p class="page-hero__lede">
+            The Academy is open to secondary school mathematics teachers across the MENA
+            region. New cohorts are admitted between cycles. Submit your interest
+            below and the academic team will be in touch when the next round opens.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-info reveal">
+              <h3>Direct contact</h3>
+              <dl>
+                <div>
+                  <dt>Academic Program Director</dt>
+                  <dd>Dr. Dania Zantout, <a href="mailto:dz41@nyu.edu">dz41@nyu.edu</a></dd>
+                </div>
+                <div>
+                  <dt>General enquiries</dt>
+                  <dd>For questions about the Academy, partnerships, or media, please write directly to the Director.</dd>
+                </div>
+                <div>
+                  <dt>Year One onsite venue</dt>
+                  <dd>
+                    NYU Abu Dhabi · Saadiyat Island, Abu Dhabi, United Arab Emirates
+                    <br>
+                    <a href="https://nyuad.nyu.edu" target="_blank" rel="noopener">nyuad.nyu.edu</a>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Daily platform</dt>
+                  <dd><a href="https://classroom.google.com/c/NzExNTk4MzQxNDI2" target="_blank" rel="noopener">Google Classroom · Enrolled participants only</a></dd>
+                </div>
+              </dl>
+
+              <h3>For enrolled teachers</h3>
+              <dl>
+                <div>
+                  <dt>Live sessions</dt>
+                  <dd>Held on the NYU Abu Dhabi Zoom platform. Join links and the full schedule are posted to the Academy's Google Classroom.</dd>
+                </div>
+                <div>
+                  <dt>onsite intensive</dt>
+                  <dd>Year One concluded with a specially funded intensive at NYU Abu Dhabi from 16 to 20 June 2025. Year Two continued online. A future onsite intensive would follow separately confirmed funding and arrangements.</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="form reveal" id="express-interest">
+              <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; margin-bottom: var(--space-2);">Express interest</h3>
+              <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: var(--space-4);">
+                A structured annual form collects expressions of interest for AY 2026
+                to 2027. It supports consistent review, cohort planning, and participant
+                communication.
+              </p>
+              <ul style="margin: 0 0 var(--space-6) var(--space-5); color: var(--color-text-muted);">
+                <li>A personal Gmail address for Google Classroom access</li>
+                <li>A telephone number connected to WhatsApp</li>
+                <li>Institution, role, teaching responsibilities, and relevant links</li>
+                <li>Experience in mathematics, olympiad training, or community outreach</li>
+                <li>Commitment to live sessions, Academy instructions, and cycle teacher presentations</li>
+              </ul>
+              <a class="btn btn--primary btn--lg" id="interest-form-link" href="#" hidden>Open the AY 2026 to 2027 form</a>
+              <p id="interest-form-status" style="margin-top: var(--space-4); font-size: 0.9rem; color: var(--color-text-muted);">The AY 2026 to 2027 expression of interest form will appear here when its verified Google Form link is activated. Please use the form for application information.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="curriculum">
+        <div class="container container--narrow">
+          <div class="section-head reveal">
+            <p class="eyebrow">Frequently asked</p>
+            <h2 class="section-title">A few common questions.</h2>
+          </div>
+          <div class="reveal">
+            <details class="faq-item">
+              <summary>Who is the Academy for?</summary>
+              <p>The Academy is a professional development program for secondary school mathematics teachers across the MENA region. Their students benefit from stronger olympiad instruction.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Is the program free of charge?</summary>
+              <p>The Academy operates as an educational initiative. SITE funded its development while part of the NYU Abu Dhabi Research Institute. Year One closed with an onsite summer intensive at NYU Abu Dhabi from 16 to 20 June 2025. Selected participants receive cost information in advance.</p>
+            </details>
+            <details class="faq-item">
+              <summary>What languages are sessions held in?</summary>
+              <p>Sessions and written notes use English. Clear mathematical notation and accessible exposition support teachers working across several classroom languages.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How are participants selected?</summary>
+              <p>Each cycle opens applications between rounds. Selection is based on teaching background, mathematical experience, and demonstrated commitment to olympiad level instruction. We aim for a balanced cohort across the participating countries.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Do I need olympiad experience to apply?</summary>
+              <p>Qualified secondary school mathematics teachers may apply at any level of prior olympiad experience. A serious interest in olympiad mathematics and a willingness to teach it guide selection.</p>
+            </details>
+            <details class="faq-item">
+              <summary>What is the time commitment?</summary>
+              <p>A cycle normally consists of two to four live online sessions led by a coach, each roughly three hours, followed by a teacher presentation. Sessions run approximately every two weeks in the late afternoon. Scheduling reflects coach availability and regional time differences. The online Academy year runs from the middle of September to the middle of June.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Is the Academy connected to NYU Abu Dhabi formally?</summary>
+              <p>The Academy developed through SITE funding while SITE was part of the NYU Abu Dhabi Research Institute. MIMS, the Mediterranean Institute for the Mathematical Sciences, serves as academic partner. NYU Abu Dhabi platforms have hosted online sessions, and its campus hosted the funded Year One intensive.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="logo">
+              <svg class="logo__mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.5" /><path d="M24 7.5 L41.32 36 L6.68 36 Z" stroke-width="1.4" /><circle cx="24" cy="27" r="6.5" stroke-width="1.2" /><circle cx="24" cy="27" r="1.2" fill="currentColor" stroke="none" /></svg>
+              <span class="logo__text"><span class="logo__title">Math Olympiad Trainer Academy</span><span class="logo__subtitle">SITE · MIMS</span></span>
+            </a>
+            <p>Training the trainers of secondary school mathematics across the MENA region. Developed with funding from SITE, which was part of the NYU Abu Dhabi Research Institute, in academic partnership with MIMS.</p>
+          </div>
+          <div class="footer__col"><h4>Academy</h4><ul role="list"><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="impact.html">Impact &amp; Evidence</a></li><li><a href="curriculum.html">Curriculum</a></li><li><a href="team.html">Team</a></li><li><a href="atlas/index.html">Historical Profiles</a></li><li><a href="editorial.html">Editorial policy</a></li></ul></div>
+          <div class="footer__col"><h4>Participants</h4><ul role="list"><li><a href="resources.html">Resources</a></li><li><a href="https://classroom.google.com/c/NzExNTk4MzQxNDI2" target="_blank" rel="noopener">Google Classroom</a></li><li><a href="contact.html#express-interest">Apply</a></li><li><a href="contact.html#faq">FAQ</a></li>
+              <li><a href="archive.html">Teaching Materials</a></li>
+              <li><a href="glossary.html">Glossary</a></li></ul></div>
+          <div class="footer__col"><h4>Contact</h4><ul role="list"><li><a href="contact.html">General enquiries</a></li><li><a href="mailto:dz41@nyu.edu">dz41@nyu.edu</a></li><li><a href="https://nyuad.nyu.edu" target="_blank" rel="noopener">NYU Abu Dhabi</a></li></ul></div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2024 to <span data-year>2026</span> Math Olympiad Trainer Academy. All rights reserved.</span>
+          <span>Built on a foundation of theorem, example, and method.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js" defer></script>
+    <script src="js/application-config.js" defer></script>
+    <script src="js/application.js" defer></script></body>
+</html>

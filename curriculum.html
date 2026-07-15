@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Curriculum, Math Olympiad Trainer Academy</title>
+    <meta name="description" content="The Academy's curriculum traces the four classical pillars of olympiad mathematics, algebra, geometry, number theory and combinatorics, through theorem, example and method." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .subject {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: clamp(var(--space-8), 5vw, var(--space-16));
+        padding-block: clamp(var(--space-12), 7vw, var(--space-20));
+        border-bottom: 1px solid var(--color-divider);
+        align-items: start;
+      }
+      .subject:last-child { border-bottom: none; }
+      .subject__label {
+        position: sticky;
+        top: var(--space-24);
+      }
+      .subject__num {
+        font-family: var(--font-display);
+        font-style: italic;
+        font-size: 1rem;
+        color: var(--color-accent);
+        letter-spacing: 0.15em;
+        margin-bottom: var(--space-3);
+      }
+      .subject__title {
+        font-family: var(--font-display);
+        font-size: 2.5rem;
+        font-weight: 500;
+        line-height: 1;
+        color: var(--color-primary);
+      }
+      .subject__body p { margin-bottom: var(--space-4); font-size: 1.0625rem; line-height: 1.7; color: var(--color-text); }
+      .subject__topics {
+        margin-top: var(--space-6);
+        list-style: none;
+        display: grid;
+        gap: var(--space-3);
+      }
+      .subject__topics li {
+        display: grid;
+        grid-template-columns: 24px 1fr;
+        gap: var(--space-4);
+        padding: var(--space-3) 0;
+        border-top: 1px dashed var(--color-divider);
+        font-size: 0.95rem;
+        color: var(--color-text);
+      }
+      .subject__topics li::before {
+        content: '+';
+        color: var(--color-accent);
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+      @media (max-width: 760px) {
+        .subject { grid-template-columns: 1fr; }
+        .subject__label { position: static; }
+        .subject__title { font-size: 2rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <a href="index.html" class="logo" aria-label="Math Olympiad Trainer Academy, home">
+          <svg class="logo__mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.5" /><path d="M24 7.5 L41.32 36 L6.68 36 Z" stroke-width="1.4" /><circle cx="24" cy="27" r="6.5" stroke-width="1.2" /><circle cx="24" cy="27" r="1.2" fill="currentColor" stroke="none" /></svg>
+          <span class="logo__text"><span class="logo__title">Math Olympiad Trainer Academy</span><span class="logo__subtitle">SITE · MIMS</span></span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <div class="nav__panel">
+          <ul class="nav__list" role="list">
+            <li><a class="nav__link" href="index.html">Home</a></li>
+            <li><a class="nav__link" href="about.html">About</a></li>
+            <li><a class="nav__link" href="programs.html">Programs</a></li>
+            <li><a class="nav__link" href="impact.html">Impact</a></li>
+            
+            <li class="nav__item--dropdown">
+              <button type="button" class="nav__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                Knowledge Hub <svg class="nav__dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <ul class="nav__dropdown-menu" role="list">
+                <li><a class="nav__dropdown-link" href="curriculum.html">Curriculum</a></li>
+                <li><a class="nav__dropdown-link" href="resources.html">Participant Resources</a></li>
+                <li><a class="nav__dropdown-link" href="atlas-methods.html">Methods</a></li>
+                
+                <li><a class="nav__dropdown-link" href="continuum.html">Mathematical Heritage</a></li>
+                <li><a class="nav__dropdown-link" href="atlas/index.html">Historical Profiles</a></li>
+                <li><a class="nav__dropdown-link" href="archive.html">Teaching Materials</a></li>
+                              <li><a class="nav__dropdown-link" href="glossary.html">Mathematics Glossary</a></li>
+              </ul>
+            </li>
+            <li><a class="nav__link" href="team.html">Team</a></li>
+            
+            <li><a class="nav__link" href="contact.html">Contact</a></li>
+          </ul>
+          <a class="btn btn--accent nav__cta" href="https://classroom.google.com/c/NzExNTk4MzQxNDI2" target="_blank" rel="noopener">Classroom</a>
+        </div>
+          <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
+          <button class="menu-toggle" data-menu-toggle aria-label="Toggle menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero__inner">
+          <p class="page-hero__eyebrow">The Curriculum</p>
+          <h1>Theorem, example, <em>method</em>.</h1>
+          <p class="page-hero__lede">
+            The Academy's curriculum traces the four classical pillars of olympiad
+            mathematics through algebra, geometry, number theory, and combinatorics.
+            Pedagogy organises the curriculum. We move from theorem to worked example
+            before naming the method beneath the calculation.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <article class="subject reveal">
+            <div class="subject__label">
+              <p class="subject__num">i.</p>
+              <h2 class="subject__title">Algebra</h2>
+            </div>
+            <div class="subject__body">
+              <p>
+                Olympiad algebra lives at the intersection of inequalities, identities
+                and structure. Teachers study how estimates, rewrites, and purposeful
+                substitutions reveal the structure of a problem. Symmetric polynomials,
+                factorisations, and functional equations provide the working language.
+              </p>
+              <ul class="subject__topics" role="list">
+                <li>Classical inequalities, arithmetic and geometric mean, Cauchy Schwarz, rearrangement, and power mean</li>
+                <li>Symmetric and homogeneous polynomials, Newton's identities</li>
+                <li>Functional equations and the discipline of substitution</li>
+                <li>Polynomial roots, Vieta's relations and Lagrange interpolation</li>
+                <li>Algebraic structure in number theoretic problems</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="subject reveal">
+            <div class="subject__label">
+              <p class="subject__num">ii.</p>
+              <h2 class="subject__title">Geometry</h2>
+            </div>
+            <div class="subject__body">
+              <p>
+                Geometry is the most visible olympiad subject and the easiest to teach
+                badly. Our approach is patient and synthetic. A clear diagram and a
+                focused set of techniques support steady progress toward
+                transformations and projective methods.
+              </p>
+              <ul class="subject__topics" role="list">
+                <li>Classical synthetic geometry, circles, angles, similar triangles</li>
+                <li>Power of a point and the radical axis</li>
+                <li>Transformations, rotation, reflection, spiral similarity</li>
+                <li>Projective and inversive geometry as olympiad tools</li>
+                <li>The pedagogy of the diagram</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="subject reveal">
+            <div class="subject__label">
+              <p class="subject__num">iii.</p>
+              <h2 class="subject__title">Number Theory</h2>
+            </div>
+            <div class="subject__body">
+              <p>
+                Number theory is where the Academy spends much of its time, because it
+                is where the gap between a willing student and a trained one is widest.
+                Year Two has worked through divisors and gcd identities in Cycle 1 with
+                Melih Üçer, then exponential congruences and multiplicative orders
+                later in the year with Prof. Dušan Djukić.
+              </p>
+              <ul class="subject__topics" role="list">
+                <li>Modular arithmetic and the residue permutation method</li>
+                <li>Fermat's Little Theorem, statement, proof and the meaning of cycles</li>
+                <li>Euler's Theorem and the totient function</li>
+                <li>Multiplicative order, ord<sub>n</sub>(a), and the divisibility ord<sub>n</sub>(a) | φ(n)</li>
+                <li>Exponential Diophantine equations and the smallest prime divisor method</li>
+                <li>Lifting the exponent, preparation and applications</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="subject reveal">
+            <div class="subject__label">
+              <p class="subject__num">iv.</p>
+              <h2 class="subject__title">Combinatorics</h2>
+            </div>
+            <div class="subject__body">
+              <p>
+                Combinatorics rewards the imaginative student more than the
+                computational one, but it is also the most teachable olympiad subject,
+                because its methods are short and its proofs visible. We emphasise the
+                named methods, the canonical examples, and the move from counting to
+                bounding.
+              </p>
+              <ul class="subject__topics" role="list">
+                <li>Counting arguments, bijections, double counting, generating functions</li>
+                <li>Pigeonhole, in its elementary and parametric forms</li>
+                <li>Extremal arguments and the smallest counterexample method</li>
+                <li>Graphs, colourings, and Ramsey problems</li>
+                <li>Probabilistic arguments at the olympiad level</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="section-head section-head--center reveal">
+            <p class="eyebrow">A regional inheritance</p>
+            <h2 class="section-title">The four subjects have a <em>long memory</em> in this part of the world.</h2>
+            <p class="section-lede">
+              Each of the four subjects has a documented lineage in the medieval
+              mathematical tradition of the Arab world. That tradition produced
+              vocabulary, notation, and techniques that teachers still share with
+              students. This connection gives trainees historical grounding and
+              confidence in the classroom.
+            </p>
+          </div>
+          <div class="heritage-grid reveal">
+            <div class="heritage-cell">
+              <p class="heritage-cell__num">i.</p>
+              <h3 class="heritage-cell__title">Algebra</h3>
+              <p class="heritage-cell__body">
+                The word itself comes from Al-Khw&#257;rizm&#299;'s ninth century treatise on
+                <em>al-jabr</em> and <em>al-muq&#257;bala</em>, which classified quadratic equations into
+                six types and proved each geometrically. Two centuries later Al-Karaj&#299;
+                extended the calculus of polynomials, worked out the closed form for the sum
+                of cubes, and used what modern historians read as an early inductive argument.
+                Al-Samaw'al al-Maghrib&#299; wrote <em>Al-B&#257;hir fi'l-jabr</em> in the twelfth century,
+                credited the induction idea back to Al-Karaj&#299;, and pushed algebraic manipulation
+                further than anyone before him in the region.
+              </p>
+            </div>
+            <div class="heritage-cell">
+              <p class="heritage-cell__num">ii.</p>
+              <h3 class="heritage-cell__title">Geometry</h3>
+              <p class="heritage-cell__body">
+                Th&#257;bit ibn Qurra proved a generalisation of the Pythagorean theorem
+                that still appears in problem sets, and translated the Greek geometric
+                canon into Arabic with corrections that shaped how it reached Europe.
+                Ibn al-Haytham's <em>Kit&#257;b al-man&#257;&#7827;ir</em> reworked the geometry of
+                vision using rigorous constructions, the same instinct for building
+                a figure carefully before reasoning about it that we ask trainees to model
+                in their classrooms.
+              </p>
+            </div>
+            <div class="heritage-cell">
+              <p class="heritage-cell__num">iii.</p>
+              <h3 class="heritage-cell__title">Number Theory</h3>
+              <p class="heritage-cell__body">
+                Th&#257;bit gave a rule for producing amicable number pairs that carried
+                his name for centuries. Ibn al-Haytham stated and worked with a congruence
+                system whose reasoning matches what we now call Wilson's theorem, arriving
+                at the result more than seven centuries before the eighteenth century statement
+                Wilson's name is attached to. Al-Karaj&#299;'s
+                <em>Al-Fakhr&#299;</em> extended and corrected Diophantus's arithmetical problems
+, a direct ancestor of the number theoretic problem style olympiads still use.
+              </p>
+            </div>
+            <div class="heritage-cell">
+              <p class="heritage-cell__num">iv.</p>
+              <h3 class="heritage-cell__title">Combinatorics</h3>
+              <p class="heritage-cell__body">
+                Al-Samaw'al set out a problem in ten unknowns with 210 equations, an
+                early and deliberate piece of combinatorial reasoning about systems.
+                He also produced a closed form for the sum of squares of the first <em>n</em>
+                integers, the kind of summation identity that still opens olympiad
+                counting problems. Al-B&#299;r&#363;n&#299;'s geodetic work, meanwhile, is a
+                masterclass in the extremal habit of mind: reduce a hard measurement to a
+                clever configuration, then bound the error.
+              </p>
+            </div>
+          </div>
+          <p class="heritage-note reveal">
+            <small>
+              We name these figures where the historical record supports the specific claim.
+              Each scholar has a fully sourced standalone entry in the
+              <a href="atlas/index.html">Historical Profiles</a>, and the shorter Heritage
+              narrative lives on the <a href="about.html#heritage">About page</a>.
+            </small>
+          </p>
+        </div>
+      </section>
+
+      <section class="cycle">
+        <div class="container">
+          <div class="section-head section-head--center reveal">
+            <p class="eyebrow">The pedagogical method</p>
+            <h2 class="section-title">A consistent rhythm across <em>every cycle</em>.</h2>
+            <p class="section-lede">
+              Independent of subject, every session of the Academy follows the same
+              structure of three connected stages. Once teachers internalise the rhythm, they can
+              carry it back to their classrooms.
+            </p>
+          </div>
+          <div class="timeline">
+            <div class="timeline__item">
+              <span class="timeline__phase">First</span>
+              <h3 class="timeline__title">Theorem</h3>
+              <p class="timeline__desc">We state the theorem, motivate its hypotheses, and prove it in a form that reveals the underlying mechanism.</p>
+            </div>
+            <div class="timeline__item">
+              <span class="timeline__phase">Then</span>
+              <h3 class="timeline__title">Example</h3>
+              <p class="timeline__desc">We work several olympiad problems where the theorem appears in concrete form. The calculation comes first; the meaning comes after.</p>
+            </div>
+            <div class="timeline__item">
+              <span class="timeline__phase">Finally</span>
+              <h3 class="timeline__title">Method</h3>
+              <p class="timeline__desc">We name the hidden idea behind the examples. Once the method has a name, problems become cleaner, more systematic, and easier to teach.</p>
+            </div>
+            <div class="timeline__item">
+              <span class="timeline__phase">Always</span>
+              <h3 class="timeline__title">Written record</h3>
+              <p class="timeline__desc">Every session is paired with a full LaTeX document, the kind of notes a teacher can take into a classroom and teach from directly.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="join">
+        <div class="join__bg"><img src="images/imo2025-campus.jpg" alt="NYU Abu Dhabi campus at golden hour" /></div>
+        <div class="join__overlay"></div>
+        <div class="container">
+          <h2>Curriculum becomes <em>practice</em>.</h2>
+          <p>The Academy's curriculum lives in the working notebooks of its teachers. Apply to join the next cycle and become part of that working community.</p>
+          <div class="join__actions">
+            <a class="btn btn--accent btn--lg" href="contact.html#express-interest">Apply for the next cycle</a>
+            <a class="btn btn--ghost btn--lg" href="resources.html">Browse resources</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="logo">
+              <svg class="logo__mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.5" /><path d="M24 7.5 L41.32 36 L6.68 36 Z" stroke-width="1.4" /><circle cx="24" cy="27" r="6.5" stroke-width="1.2" /><circle cx="24" cy="27" r="1.2" fill="currentColor" stroke="none" /></svg>
+              <span class="logo__text"><span class="logo__title">Math Olympiad Trainer Academy</span><span class="logo__subtitle">SITE · MIMS</span></span>
+            </a>
+            <p>Training the trainers of secondary school mathematics across the MENA region. Developed with funding from SITE, which was part of the NYU Abu Dhabi Research Institute, in academic partnership with MIMS.</p>
+          </div>
+          <div class="footer__col"><h4>Academy</h4><ul role="list"><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="impact.html">Impact &amp; Evidence</a></li><li><a href="curriculum.html">Curriculum</a></li><li><a href="team.html">Team</a></li><li><a href="atlas/index.html">Historical Profiles</a></li><li><a href="editorial.html">Editorial policy</a></li></ul></div>
+          <div class="footer__col"><h4>Participants</h4><ul role="list"><li><a href="resources.html">Resources</a></li><li><a href="https://classroom.google.com/c/NzExNTk4MzQxNDI2" target="_blank" rel="noopener">Google Classroom</a></li><li><a href="contact.html#express-interest">Apply</a></li><li><a href="contact.html#faq">FAQ</a></li>
+              <li><a href="archive.html">Teaching Materials</a></li>
+              <li><a href="glossary.html">Glossary</a></li></ul></div>
+          <div class="footer__col"><h4>Contact</h4><ul role="list"><li><a href="contact.html">General enquiries</a></li><li><a href="mailto:dz41@nyu.edu">dz41@nyu.edu</a></li><li><a href="https://nyuad.nyu.edu" target="_blank" rel="noopener">NYU Abu Dhabi</a></li></ul></div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2024 to <span data-year>2026</span> Math Olympiad Trainer Academy. All rights reserved.</span>
+          <span>Built on a foundation of theorem, example, and method.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js" defer></script></body>
+</html>

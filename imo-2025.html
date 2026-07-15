@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UAE IMO 2025 Training Camp, A special engagement with the Ministry of Education</title>
+    <meta name="description" content="In the summer of 2025, the UAE Ministry of Education asked the team behind the Math Olympiad Trainer Academy to design and deliver an intensive Olympiad training camp for the UAE's IMO team and the country's top secondary school mathematicians, in collaboration with the Ministry of Education. A special engagement, run alongside but distinct from the Academy's regular teacher-training program." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Page-scoped styles, IMO 2025 special engagement */
+      .imo-hero {
+        position: relative;
+        padding: clamp(5rem, 9vw, 7.5rem) 0 clamp(3rem, 5vw, 4.5rem);
+        background: linear-gradient(180deg, rgba(15,30,61,0.92) 0%, rgba(15,30,61,0.78) 100%), url('images/imo2025-cohort-classroom.jpg') center 30% / cover no-repeat;
+        color: #fbf6ea;
+        overflow: hidden;
+      }
+      .imo-hero__inner {
+        max-width: 920px;
+        margin-inline: auto;
+        padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+        text-align: left;
+      }
+      .imo-hero .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.35rem 0.85rem;
+        background: rgba(184,137,58,0.18);
+        border: 1px solid rgba(184,137,58,0.55);
+        border-radius: 999px;
+        color: #e8c98a;
+        font-family: var(--font-sans);
+        font-size: 0.75rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      .imo-hero h1 {
+        font-family: var(--font-display);
+        font-size: clamp(2.4rem, 5vw, 3.6rem);
+        line-height: 1.1;
+        margin: 1.25rem 0 1rem;
+        color: #fbf6ea;
+      }
+      .imo-hero h1 em { color: #d9b16a; font-style: italic; }
+      .imo-hero__lede {
+        font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+        line-height: 1.6;
+        max-width: 62ch;
+        color: rgba(251,246,234,0.92);
+      }
+      .imo-hero__meta {
+        margin-top: 1.75rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 2rem;
+        font-family: var(--font-sans);
+        font-size: 0.85rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(217,177,106,0.92);
+      }
+      .imo-hero__meta span { display: inline-flex; align-items: center; gap: 0.5rem; }
+      .imo-hero__meta span::before {
+        content: "";
+        width: 6px; height: 6px; border-radius: 999px;
+        background: #b8893a;
+      }
+
+      /* Fact strip */
+      .imo-facts {
+        background: var(--color-surface, #fbf6ea);
+        border-top: 1px solid var(--color-divider);
+        border-bottom: 1px solid var(--color-divider);
+      }
+      .imo-facts__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+      }
+      .imo-facts__cell {
+        padding: 2rem 1.5rem;
+        text-align: center;
+        border-right: 1px solid var(--color-divider);
+      }
+      .imo-facts__cell:last-child { border-right: 0; }
+      .imo-facts__num {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 3.5vw, 2.75rem);
+        color: var(--color-primary);
+        line-height: 1;
+      }
+      .imo-facts__label {
+        margin-top: 0.5rem;
+        font-family: var(--font-sans);
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--color-muted, #5f5746);
+      }
+      @media (max-width: 720px) {
+        .imo-facts__grid { grid-template-columns: repeat(2, 1fr); }
+        .imo-facts__cell:nth-child(2) { border-right: 0; }
+        .imo-facts__cell:nth-child(1),
+        .imo-facts__cell:nth-child(2) { border-bottom: 1px solid var(--color-divider); }
+      }
+
+      /* Story prose */
+      .imo-story p { line-height: 1.75; }
+      .imo-story h2 {
+        margin-top: 3rem;
+        font-family: var(--font-display);
+        color: var(--color-primary);
+      }
+
+      /* Roles grid */
+      .role-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+      .role-card {
+        padding: 1.5rem 1.5rem 1.75rem;
+        background: var(--color-surface, #fbf6ea);
+        border: 1px solid var(--color-divider);
+        border-radius: 6px;
+      }
+      .role-card__eyebrow {
+        font-family: var(--font-sans);
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--color-accent, #b8893a);
+        font-weight: 600;
+      }
+      .role-card__name {
+        font-family: var(--font-display);
+        font-size: 1.35rem;
+        margin: 0.45rem 0 0.25rem;
+        color: var(--color-primary);
+      }
+      .role-card__role {
+        font-family: var(--font-sans);
+        font-size: 0.9rem;
+        color: var(--color-muted, #5f5746);
+        line-height: 1.5;
+      }
+
+      /* Instructor cards */
+      .instructor-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+      .instructor {
+        padding: 1.75rem;
+        background: var(--color-surface, #fbf6ea);
+        border-left: 3px solid var(--color-accent, #b8893a);
+        border-radius: 0 6px 6px 0;
+      }
+      .instructor__label {
+        font-family: var(--font-sans);
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--color-accent, #b8893a);
+        font-weight: 600;
+      }
+      .instructor__name {
+        font-family: var(--font-display);
+        font-size: 1.4rem;
+        color: var(--color-primary);
+        margin: 0.4rem 0 0.5rem;
+      }
+      .instructor p {
+        font-size: 0.95rem;
+        line-height: 1.65;
+        color: var(--color-text);
+        margin: 0;
+      }
+
+      /* Curriculum pillars */
+      .pillars {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+      .pillar {
+        padding: 1.5rem;
+        background: var(--color-surface, #fbf6ea);
+        border: 1px solid var(--color-divider);
+        border-radius: 6px;
+      }
+      .pillar h3 {
+        font-family: var(--font-display);
+        font-size: 1.2rem;
+        color: var(--color-primary);
+        margin: 0 0 0.75rem;
+      }
+      .pillar ul {
+        margin: 0;
+        padding-left: 1.1rem;
+        font-size: 0.9rem;
+        line-height: 1.65;
+        color: var(--color-text);
+      }
+      .pillar li { margin-bottom: 0.3rem; }
+
+      /* Quote block */
+      .imo-quote {
+        background: var(--color-primary, #0f1e3d);
+        color: #fbf6ea;
+        padding: clamp(3rem, 6vw, 5rem) 0;
+      }
+      .imo-quote__grid {
+        display: grid;
+        grid-template-columns: minmax(220px, 320px) 1fr;
+        gap: clamp(2rem, 5vw, 4rem);
+        align-items: center;
+      }
+      .imo-quote__photo {
+        aspect-ratio: 4/5;
+        background-size: cover;
+        background-position: center 20%;
+        border-radius: 6px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      }
+      .imo-quote blockquote {
+        font-family: var(--font-display);
+        font-style: italic;
+        font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+        line-height: 1.45;
+        margin: 0;
+        color: #fbf6ea;
+        position: relative;
+      }
+      .imo-quote blockquote::before {
+        content: "“";
+        font-size: 5rem;
+        line-height: 0.6;
+        color: #d9b16a;
+        position: absolute;
+        left: -2rem;
+        top: 0.5rem;
+      }
+      .imo-quote cite {
+        display: block;
+        margin-top: 1.5rem;
+        font-family: var(--font-sans);
+        font-style: normal;
+        font-size: 0.85rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #d9b16a;
+      }
+      @media (max-width: 720px) {
+        .imo-quote__grid { grid-template-columns: 1fr; }
+        .imo-quote__photo { width: 100%; max-width: 280px; margin-inline: auto; }
+        .imo-quote blockquote { padding-left: 1.5rem; }
+        .imo-quote blockquote::before { left: 0; font-size: 4rem; }
+      }
+
+      /* Gallery */
+      .imo-gallery {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1rem;
+        margin-top: 2.5rem;
+      }
+      .imo-gallery__item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        background: #e8e0cd;
+      }
+      .imo-gallery__item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .imo-gallery__caption {
+        position: absolute;
+        left: 0; right: 0; bottom: 0;
+        padding: 1rem 1.25rem;
+        background: linear-gradient(0deg, rgba(15,30,61,0.92) 0%, rgba(15,30,61,0) 100%);
+        color: #fbf6ea;
+        font-family: var(--font-sans);
+        font-size: 0.85rem;
+        letter-spacing: 0.04em;
+      }
+      .imo-gallery__item--wide { grid-column: span 8; aspect-ratio: 16/9; }
+      .imo-gallery__item--tall { grid-column: span 4; aspect-ratio: 4/5; }
+      .imo-gallery__item--half { grid-column: span 6; aspect-ratio: 16/9; }
+      @media (max-width: 720px) {
+        .imo-gallery__item--wide,
+        .imo-gallery__item--tall,
+        .imo-gallery__item--half { grid-column: span 12; aspect-ratio: 4/3; }
+      }
+
+      /* Connection card */
+      .connection-card {
+        margin-top: 3rem;
+        padding: 2rem 2.25rem;
+        background: rgba(184,137,58,0.08);
+        border-left: 3px solid var(--color-accent, #b8893a);
+        border-radius: 0 6px 6px 0;
+      }
+      .connection-card h3 {
+        font-family: var(--font-display);
+        font-size: 1.4rem;
+        color: var(--color-primary);
+        margin: 0 0 0.75rem;
+      }
+      .connection-card p {
+        margin: 0 0 0.75rem;
+        line-height: 1.7;
+      }
+      .connection-card p:last-child { margin-bottom: 0; }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <a href="index.html" class="logo" aria-label="Math Olympiad Trainer Academy, home">
+          <svg class="logo__mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.5" /><path d="M24 7.5 L41.32 36 L6.68 36 Z" stroke-width="1.4" /><circle cx="24" cy="27" r="6.5" stroke-width="1.2" /><circle cx="24" cy="27" r="1.2" fill="currentColor" stroke="none" /></svg>
+          <span class="logo__text"><span class="logo__title">Math Olympiad Trainer Academy</span><span class="logo__subtitle">SITE · MIMS</span></span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <div class="nav__panel">
+          <ul class="nav__list" role="list">
+            <li><a class="nav__link" href="index.html">Home</a></li>
+            <li><a class="nav__link" href="about.html">About</a></li>
+            <li><a class="nav__link" href="programs.html">Programs</a></li>
+            <li><a class="nav__link" href="impact.html">Impact</a></li>
+            
+            <li class="nav__item--dropdown">
+              <button type="button" class="nav__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                Knowledge Hub <svg class="nav__dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <ul class="nav__dropdown-menu" role="list">
+                <li><a class="nav__dropdown-link" href="curriculum.html">Curriculum</a></li>
+                <li><a class="nav__dropdown-link" href="resources.html">Participant Resources</a></li>
+                <li><a class="nav__dropdown-link" href="atlas-methods.html">Methods</a></li>
+                
+                <li><a class="nav__dropdown-link" href="continuum.html">Mathematical Heritage</a></li>
+                <li><a class="nav__dropdown-link" href="atlas/index.html">Historical Profiles</a></li>
+                <li><a class="nav__dropdown-link" href="archive.html">Teaching Materials</a></li>
+                              <li><a class="nav__dropdown-link" href="glossary.html">Mathematics Glossary</a></li>
+              </ul>
+            </li>
+            <li><a class="nav__link" href="team.html">Team</a></li>
+            
+            <li><a class="nav__link" href="contact.html">Contact</a></li>
+          </ul>
+          <a class="btn btn--accent nav__cta" href="https://classroom.google.com/c/NzExNTk4MzQxNDI2" target="_blank" rel="noopener">Classroom</a>
+        </div>
+          <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
+          <button class="menu-toggle" data-menu-toggle aria-label="Toggle menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="imo-hero">
+        <div class="imo-hero__inner">
+          <span class="badge">Special engagement · Summer 2025</span>
+          <h1>When the Ministry called, <em>we built the room.</em></h1>
+          <p class="imo-hero__lede">
+            In the summer of 2025, the UAE Ministry of Education asked the team
+            behind the Math Olympiad Trainer Academy to design and deliver an
+            intensive, onsite training camp for the country's IMO team and its
+            strongest secondary school mathematicians. The answer was yes. Nineteen days
+            later, seventeen students had lived through it.
+          </p>
+          <div class="imo-hero__meta">
+            <span>21 June  to  9 July 2025</span>
+            <span>NYU Abu Dhabi · residential</span>
+            <span>In partnership with the UAE Ministry of Education</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FACT STRIP -->
+      <section class="imo-facts">
+        <div class="imo-facts__grid">
+          <div class="imo-facts__cell">
+            <div class="imo-facts__num">19</div>
+            <div class="imo-facts__label">Days · hybrid format</div>
+          </div>
+          <div class="imo-facts__cell">
+            <div class="imo-facts__num">17</div>
+            <div class="imo-facts__label">secondary school students</div>
+          </div>
+          <div class="imo-facts__cell">
+            <div class="imo-facts__num">6</div>
+            <div class="imo-facts__label">UAE IMO 2025 team members</div>
+          </div>
+          <div class="imo-facts__cell">
+            <div class="imo-facts__num">3</div>
+            <div class="imo-facts__label">International instructors</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- A NOTE ON SCOPE -->
+      <section>
+        <div class="container">
+          <div class="prose reveal imo-story" style="max-width: 70ch;">
+            <p class="drop-cap">
+              This page documents a single sovereign level engagement for the UAE's
+              IMO team and advanced secondary school mathematicians. The network behind
+              the Academy established the camp and carried its lessons into later work.
+              The Academy's standing program continues to serve mathematics teachers.
+            </p>
+
+            <h2>How it began</h2>
+            <p>
+              The request came directly from the UAE Ministry of Education. The
+              Ministry's Innovation &amp; Entrepreneurship Department, which led
+              the engagement on the government side, framed Olympiad training as a
+              strategic investment in the nation's intellectual infrastructure,
+              the same advanced reasoning that underwrites a competitive innovation
+              economy. The Academy accepted the brief and built the camp around its
+              own academic team, in collaboration with the Ministry.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- INSTRUCTORS -->
+      <section>
+        <div class="container">
+          <div class="prose reveal imo-story" style="max-width: 70ch;">
+            <h2>The instruction model</h2>
+            <p>
+              The teaching team was deliberately built around three
+              complementary profiles. A theoretician developed the theory, a
+              practitioner focused on competition strategy, and a recent competitor
+              helped students connect the two.
+            </p>
+          </div>
+
+          <div class="instructor-grid">
+            <article class="instructor">
+              <div class="instructor__label">Theoretician · academic anchor</div>
+              <h3 class="instructor__name">Prof. Zdravko Cvetkovski</h3>
+              <p>
+                University professor and PhD candidate; author of a published
+                book on inequalities. Carried the formal pedagogical structure
+                of the program, the depth that turns a clever trick into a
+                durable method.
+              </p>
+            </article>
+            <article class="instructor">
+              <div class="instructor__label">Practitioner · elite coach</div>
+              <h3 class="instructor__name">Mr. Mustafa Alelg</h3>
+              <p>
+                IMO bronze medalist and current coach for the Saudi national
+                team. He brought proven competition strategy and disciplined
+                time management into daily practice.
+              </p>
+            </article>
+            <article class="instructor">
+              <div class="instructor__label">Recent competitor and mentor</div>
+              <h3 class="instructor__name">Abdulkareem Alsalem</h3>
+              <p>
+                Recent elite competitor and current university student.
+                Worked closely with participants on the inequalities module
+                and translated advanced concepts into the language of someone
+                who had been on the same side of the desk months earlier.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CURRICULUM -->
+      <section>
+        <div class="container">
+          <div class="prose reveal imo-story" style="max-width: 70ch;">
+            <h2>The four pillars</h2>
+            <p>
+              The curriculum covered the four areas that make up an
+              olympiad. Each block ran as a focused module with daily
+              problem sets, classroom proof construction, and mock competition
+              rounds against the clock.
+            </p>
+          </div>
+
+          <div class="pillars">
+            <div class="pillar">
+              <h3>Algebra</h3>
+              <ul>
+                <li>Polynomial theory and manipulation</li>
+                <li>Functional equations</li>
+                <li>Inequalities (specialized module)</li>
+                <li>Vieta's formulas</li>
+                <li>Algebraic identities and transformations</li>
+              </ul>
+            </div>
+            <div class="pillar">
+              <h3>Geometry</h3>
+              <ul>
+                <li>Classical Euclidean geometry</li>
+                <li>Circle theorems and properties</li>
+                <li>Inscribed and circumscribed angles</li>
+                <li>Power of a point</li>
+                <li>Geometric transformations</li>
+              </ul>
+            </div>
+            <div class="pillar">
+              <h3>Number theory</h3>
+              <ul>
+                <li>Divisibility and primes</li>
+                <li>Modular arithmetic</li>
+                <li>Diophantine equations</li>
+                <li>number theoretic functions</li>
+                <li>Congruences and residues</li>
+              </ul>
+            </div>
+            <div class="pillar">
+              <h3>Combinatorics</h3>
+              <ul>
+                <li>Counting principles</li>
+                <li>Binomial theorem and applications</li>
+                <li>Graph theory basics</li>
+                <li>Pigeonhole principle</li>
+                <li>Extremal combinatorics</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STUDENT EXPERIENCE -->
+      <section>
+        <div class="container">
+          <div class="prose reveal imo-story" style="max-width: 70ch;">
+            <h2>Nineteen days on campus</h2>
+            <p>
+              Fourteen days of onsite training at NYUAD were followed by
+              five days of virtual instruction from 5 to 9 July, so that the
+              students preparing for the IMO could continue refining selected topics
+              after the residential phase ended. Students lived in NYUAD
+              dormitories, ate in campus dining halls, and worked through
+              problems together late into the evening. For many of them, it
+              was a first taste of university life, an experience that, on
+              its own terms, mattered as much as the mathematics.
+            </p>
+            <p>
+              Assessment ran continuously: daily problem sets, mock
+              competitions, extended homework, and trainer observations.
+              Students from public, private, and vocational schools across
+              the Emirates worked side by side. Peer mentoring between the
+              IMO team and the broader cohort emerged naturally and was one
+              of the program's quiet successes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLOSING QUOTE -->
+      <section class="imo-quote">
+        <div class="container">
+          <div class="imo-quote__grid">
+            <div class="imo-quote__photo" style="background-image: url('images/imo2025-zantout-podium.jpg');" role="img" aria-label="The closing ceremony of the 2025 training camp"></div>
+            <div>
+              <blockquote>
+                Olympiad mathematics develops thoughtful problem solvers and helps shape
+                future scientists, innovators, and leaders for a knowledge driven world.
+                Sustained support makes that growth possible.
+              </blockquote>
+              <cite>Closing message by Dr. Dania Zantout · 9 July 2025</cite>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section>
+        <div class="container">
+          <div class="prose reveal imo-story" style="max-width: 70ch;">
+            <h2>From the camp</h2>
+            <p>
+              A small selection of images taken by Ministry representatives during
+              the residential phase at NYU Abu Dhabi.
+            </p>
+          </div>
+
+          <div class="imo-gallery">
+            <figure class="imo-gallery__item imo-gallery__item--wide">
+              <img src="images/imo2025-cohort-classroom.jpg" alt="Full cohort with instructor at the close of a session at NYUAD, 3 July 2025" />
+              <figcaption class="imo-gallery__caption">Cohort and instructor · classroom session, 3 July 2025</figcaption>
+            </figure>
+            <figure class="imo-gallery__item imo-gallery__item--tall">
+              <img src="images/imo2025-group-outdoor.jpg" alt="Students and organizers in the NYUAD courtyard" />
+              <figcaption class="imo-gallery__caption">Students and organizers · NYUAD courtyard</figcaption>
+            </figure>
+            <figure class="imo-gallery__item imo-gallery__item--half">
+              <img src="images/imo2025-instruction.jpg" alt="Olympiad instruction in progress, geometry diagrams on the whiteboard" />
+              <figcaption class="imo-gallery__caption">Geometry session in progress</figcaption>
+            </figure>
+            <figure class="imo-gallery__item imo-gallery__item--half">
+              <img src="images/imo2025-team-ministry.jpg" alt="The organizing team with the UAE Ministry of Education representative" />
+              <figcaption class="imo-gallery__caption">Organizing team with Ministry representative</figcaption>
+            </figure>
+            <figure class="imo-gallery__item imo-gallery__item--half">
+              <img src="images/imo2025-organizers.jpg" alt="Organizing team and supervisors at the NYUAD atrium staircase" />
+              <figcaption class="imo-gallery__caption">Organizers and supervisors · NYUAD atrium</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONNECTION TO THE ACADEMY -->
+      <section>
+        <div class="container">
+          <div class="prose reveal imo-story" style="max-width: 70ch;">
+            <h2>What this taught the Academy</h2>
+            <p>
+              The 2025 training camp ran as a sovereign engagement with the
+              Ministry of Education. It ran alongside the Academy's first cycle
+              that summer. Insights moved between the two efforts and helped shape
+              the Academy's current practice.
+            </p>
+
+            <div class="connection-card">
+              <h3>One bridge worth naming</h3>
+              <p>
+                Working with Mr. Mustafa Alelg in the residential camp
+                opened a concrete pathway for the Academy's own participants.
+                A secondary school teacher who is part of the Math Olympiad
+                Trainer Academy was able to observe and practice elite
+                Olympiad delivery in the same room as an internationally
+                established coach, exactly the kind of apprenticeship the
+                Academy was built to provide. Mr. Mustafa has since
+                continued his association with the Academy as a coach in
+                its later cycles.
+              </p>
+              <p>
+                That is the deeper logic behind training teachers. A single
+                room of seventeen students is a beautiful thing. A room of
+                trained teachers, each carrying what they learned back into
+                their own classrooms, multiplies it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="join">
+        <div class="join__bg"><img src="images/imo2025-campus.jpg" alt="NYU Abu Dhabi campus at golden hour" /></div>
+        <div class="join__overlay"></div>
+        <div class="container">
+          <h2>The Academy <em>continues</em>.</h2>
+          <p>The 2025 training camp was a moment. The Math Olympiad Trainer Academy is the long work, training the teachers who carry mathematical thinking into classrooms across the region, year after year.</p>
+          <div class="join__actions">
+            <a class="btn btn--accent btn--lg" href="programs.html">See the Academy's programs</a>
+            <a class="btn btn--ghost btn--lg" href="team.html">Meet the team</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="logo">
+              <svg class="logo__mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.5" /><path d="M24 7.5 L41.32 36 L6.68 36 Z" stroke-width="1.4" /><circle cx="24" cy="27" r="6.5" stroke-width="1.2" /><circle cx="24" cy="27" r="1.2" fill="currentColor" stroke="none" /></svg>
+              <span class="logo__text"><span class="logo__title">Math Olympiad Trainer Academy</span><span class="logo__subtitle">SITE · MIMS</span></span>
+            </a>
+            <p>Training the trainers of secondary school mathematics across the MENA region. Developed with funding from SITE, which was part of the NYU Abu Dhabi Research Institute, in academic partnership with MIMS.</p>
+          </div>
+          <div class="footer__col"><h4>Academy</h4><ul role="list"><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="impact.html">Impact &amp; Evidence</a></li><li><a href="curriculum.html">Curriculum</a></li><li><a href="team.html">Team</a></li><li><a href="atlas/index.html">Historical Profiles</a></li><li><a href="editorial.html">Editorial policy</a></li></ul></div>
+          <div class="footer__col"><h4>Participants</h4><ul role="list"><li><a href="resources.html">Resources</a></li><li><a href="https://classroom.google.com/c/NzExNTk4MzQxNDI2" target="_blank" rel="noopener">Google Classroom</a></li><li><a href="contact.html#express-interest">Apply</a></li><li><a href="contact.html#faq">FAQ</a></li>
+              <li><a href="archive.html">Teaching Materials</a></li>
+              <li><a href="glossary.html">Glossary</a></li></ul></div>
+          <div class="footer__col"><h4>Contact</h4><ul role="list"><li><a href="contact.html">General enquiries</a></li><li><a href="mailto:dz41@nyu.edu">dz41@nyu.edu</a></li><li><a href="https://nyuad.nyu.edu" target="_blank" rel="noopener">NYU Abu Dhabi</a></li></ul></div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2024 to <span data-year>2026</span> Math Olympiad Trainer Academy. All rights reserved.</span>
+          <span>Built on a foundation of theorem, example, and method.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js" defer></script></body>
+</html>

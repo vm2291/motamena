@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mathematical Heritage, Math Olympiad Trainer Academy</title>
+    <meta name="description" content="From al-Khwārizmī to al-Kāshī. Twelve scholars of the medieval Arabic mathematical tradition, in chronological order, whose work seeded the techniques the Academy teaches today." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Mathematical Heritage, restrained editorial treatment */
+      .continuum-hero {
+        position: relative;
+        min-height: 70vh;
+        display: grid;
+        place-items: end start;
+        padding: var(--space-16) 0 var(--space-14);
+        overflow: hidden;
+        background: #18243d;
+      }
+      .continuum-hero__bg {
+        position: absolute; inset: 0;
+        background:
+          radial-gradient(circle at 82% 22%, rgba(212,163,71,0.22), transparent 25%),
+          linear-gradient(135deg, #0f1e3d 0%, #23365f 58%, #49361d 100%);
+      }
+      .continuum-hero__veil {
+        position: absolute; inset: 0;
+        background:
+          linear-gradient(180deg, rgba(8,16,34,0.05) 0%, rgba(8,16,34,0.48) 100%),
+          repeating-linear-gradient(60deg, transparent 0 58px, rgba(255,255,255,0.025) 59px 60px);
+      }
+      .continuum-hero__inner {
+        position: relative;
+        z-index: 2;
+        max-width: 760px;
+        padding: 0 var(--space-6);
+        color: #f7ecd2;
+      }
+      .continuum-hero__eyebrow {
+        font-family: var(--font-body);
+        font-size: 0.76rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #e6c884;
+        margin-bottom: var(--space-4);
+      }
+      .continuum-hero__title {
+        font-family: var(--font-display);
+        font-weight: 500;
+        font-size: clamp(2.4rem, 5.5vw, 4.5rem);
+        line-height: 1.04;
+        color: #f7ecd2;
+        margin-bottom: var(--space-5);
+      }
+      .continuum-hero__title em {
+        font-style: italic;
+        color: #e6c884;
+      }
+      .continuum-hero__lede {
+        font-family: var(--font-display);
+        font-style: italic;
+        font-weight: 400;
+        font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+        line-height: 1.55;
+        color: #ead9b3;
+        max-width: 56ch;
+      }
+      .continuum-hero__arabic {
+        font-family: 'Amiri', serif;
+        font-size: 1.5rem;
+        color: #d4a347;
+        margin-top: var(--space-6);
+        letter-spacing: 0.02em;
+        direction: rtl;
+      }
+
+      /* Intro section */
+      .continuum-intro {
+        background: var(--color-bg);
+        padding: var(--space-16) 0;
+        border-bottom: 1px solid var(--color-divider);
+      }
+      .continuum-intro__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--space-12);
+        align-items: center;
+      }
+      @media (max-width: 860px) {
+        .continuum-intro__grid { grid-template-columns: 1fr; }
+      }
+      .continuum-intro__prose {
+        font-family: var(--font-display);
+        font-size: 1.25rem;
+        line-height: 1.7;
+        color: var(--color-text);
+      }
+      .continuum-intro__prose p + p { margin-top: var(--space-5); }
+
+      /* Scholars list, manuscript entries */
+      .scholars {
+        background: var(--color-surface);
+        padding: var(--space-16) 0;
+      }
+      .scholars__intro {
+        max-width: 68ch;
+        margin: 0 auto var(--space-14);
+        text-align: center;
+      }
+      .scholar {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: var(--space-10);
+        padding: var(--space-10) 0;
+        border-top: 1px solid var(--color-divider);
+        align-items: start;
+      }
+      .scholar:last-child { border-bottom: 1px solid var(--color-divider); }
+      @media (max-width: 720px) {
+        .scholar { grid-template-columns: 1fr; gap: var(--space-5); }
+        .scholar__header {
+          display: grid;
+          grid-template-columns: auto 1fr;
+          column-gap: var(--space-5);
+          align-items: baseline;
+        }
+        .scholar__num { margin-bottom: var(--space-2); }
+        .scholar__arabic { margin-bottom: 0; text-align: right; }
+        .scholar__dates { grid-column: 1 / -1; margin-top: var(--space-2); }
+      }
+      .scholar__num {
+        font-family: var(--font-display);
+        font-style: italic;
+        font-weight: 400;
+        font-size: 4rem;
+        line-height: 1;
+        color: var(--color-accent);
+        margin-bottom: var(--space-3);
+      }
+      .scholar__arabic {
+        font-family: 'Amiri', serif;
+        font-size: 2rem;
+        line-height: 1.2;
+        color: var(--color-primary);
+        direction: rtl;
+        margin-bottom: var(--space-3);
+      }
+      .scholar__dates {
+        font-size: 0.78rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+        font-weight: 600;
+      }
+      .scholar__name {
+        font-family: var(--font-display);
+        font-weight: 500;
+        font-size: clamp(1.7rem, 2.5vw, 2.2rem);
+        line-height: 1.15;
+        color: var(--color-primary);
+        margin-bottom: var(--space-2);
+      }
+      .scholar__meta {
+        font-family: var(--font-body);
+        font-size: 0.88rem;
+        color: var(--color-text-muted);
+        letter-spacing: 0.04em;
+        margin-bottom: var(--space-5);
+      }
+      .scholar__prose {
+        font-family: var(--font-body);
+        font-size: 1.02rem;
+        line-height: 1.75;
+        color: var(--color-text);
+      }
+      .scholar__signature {
+        margin-top: var(--space-5);
+        padding: var(--space-5) var(--space-6);
+        background: var(--color-surface-offset);
+        border-left: 3px solid var(--color-accent);
+        font-family: var(--font-display);
+        font-style: italic;
+        font-size: 1.1rem;
+        color: var(--color-primary);
+      }
+      .scholar__signature strong {
+        display: block;
+        font-style: normal;
+        font-family: var(--font-body);
+        font-size: 0.74rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--color-accent-active);
+        font-weight: 600;
+        margin-bottom: var(--space-2);
+      }
+      .scholar__atlas-link {
+        margin-top: var(--space-4);
+        font-family: var(--font-body);
+        font-size: 0.85rem;
+        letter-spacing: 0.02em;
+      }
+      .scholar__atlas-link a {
+        color: var(--color-accent-active);
+        text-decoration: none;
+        border-bottom: 1px solid currentColor;
+        padding-bottom: 1px;
+        transition: color 160ms ease;
+      }
+      .scholar__atlas-link a:hover,
+      .scholar__atlas-link a:focus-visible {
+        color: var(--color-primary);
+      }
+
+      /* Mid-page editorial image */
+      .continuum-plate {
+        position: relative;
+        padding: var(--space-12) 0;
+        background: var(--color-surface-deep);
+        overflow: hidden;
+      }
+      .continuum-plate__image {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 var(--space-6);
+      }
+      .continuum-plate__image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-lg);
+      }
+      .continuum-plate__caption {
+        max-width: 760px;
+        margin: var(--space-5) auto 0;
+        padding: 0 var(--space-6);
+        text-align: center;
+        font-family: var(--font-display);
+        font-style: italic;
+        color: var(--color-text-muted);
+        font-size: 0.95rem;
+      }
+
+      /* Coda */
+      .continuum-coda {
+        background: var(--color-primary);
+        color: var(--color-text-inverse);
+        padding: var(--space-16) 0;
+        text-align: center;
+      }
+      .continuum-coda h2 {
+        font-family: var(--font-display);
+        font-weight: 500;
+        font-size: clamp(1.8rem, 3vw, 2.6rem);
+        line-height: 1.2;
+        color: var(--color-text-inverse);
+        margin-bottom: var(--space-5);
+        max-width: 24ch;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .continuum-coda h2 em { font-style: italic; color: #e6c884; }
+      .continuum-coda p {
+        max-width: 60ch;
+        margin: 0 auto var(--space-8);
+        font-family: var(--font-display);
+        font-style: italic;
+        font-size: 1.2rem;
+        line-height: 1.65;
+        color: #ead9b3;
+      }
+      /* Override ghost button on dark background so text is visible */
+      .continuum-coda .btn--ghost {
+        color: #f7ecd2;
+        border-color: rgba(247, 236, 210, 0.4);
+      }
+      .continuum-coda .btn--ghost:hover {
+        background: rgba(247, 236, 210, 0.08);
+        border-color: rgba(247, 236, 210, 0.7);
+        color: #f7ecd2;
+      }
+      .continuum-coda > .container > div {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-4);
+        flex-wrap: wrap;
+      }
+      [data-theme="dark"] .continuum-coda { background: var(--color-surface-2); }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <a href="index.html" class="logo" aria-label="Math Olympiad Trainer Academy, home">
+          <svg class="logo__mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.5" /><path d="M24 7.5 L41.32 36 L6.68 36 Z" stroke-width="1.4" /><circle cx="24" cy="27" r="6.5" stroke-width="1.2" /><circle cx="24" cy="27" r="1.2" fill="currentColor" stroke="none" /></svg>
+          <span class="logo__text"><span class="logo__title">Math Olympiad Trainer Academy</span><span class="logo__subtitle">SITE · MIMS</span></span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <div class="nav__panel">
+          <ul class="nav__list" role="list">
+            <li><a class="nav__link" href="index.html">Home</a></li>
+            <li><a class="nav__link" href="about.html">About</a></li>
+            <li><a class="nav__link" href="programs.html">Programs</a></li>
+            <li><a class="nav__link" href="impact.html">Impact</a></li>
+            
+            <li class="nav__item--dropdown is-active">
+              <button type="button" class="nav__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                Knowledge Hub <svg class="nav__dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <ul class="nav__dropdown-menu" role="list">
+                <li><a class="nav__dropdown-link" href="curriculum.html">Curriculum</a></li>
+                <li><a class="nav__dropdown-link" href="resources.html">Participant Resources</a></li>
+                <li><a class="nav__dropdown-link" href="atlas-methods.html">Methods</a></li>
+                
+                <li><a class="nav__dropdown-link" href="continuum.html" aria-current="page">Mathematical Heritage</a></li>
+                <li><a class="nav__dropdown-link" href="atlas/index.html">Historical Profiles</a></li>
+                <li><a class="nav__dropdown-link" href="archive.html">Teaching Materials</a></li>
+                              <li><a class="nav__dropdown-link" href="glossary.html">Mathematics Glossary</a></li>
+              </ul>
+            </li>
+            <li><a class="nav__link" href="team.html">Team</a></li>
+            
+            <li><a class="nav__link" href="contact.html">Contact</a></li>
+          </ul>
+          <a class="btn btn--accent nav__cta" href="https://classroom.google.com/c/NzExNTk4MzQxNDI2" target="_blank" rel="noopener">Classroom</a>
+        </div>
+          <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
+          <button class="menu-toggle" data-menu-toggle aria-label="Toggle menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="continuum-hero">
+        <div class="continuum-hero__bg" aria-hidden="true"></div>
+        <div class="continuum-hero__veil" aria-hidden="true"></div>
+        <div class="continuum-hero__inner">
+          <p class="continuum-hero__eyebrow">Mathematical Heritage</p>
+          <h1 class="continuum-hero__title">
+            From <em>al-Khwārizmī</em><br/>to the classroom.
+          </h1>
+          <p class="continuum-hero__lede">
+            Twelve scholars of the medieval Arabic mathematical tradition, in chronological order, whose
+            work seeded the techniques our students will meet in olympiad halls
+            today, algebra, trigonometry, conic sections, the iterative root,
+            the decimal fraction.
+          </p>
+          <p class="continuum-hero__arabic" lang="ar" aria-hidden="true">سِلسلةٌ من المعرفة</p>
+        </div>
+      </section>
+
+      <!-- INTRO -->
+      <section class="continuum-intro">
+        <div class="container">
+          <div class="continuum-intro__grid">
+            <div class="continuum-intro__prose reveal">
+              <p>
+                The Academy continues a mathematical tradition carried in Arabic
+                across several centuries. Its teaching draws on the same habits of
+                generalisation, geometric reasoning, recursion, and iterative refinement.
+              </p>
+              <p>
+                From Baghdad to Marāgha, from Cairo to Samarkand, scholars writing
+                in Arabic gave algebra its name, formalised plane and spherical
+                trigonometry, classified the cubic equations by conic intersection,
+                refined the iterative root, and pushed the decimal fraction into
+                sixteen place computation.
+              </p>
+              <p>
+                These twelve scholars make that intellectual line visible. Their work
+                helps teachers and students place each problem within a thousand year arc.
+              </p>
+              <p><small>This page provides the narrative arc. <a href="atlas/index.html">Historical Profiles</a> provides the evidence layer: one scholar per page, with dates, works, claims, and source links presented for checking.</small></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCHOLARS -->
+      <section class="scholars">
+        <div class="container">
+          <div class="section-head section-head--center reveal scholars__intro">
+            <p class="eyebrow">Twelve scholars</p>
+            <h2 class="section-title">A short <em>genealogy</em>.</h2>
+            <p class="section-lede">
+              Arranged roughly in chronological order. Each entry names one
+              signature contribution that still appears in olympiad and classroom
+              mathematics today.
+            </p>
+          </div>
+
+          <article class="scholar reveal">
+            <div class="scholar__header">
+              <div class="scholar__num">i</div>
+              <p class="scholar__arabic" lang="ar">الخوارزمي</p>
+              <p class="scholar__dates">c. 780  to  c. 850</p>
+            </div>
+            <div>
+              <h3 class="scholar__name">Muḥammad ibn Mūsā al-Khwārizmī</h3>
+              <p class="scholar__meta">Baghdad · court of the Abbasid caliph al-Maʾmūn</p>
+              <p class="scholar__prose">
+                Al-Khwārizmī's <em>Kitāb al-jabr wa-l-muqābala</em> gave algebra
+                both its name and its first systematic treatment as a discipline
+                apart from arithmetic. He set out the six canonical forms of the
+                quadratic and showed how completing the square, reducing, and
+                balancing recover the unknown. From his Latinised name we still
+                draw the word <em>algorithm</em>.
+              </p>
+              <div class="scholar__signature">
+                <strong>Signature contribution</strong>
+                The quadratic, solved by completing the square, the procedure
+                every olympiad student inherits before they know its history.
+              </div>
+              <p class="scholar__atlas-link"><a href="atlas/al-khwarizmi.html">Read the full archive entry &rarr;</a></p>
+            </div>
+          </article>
+
+          <article class="scholar reveal">
+            <div class="scholar__header">
+              <div class="scholar__num">ii</div>
+              <p class="scholar__arabic" lang="ar">ثابت بن قُرّة</p>
+              <p class="scholar__dates">836  to  901</p>
+            </div>
+            <div>
+              <h3 class="scholar__name">Thābit ibn Qurra</h3>
+              <p class="scholar__meta">Ḥarrān · Baghdad</p>
+              <p class="scholar__prose">
+                A translator, astronomer and geometer of the Banū Mūsā circle,
+                Thābit produced one of the earliest general proofs of the
+                Pythagorean theorem and gave a rule for generating amicable
+                numbers, pairs <em>(m, n)</em> in which the proper divisors of
+                each sum to the other. His work on incommensurables anticipated
+                later developments in number theory by several centuries.
+              </p>
+              <div class="scholar__signature">
+                <strong>Signature contribution</strong>
+                Thābit's rule for amicable numbers, the first systematic
+                generator of a nontrivial number theoretic family.
+              </div>
+              <p class="scholar__atlas-link"><a href="atlas/thabit-ibn-qurra.html">Read the full archive entry &rarr;</a></p>
+            </div>
+          </article>
+
+          <article class="scholar reveal">
+            <div class="scholar__header">
+              <div class="scholar__num">iii</div>
+              <p class="scholar__arabic" lang="ar">البَتّاني</p>
+              <p class="scholar__dates">c. 858  to  929</p>
+            </div>
+            <div>
+              <h3 class="scholar__name">Abū ʿAbdullāh al-Battānī</h3>
+              <p class="scholar__meta">Ḥarrān · Raqqa</p>
+              <p class="scholar__prose">
+                Al-Battānī replaced the Greek chord with the sine and tabulated
+                it as a ratio. This shifted trigonometric calculation away from length.
+                In right angled trigonometry
+                he gave the relation MacTutor records as 
+                <em>b</em> sin <em>A</em> = <em>a</em> sin(90° − <em>A</em>),
+                the shape in which the sine and cosine relationship first enters
+                the textbook line. He refined the length of the solar year to
+                within minutes of the modern value. His astronomical tables,
+                the <em>Zīj al-Ṣābiʾ</em>, were read in Latin Europe for half a
+                millennium.
+              </p>
+              <div class="scholar__signature">
+                <strong>Signature contribution</strong>
+                Trigonometry as a calculus of ratios, sine and cosine,
+                calibrated against Ptolemy's chord.
+              </div>
+              <p class="scholar__atlas-link"><a href="atlas/al-battani.html">Read the full archive entry &rarr;</a></p>
+            </div>
+          </article>
+
+          <article class="scholar reveal">
+            <div class="scholar__header">
+              <div class="scholar__num">iv</div>
+              <p class="scholar__arabic" lang="ar">أبو الوفاء البوزجاني</p>
+              <p class="scholar__dates">940  to  998</p>
+            </div>
+            <div>
+              <h3 class="scholar__name">Abū al-Wafāʾ al-Būzjānī</h3>
+              <p class="scholar__meta">Būzjān · Baghdad</p>
+              <p class="scholar__prose">
+                Al-Būzjānī introduced the tangent, cotangent, secant and cosecant
+                as named functions, and he gave a rigorous proof of the spherical
+                law of sines, whether it is originally his or independently
+                Abū Naṣr Manṣūr's remains a live question in the historiography.
+                He also worked on geometric constructions with a single rule and
+                a compass with a fixed radius, a constraint that still surfaces in
+                olympiad problems on constructibility.
+              </p>
+              <div class="scholar__signature">
+                <strong>Signature contribution</strong>
+                Tangent, cotangent, secant, cosecant, the complete trigonometric
+                family, named and tabulated.
+              </div>
+              <p class="scholar__atlas-link"><a href="atlas/abul-wafa.html">Read the full archive entry &rarr;</a></p>
+            </div>
+          </article>
+
+          <article class="scholar reveal">
+            <div class="scholar__header">
+              <div class="scholar__num">v</div>
+              <p class="scholar__arabic" lang="ar">الكرجي</p>
+              <p class="scholar__dates">13 April 953  to  c. 1029</p>
+            </div>
+            <div>
+              <h3 class="scholar__name">Abū Bakr al-Karajī</h3>
+              <p class="scholar__meta">Baghdad · the “mountain countries”</p>
+              <p class="scholar__prose">
+                Al-Karajī pushed algebra away from geometric figures and toward
+                the manipulation of powers of an unknown as symbols in their
+                own right. His <em>al-Fakhrī</em> gave the sum of cubes
+                identity <em>1³ + 2³ + … + n³ = (1 + 2 + … + n)²</em> and
+                one of the earliest inductive arguments in the surviving
+                record, preserved in detail by al-Samaw'al a century later,
+                who credits the technique back to him.
+              </p>
+              <div class="scholar__signature">
+                <strong>Signature contribution</strong>
+                An arithmetised algebra of powers, and the inductive method
+                whose surviving record runs through al-Samaw'al a
+                century later.
+              </div>
+              <p class="scholar__atlas-link"><a href="atlas/al-karaji.html">Read the full archive entry &rarr;</a></p>
+            </div>
+          </article>
+
+          <article class="scholar reveal">
+            <div class="scholar__header">
+              <div class="scholar__num">vi</div>
+              <p class="scholar__arabic" lang="ar">ابن الهيثم</p>
+              <p class="scholar__dates">c. 965  to  c. 1040</p>
+            </div>
+            <div>
+              <h3 class="scholar__name">Ibn al-Haytham (Alhazen)</h3>
+              <p class="scholar__meta">Basra · Cairo</p>
+              <p class="scholar__prose">
+                Ibn al-Haytham worked in optics, geometry and number theory,
+                but he is most relevant to us as an early articulator of what
+                is now called Wilson's theorem, that <em>(p − 1)! ≡ −1 (mod p)</em>
+                for every prime <em>p</em>. His geometric studies of conic
+                reflection and the problem of finding the point on a spherical
+                mirror that reflects light between two fixed points (now called
+                Alhazen's problem) remain canonical.
+              </p>
+              <div class="scholar__signature">
+                <strong>Signature contribution</strong>
+                An early statement of Wilson's theorem, and a sustained study
+                of conic reflection.
+              </div>
+              <p class="scholar__atlas-link"><a href="atlas/ibn-al-haytham.html">Read the full archive entry &rarr;</a></p>
+            </div>
+          </article>
+
+          <article class="scholar reveal">
+            <div class="scholar__header">
+              <div class="scholar__num">vii</div>
+              <p class="scholar__arabic" lang="ar">البيروني</p>
+              <p class="scholar__dates">15 September 973  to  13 December 1048</p>
+            </div>
+            <div>
+              <h3 class="scholar__name">Abū al-Rayḥān al-Bīrūnī</h3>
+              <p class="scholar__meta">Khwārazm · Ghazna · fieldwork in India</p>
+              <p class="scholar__prose">
+                Al-Bīrūnī brought a working scientist's discipline to the
+                measurement of the world. From a single elevated observation
+                at Nandana Fort in the Punjab he estimated the Earth's radius
+                using nothing more than a quadrant, a horizon angle, and
+                spherical trigonometry, a method still worth teaching for
+                its economy. Across his works, an insistence on reporting the
+                error alongside the measurement.
+              </p>
+              <div class="scholar__signature">
+                <strong>Signature contribution</strong>
+                A trigonometric measurement of the Earth's radius from one observation,
+                radius, and a career long standard of observational precision.
+              </div>
+              <p class="scholar__atlas-link"><a href="atlas/al-biruni.html">Read the full archive entry &rarr;</a></p>
+            </div>
+          </article>
+
+          <article class="scholar reveal">
+            <div class="scholar__header">
+              <div class="scholar__num">viii</div>
+              <p class="scholar__arabic" lang="ar">عمر الخيّام</p>
+              <p class="scholar__dates">1048  to  1131</p>
+            </div>
+            <div>
+              <h3 class="scholar__name">Omar Khayyām</h3>
+              <p class="scholar__meta">Nīshāpūr · Isfahan</p>
+              <p class="scholar__prose">
+                In his <em>Treatise on the Proofs of Problems of Algebra</em>,
+                Khayyām classified the cubic equations into fourteen canonical
+                forms and gave a geometric solution to each through the
+                intersection of conic sections. He worked toward a proof of
+                Euclid's parallel postulate; the constructions he used in that
+                attempt would later inform non-Euclidean geometry.
+              </p>
+              <div class="scholar__signature">
+                <strong>Signature contribution</strong>
+                Geometric solution of the cubic, by intersecting conics,
+                nearly five centuries before Cardano's algebraic treatment.
+              </div>
+              <p class="scholar__atlas-link"><a href="atlas/khayyam.html">Read the full archive entry &rarr;</a></p>
+            </div>
+          </article>
+
+          <article class="scholar reveal">
+            <div class="scholar__header">
+              <div class="scholar__num">ix</div>
+              <p class="scholar__arabic" lang="ar">السموأل</p>
+              <p class="scholar__dates">c. 1130  to  c. 1180</p>
+            </div>
+            <div>
+              <h3 class="scholar__name">Al-Samaw'al al-Maghribī</h3>
+              <p class="scholar__meta">Baghdad · Marāgha</p>
+              <p class="scholar__prose">
+                Al-Samaw'al is the reason we know what al-Karajī did. His
+                <em>Al-Bāhir fi'l-jabr</em> preserves the detailed inductive
+                argument, credits it back to al-Karajī explicitly, and adds
+                the sum of squares identity in the form olympiad students
+                still meet. His combinatorics problem of ten unknowns and
+                210 equations formed from sums of six quantities anticipates a modern
+                family of problems about symmetric data.
+              </p>
+              <div class="scholar__signature">
+                <strong>Signature contribution</strong>
+                The sum of the first <em>n</em> squares, in closed form, and
+                the surviving record of al-Karajī's inductive method.
+              </div>
+              <p class="scholar__atlas-link"><a href="atlas/al-samawal.html">Read the full archive entry &rarr;</a></p>
+            </div>
+          </article>
+
+          <article class="scholar reveal">
+            <div class="scholar__header">
+              <div class="scholar__num">x</div>
+              <p class="scholar__arabic" lang="ar">شرف الدين الطوسي</p>
+              <p class="scholar__dates">c. 1135  to  1213</p>
+            </div>
+            <div>
+              <h3 class="scholar__name">Sharaf al-Dīn al-Ṭūsī</h3>
+              <p class="scholar__meta">Ṭūs · Damascus · Aleppo · Mosul · Baghdad</p>
+              <p class="scholar__prose">
+                Sharaf al-Dīn returned to the cubic and studied the conditions
+                for a positive solution. For the five contested cubic
+                cases he locates the point where a cubic polynomial takes its
+                maximum and reads off the number of positive roots from a
+                comparison with the constant. Rashed reads the maximum
+                computation as a derivative argument; Hogendijk reads it as
+                Euclid Book II. The archive entry keeps both readings in view.
+                He also gave a Ruffini Horner style iteration for cubic roots,
+                six centuries early.
+              </p>
+              <div class="scholar__signature">
+                <strong>Signature contribution</strong>
+                Existence conditions for the cubic derived from its maximum,
+                and a numerical scheme that anticipates Horner.
+              </div>
+              <p class="scholar__atlas-link"><a href="atlas/sharaf-al-din-al-tusi.html">Read the full archive entry &rarr;</a></p>
+            </div>
+          </article>
+
+          <article class="scholar reveal">
+            <div class="scholar__header">
+              <div class="scholar__num">xi</div>
+              <p class="scholar__arabic" lang="ar">نصير الدين الطوسي</p>
+              <p class="scholar__dates">1201  to  1274</p>
+            </div>
+            <div>
+              <h3 class="scholar__name">Naṣīr al-Dīn al-Ṭūsī</h3>
+              <p class="scholar__meta">Ṭūs · Marāgha Observatory</p>
+              <p class="scholar__prose">
+                Naṣīr al-Dīn detached trigonometry from astronomy and treated
+                it as an independent mathematical discipline. He gave a clean
+                statement of the law of sines for plane triangles and developed
+                the geometric device now called the <em>Ṭūsī couple</em>, a
+                pair of circles whose combined motion produces linear
+                oscillation, a construction that would reappear, unattributed,
+                in Copernicus.
+              </p>
+              <div class="scholar__signature">
+                <strong>Signature contribution</strong>
+                Trigonometry as an autonomous mathematical subject, and the
+                Ṭūsī couple.
+              </div>
+              <p class="scholar__atlas-link"><a href="atlas/nasir-al-din-al-tusi.html">Read the full archive entry &rarr;</a></p>
+            </div>
+          </article>
+
+          <article class="scholar reveal">
+            <div class="scholar__header">
+              <div class="scholar__num">xii</div>
+              <p class="scholar__arabic" lang="ar">جمشيد الكاشي</p>
+              <p class="scholar__dates">c. 1380  to  1429</p>
+            </div>
+            <div>
+              <h3 class="scholar__name">Jamshīd al-Kāshī</h3>
+              <p class="scholar__meta">Kāshān · Samarkand Observatory</p>
+              <p class="scholar__prose">
+                At Ulugh Beg's observatory in Samarkand, al-Kāshī computed sin 1°
+                to ten correct sexagesimal places by an iterative method that is,
+                in substance, Newton Raphson applied to a cubic. In his <em>Risāla
+                al-muḥīṭīya</em> (Treatise on the Circumference, July 1424) he gave
+                2π to nine sexagesimal, equivalent to sixteen decimal, places,
+                a record that stood until van Ceulen computed twenty decimal places
+                at the turn of the seventeenth century. His <em>Miftāḥ al-Ḥisāb</em>
+                (Key to Arithmetic, 1427) is the encyclopedic teaching companion
+                to that work.
+              </p>
+              <div class="scholar__signature">
+                <strong>Signature contribution</strong>
+                An iterative root method now associated with Newton and Raphson,
+                and 2π to sixteen decimal places.
+              </div>
+              <p class="scholar__atlas-link"><a href="atlas/al-kashi.html">Read the full archive entry &rarr;</a></p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CODA -->
+      <section class="continuum-coda">
+        <div class="container">
+          <h2>The same problems, <em>passed forward</em>.</h2>
+          <p>
+            Every cubic our students solve, every triangle they inscribe, every
+            iterative root they refine, they are doing, again, what was done
+            in Baghdad and Marāgha and Samarkand. The Academy's task is to keep
+            that line visible, and to put it back into the classroom.
+          </p>
+          <div>
+            <a class="btn btn--accent btn--lg" href="curriculum.html">See the curriculum</a>
+            <a class="btn btn--ghost btn--lg" href="about.html">Our mission</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="logo">
+              <svg class="logo__mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.5" /><path d="M24 7.5 L41.32 36 L6.68 36 Z" stroke-width="1.4" /><circle cx="24" cy="27" r="6.5" stroke-width="1.2" /><circle cx="24" cy="27" r="1.2" fill="currentColor" stroke="none" /></svg>
+              <span class="logo__text"><span class="logo__title">Math Olympiad Trainer Academy</span><span class="logo__subtitle">SITE · MIMS</span></span>
+            </a>
+            <p>Training the trainers of secondary school mathematics across the MENA region. Developed with funding from SITE, which was part of the NYU Abu Dhabi Research Institute, in academic partnership with MIMS.</p>
+          </div>
+          <div class="footer__col"><h4>Academy</h4><ul role="list"><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="impact.html">Impact &amp; Evidence</a></li><li><a href="curriculum.html">Curriculum</a></li><li><a href="continuum.html">Mathematical Heritage</a></li><li><a href="team.html">Team</a></li><li><a href="atlas/index.html">Historical Profiles</a></li><li><a href="editorial.html">Editorial policy</a></li></ul></div>
+          <div class="footer__col"><h4>Participants</h4><ul role="list"><li><a href="resources.html">Resources</a></li><li><a href="https://classroom.google.com/c/NzExNTk4MzQxNDI2" target="_blank" rel="noopener">Google Classroom</a></li><li><a href="contact.html#express-interest">Apply</a></li><li><a href="contact.html#faq">FAQ</a></li>
+              <li><a href="archive.html">Teaching Materials</a></li>
+              <li><a href="glossary.html">Glossary</a></li></ul></div>
+          <div class="footer__col"><h4>Contact</h4><ul role="list"><li><a href="contact.html">General enquiries</a></li><li><a href="mailto:dz41@nyu.edu">dz41@nyu.edu</a></li><li><a href="https://nyuad.nyu.edu" target="_blank" rel="noopener">NYU Abu Dhabi</a></li></ul></div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2024 to <span data-year>2026</span> Math Olympiad Trainer Academy. All rights reserved.</span>
+          <span>Built on a foundation of theorem, example, and method.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js" defer></script></body>
+</html>

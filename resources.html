@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resources, Math Olympiad Trainer Academy</title>
+    <meta name="description" content="The Academy's working resources: Google Classroom, written LaTeX session notes, problem sets, and recommended reading for olympiad trainers." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .resource-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--space-6);
+        margin-top: var(--space-8);
+      }
+      .resource {
+        display: flex;
+        flex-direction: column;
+        padding: var(--space-8);
+        background: var(--color-surface-2);
+        border: 1px solid var(--color-divider);
+        border-radius: var(--radius-md);
+        transition: all var(--transition-interactive);
+        text-decoration: none;
+        color: inherit;
+      }
+      .resource:hover {
+        border-color: var(--color-accent);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-lg);
+      }
+      .resource__icon {
+        width: 40px; height: 40px;
+        display: grid; place-items: center;
+        color: var(--color-accent);
+        margin-bottom: var(--space-5);
+      }
+      .resource__label {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+        margin-bottom: var(--space-2);
+      }
+      .resource h3 {
+        font-family: var(--font-display);
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-bottom: var(--space-3);
+      }
+      .resource p {
+        font-size: 0.9rem;
+        color: var(--color-text-muted);
+        line-height: 1.6;
+        flex: 1;
+        margin-bottom: var(--space-5);
+      }
+      .resource__cta {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+      }
+      .resource:hover .resource__cta { color: var(--color-accent); }
+      .resource__cta::after { content: '→'; transition: transform var(--transition-interactive); }
+      .resource:hover .resource__cta::after { transform: translateX(4px); }
+
+      .reading {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-10);
+        margin-top: var(--space-8);
+      }
+      @media (max-width: 760px) { .reading { grid-template-columns: 1fr; } }
+      .reading-col h3 {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: var(--space-5);
+        padding-bottom: var(--space-3);
+        border-bottom: 1px solid var(--color-divider);
+      }
+      .reading-col ul { list-style: none; }
+      .reading-col li {
+        padding: var(--space-3) 0;
+        border-bottom: 1px dashed var(--color-divider);
+        font-size: 0.95rem;
+        line-height: 1.55;
+      }
+      .reading-col li em { color: var(--color-accent); font-style: italic; }
+      .reading-col li small { display: block; color: var(--color-text-muted); font-size: 0.8rem; margin-top: 2px; }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <a href="index.html" class="logo" aria-label="Math Olympiad Trainer Academy, home">
+          <svg class="logo__mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.5" /><path d="M24 7.5 L41.32 36 L6.68 36 Z" stroke-width="1.4" /><circle cx="24" cy="27" r="6.5" stroke-width="1.2" /><circle cx="24" cy="27" r="1.2" fill="currentColor" stroke="none" /></svg>
+          <span class="logo__text"><span class="logo__title">Math Olympiad Trainer Academy</span><span class="logo__subtitle">SITE · MIMS</span></span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <div class="nav__panel">
+          <ul class="nav__list" role="list">
+            <li><a class="nav__link" href="index.html">Home</a></li>
+            <li><a class="nav__link" href="about.html">About</a></li>
+            <li><a class="nav__link" href="programs.html">Programs</a></li>
+            <li><a class="nav__link" href="impact.html">Impact</a></li>
+            
+            <li class="nav__item--dropdown">
+              <button type="button" class="nav__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                Knowledge Hub <svg class="nav__dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <ul class="nav__dropdown-menu" role="list">
+                <li><a class="nav__dropdown-link" href="curriculum.html">Curriculum</a></li>
+                <li><a class="nav__dropdown-link" href="resources.html">Participant Resources</a></li>
+                <li><a class="nav__dropdown-link" href="atlas-methods.html">Methods</a></li>
+                
+                <li><a class="nav__dropdown-link" href="continuum.html">Mathematical Heritage</a></li>
+                <li><a class="nav__dropdown-link" href="atlas/index.html">Historical Profiles</a></li>
+                <li><a class="nav__dropdown-link" href="archive.html">Teaching Materials</a></li>
+                              <li><a class="nav__dropdown-link" href="glossary.html">Mathematics Glossary</a></li>
+              </ul>
+            </li>
+            <li><a class="nav__link" href="team.html">Team</a></li>
+            
+            <li><a class="nav__link" href="contact.html">Contact</a></li>
+          </ul>
+          <a class="btn btn--accent nav__cta" href="https://classroom.google.com/c/NzExNTk4MzQxNDI2" target="_blank" rel="noopener">Classroom</a>
+        </div>
+          <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"></button>
+          <button class="menu-toggle" data-menu-toggle aria-label="Toggle menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero__inner">
+          <p class="page-hero__eyebrow">Resources</p>
+          <h1>What participants <em>take home</em>.</h1>
+          <p class="page-hero__lede">
+            Every cycle of the Academy produces a growing archive of teaching material,
+            full LaTeX session notes, problem sets, and recordings. Below are the
+            primary working surfaces; enrolled participants access full materials
+            through the Academy's Google Classroom.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Working surfaces</p>
+            <h2 class="section-title">Where the Academy lives daily.</h2>
+          </div>
+          <div class="resource-grid reveal">
+            <a class="resource" href="https://classroom.google.com/c/NzExNTk4MzQxNDI2" target="_blank" rel="noopener">
+              <div class="resource__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 4v6M16 4v6"/></svg>
+              </div>
+              <p class="resource__label">Primary platform</p>
+              <h3>Google Classroom</h3>
+              <p>The Academy's daily platform, session schedules, written notes, problem sets, recordings, and participant discussion. Enrolled participants only.</p>
+              <span class="resource__cta">Open Classroom</span>
+            </a>
+
+            <a class="resource" href="contact.html">
+              <div class="resource__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+              </div>
+              <p class="resource__label">Session notes</p>
+              <h3>Written curriculum</h3>
+              <p>Each live session is paired with a fully prepared LaTeX document, a complete written account of the mathematics, written so a teacher can teach from it.</p>
+              <span class="resource__cta">Request access</span>
+            </a>
+
+            <a class="resource" href="contact.html">
+              <div class="resource__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              </div>
+              <p class="resource__label">Live sessions</p>
+              <h3>Session recordings</h3>
+              <p>Live online sessions are recorded for enrolled participants. Recordings include the lecture, worked problems, and the collaborative problem solving segment.</p>
+              <span class="resource__cta">Available in Classroom</span>
+            </a>
+
+            <a class="resource" href="https://nyuad.nyu.edu" target="_blank" rel="noopener">
+              <div class="resource__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7"/><path d="M5 9v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9"/></svg>
+              </div>
+              <p class="resource__label">Venue</p>
+              <h3>NYU Abu Dhabi</h3>
+              <p>The host campus and home of SITE within the NYUAD Research Institute. The NYUAD Zoom platform hosts the Academy's live online sessions, and NYUAD hosted the inaugural Year One onsite summer intensive in June 2025.</p>
+              <span class="resource__cta">Visit nyuad.nyu.edu</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="curriculum">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">A short reading list</p>
+            <h2 class="section-title">Books and references the Academy returns to.</h2>
+            <p class="section-lede">
+              These are the canonical olympiad references, many used by our coaches in
+              their own training work, and several authored by them.
+            </p>
+          </div>
+
+          <div class="reading reveal">
+            <div class="reading-col">
+              <h3>Olympiad training, general</h3>
+              <ul role="list">
+                <li>
+                  <em>problem solving Strategies</em>, Arthur Engel
+                  <small>The canonical reference for olympiad method.</small>
+                </li>
+                <li>
+                  <em>Problems from the Book</em>, Titu Andreescu &amp; Gabriel Dospinescu
+                  <small>Inequalities, algebra and number theory at depth.</small>
+                </li>
+                <li>
+                  <em>Putnam and Beyond</em>, Răzvan Gelca &amp; Titu Andreescu
+                  <small>A reference for the move from olympiad to university competition.</small>
+                </li>
+                <li>
+                  <em>Mathematical Olympiad Treasures</em>, Titu Andreescu &amp; Bogdan Enescu
+                  <small>Problems and solutions organised pedagogically by method.</small>
+                </li>
+              </ul>
+            </div>
+            <div class="reading-col">
+              <h3>By subject</h3>
+              <ul role="list">
+                <li>
+                  <em>Inequalities, Theorems, Techniques and Selected Problems</em>, Zdravko Cvetkovski (Springer)
+                  <small>By an Academy coach. The reference we use for olympiad inequalities.</small>
+                </li>
+                <li>
+                  <em>Lectures on Mathematics: Selected Topics</em>, Đorđe Baralić
+                  <small>From the wider mathematical network represented by individual coaches.</small>
+                </li>
+                <li>
+                  <em>Euclidean Geometry in Mathematical Olympiads</em>, Evan Chen
+                  <small>The modern standard for olympiad level synthetic geometry.</small>
+                </li>
+                <li>
+                  <em>104 Number Theory Problems</em>, Titu Andreescu, Dorin Andrica &amp; Zuming Feng
+                  <small>A focused problem set with complete solutions.</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="join">
+        <div class="join__bg"><img src="images/imo2025-campus.jpg" alt="NYU Abu Dhabi campus at golden hour" /></div>
+        <div class="join__overlay"></div>
+        <div class="container">
+          <h2>Materials are <em>made for teachers</em>.</h2>
+          <p>Enrolled participants gain access to the full archive of written notes, problem sets and recordings through the Academy's Google Classroom.</p>
+          <div class="join__actions">
+            <a class="btn btn--accent btn--lg" href="contact.html#express-interest">Apply for the next cycle</a>
+            <a class="btn btn--ghost btn--lg" href="https://classroom.google.com/c/NzExNTk4MzQxNDI2" target="_blank" rel="noopener">Open Classroom</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="logo">
+              <svg class="logo__mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.5" /><path d="M24 7.5 L41.32 36 L6.68 36 Z" stroke-width="1.4" /><circle cx="24" cy="27" r="6.5" stroke-width="1.2" /><circle cx="24" cy="27" r="1.2" fill="currentColor" stroke="none" /></svg>
+              <span class="logo__text"><span class="logo__title">Math Olympiad Trainer Academy</span><span class="logo__subtitle">SITE · MIMS</span></span>
+            </a>
+            <p>Training the trainers of secondary school mathematics across the MENA region. Developed with funding from SITE, which was part of the NYU Abu Dhabi Research Institute, in academic partnership with MIMS.</p>
+          </div>
+          <div class="footer__col"><h4>Academy</h4><ul role="list"><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="impact.html">Impact &amp; Evidence</a></li><li><a href="curriculum.html">Curriculum</a></li><li><a href="team.html">Team</a></li><li><a href="atlas/index.html">Historical Profiles</a></li><li><a href="editorial.html">Editorial policy</a></li></ul></div>
+          <div class="footer__col"><h4>Participants</h4><ul role="list"><li><a href="resources.html">Resources</a></li><li><a href="https://classroom.google.com/c/NzExNTk4MzQxNDI2" target="_blank" rel="noopener">Google Classroom</a></li><li><a href="contact.html#express-interest">Apply</a></li><li><a href="contact.html#faq">FAQ</a></li>
+              <li><a href="archive.html">Teaching Materials</a></li>
+              <li><a href="glossary.html">Glossary</a></li></ul></div>
+          <div class="footer__col"><h4>Contact</h4><ul role="list"><li><a href="contact.html">General enquiries</a></li><li><a href="mailto:dz41@nyu.edu">dz41@nyu.edu</a></li><li><a href="https://nyuad.nyu.edu" target="_blank" rel="noopener">NYU Abu Dhabi</a></li></ul></div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2024 to <span data-year>2026</span> Math Olympiad Trainer Academy. All rights reserved.</span>
+          <span>Built on a foundation of theorem, example, and method.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js" defer></script></body>
+</html>
