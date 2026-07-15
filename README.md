@@ -1,8 +1,6 @@
 # Math Olympiad Trainer Academy — Website
 
-A static website for the Math Olympiad Trainer Academy (SITE · MIMS).
-No backend, no build step, no dependencies. It is plain HTML, CSS, JavaScript,
-and images that any web server can serve directly.
+A website for the Math Olympiad Trainer Academy (SITE · MIMS).
 
 ## What's inside
 
