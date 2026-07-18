@@ -1048,6 +1048,59 @@ section {
   margin: 0;
 }
 
+/* Leadership profiles span the page as horizontal editorial rows. */
+.people__group--leadership .people__group-title,
+.people__group--coordination .people__group-title,
+.people__group--coaches .people__group-title {
+  font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+  padding-bottom: var(--space-5);
+}
+.people__grid--leadership {
+  display: block;
+}
+.person--profile {
+  display: block;
+  width: 100%;
+  padding: clamp(var(--space-8), 4vw, var(--space-12)) 0;
+  text-align: left;
+  border-bottom: 1px solid var(--color-divider);
+}
+.person--profile:last-child {
+  border-bottom: 0;
+}
+.person--profile .person__name {
+  font-size: clamp(1.5rem, 2.2vw, 1.8rem);
+}
+.person--profile .person__role {
+  max-width: none;
+  margin: var(--space-2) 0 0;
+  line-height: 1.5;
+}
+.person__profile-body {
+  margin-top: var(--space-5);
+}
+.person__profile-body .person__affiliation {
+  max-width: none;
+  font-size: 0.925rem;
+  line-height: 1.75;
+}
+.person__link {
+  margin-top: var(--space-4);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.person__link a {
+  color: var(--color-accent);
+}
+.person__link a:hover {
+  color: var(--color-accent-hover);
+}
+@media (max-width: 760px) {
+  .person--profile {
+    padding: var(--space-8) 0;
+  }
+}
+
 /* ============== PARTNERS ============== */
 .partners {
   background: var(--color-surface);
@@ -1671,14 +1724,14 @@ section {
   font-family: 'Amiri', 'Noto Naskh Arabic', 'Scheherazade New', serif;
   font-size: 1.5rem;
   line-height: 1.6;
-  color: var(--color-ink);
+  color: var(--color-text);
   margin: 0.5rem 0 0.25rem;
   font-weight: 500;
   letter-spacing: 0;
 }
 .page-hero__name-translit {
   font-size: 0.95rem;
-  color: var(--color-muted, #6b6b6b);
+  color: var(--color-text-muted);
   margin: 0 0 0.75rem;
   font-style: italic;
   font-family: var(--font-display, var(--font-body));
@@ -1716,17 +1769,17 @@ span.ar {
   font-family: var(--font-display, var(--font-body));
   font-style: italic;
   font-size: 1.1rem;
-  color: var(--color-ink);
+  color: var(--color-text);
 }
 .glossary-entry__gloss {
   font-size: 1rem;
   line-height: 1.55;
-  color: var(--color-ink);
+  color: var(--color-text);
 }
 .glossary-entry__gloss small {
   display: block;
   margin-top: 0.35rem;
-  color: var(--color-muted, #6b6b6b);
+  color: var(--color-text-muted);
   font-size: 0.85rem;
 }
 @media (max-width: 640px) {
@@ -1751,7 +1804,7 @@ span.ar {
   flex-wrap: wrap;
   gap: 0.75rem 1.5rem;
   font-size: 0.9rem;
-  color: var(--color-muted, #6b6b6b);
+  color: var(--color-text-muted);
   margin: 0 0 0.75rem;
 }
 .archive-cycle__status {
