@@ -1006,6 +1006,12 @@ section {
 .people__group {
   margin-bottom: var(--space-16);
 }
+.people__group--leadership {
+  margin-bottom: var(--space-12);
+}
+.people__group--coordination {
+  margin-bottom: var(--space-24);
+}
 .people__group:last-child { margin-bottom: 0; }
 .people__group-title {
   font-family: var(--font-display);
@@ -1046,6 +1052,26 @@ section {
   color: var(--color-text-muted);
   line-height: 1.55;
   margin: 0;
+}
+
+/* The longest coach biography closes the grid as a full-width row. */
+.person--coach-wide {
+  grid-column: 1 / -1;
+  display: block;
+  width: 100%;
+  padding: var(--space-8) 0;
+}
+.person--coach-wide .person__role {
+  margin: var(--space-2) 0 var(--space-5);
+}
+.person--coach-wide .person__name {
+  font-weight: 600;
+}
+.person--coach-wide .person__affiliation {
+  max-width: none;
+  margin-top: var(--space-2);
+  font-size: 0.9rem;
+  line-height: 1.7;
 }
 
 /* Leadership profiles span the page as horizontal editorial rows. */
